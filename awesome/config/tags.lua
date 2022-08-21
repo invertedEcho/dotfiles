@@ -2,6 +2,6 @@ local awful = require("awful")
 
 awful.screen.connect_for_each_screen(function(s)
     -- Each screen has its own tag table.
-    awful.tag({"1", "", "", "4", "5", "6", "7", "8", "9"}, s,
+    awful.tag({"I", "II", "III", "IV", "V"}, s,
               awful.layout.layouts[1])
 end)

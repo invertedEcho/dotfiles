@@ -51,10 +51,8 @@ rules = {
     {
         rule_any = {type = {"normal", "dialog"}},
         properties = {titlebars_enabled = true}
-    }, {
-        rule_any = {class = {"firefox", "Chromium"}},
-        properties = {titlebars_enabled = false}
-    }, -- Set Firefox to always map on the tag named "2" on screen 1.
+    },
+    -- Set Firefox to always map on the tag named "2" on screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { screen = 1, tag = "2" } },
     {rule = {class = "Firefox"}, properties = {maximized = false}}, {

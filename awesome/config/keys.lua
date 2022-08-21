@@ -167,7 +167,7 @@ end), awful.key({}, "XF86AudioMute", function()
 
         apps.notifications.volume(0, muted)
     end)
-end), awful.key({}, "XF86AudioNext", function() awful.spawn("mpc next") end,
+end), awful.key({}, "XF86AudioNext", function() awful.spawn("playerctl next") end,
                 {description = "Next title", group = "launcher"}),
                                    awful.key({}, "XF86AudioPrev", function()
     awful.spawn("mpc prev")
