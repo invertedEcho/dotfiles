@@ -7,7 +7,8 @@ local key = U.make_key({ noremap = true, silent = true })
 local lspkind = require("lspkind")
 local cmp = require("cmp")
 cmp.setup({
-	formatting = {
+
+formatting = {
 		format = lspkind.cmp_format({
 			mode = "symbol", -- show only symbol annotations
 			maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
@@ -19,12 +20,6 @@ cmp.setup({
 			end,
 		}),
 	},
-})
-
--- Setup nvim-cmp.
-local cmp = require("cmp")
-
-cmp.setup({
 	snippet = {
 		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
@@ -118,8 +113,6 @@ local on_attach = function(client, bufnr)
 end
 
 M.on_attach = on_attach
-
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 -- Setup lspconfig.
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
