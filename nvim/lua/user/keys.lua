@@ -6,7 +6,10 @@ vim.g.maplocalleader = " "
 local key = U.make_key({ noremap = true, silent = true })
 
 -- insert mode
-key("i", "jk", "<esc>")
+key("i", "<c-h>", "<left>")
+key("i", "<c-j>", "<down>")
+key("i", "<c-k>", "<up>")
+key("i", "<c-l>", "<right>")
 
 -- terminal
 key("n", "<leader>tt", toggleterm.toggleDefault)
