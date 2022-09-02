@@ -11,5 +11,3 @@ require("nvim-autopairs").setup({})
 require("neoscroll").setup()
 require("bufferline").setup({})
 require("feline").setup()
-
-local test = 5

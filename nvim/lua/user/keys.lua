@@ -47,11 +47,3 @@ key(
 	"ga",
 	U.bind(require("telescope").extensions.code_actions.code_actions, require("telescope.themes").get_dropdown({}))
 )
-
--- debugging plugin
-key("v", "<s-k>", U.make_cmd("lua require('dapui').eval()"))
-key("n", "tb", U.make_cmd("lua require('dap').toggle_breakpoint()"))
-key("n", "tc", U.make_cmd("lua require('dap').continue()"))
-key("n", "tt", U.make_cmd("lua require('dap').step_over()"))
-key("n", "ti", U.make_cmd("lua require('dap').step_into()"))
-key("n", "tq", U.make_cmd("lua require('dap').terminate()"))
