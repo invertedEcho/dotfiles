@@ -15,4 +15,4 @@ vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.opt.termguicolors = true
 vim.opt.splitright = true
 
-vim.cmd("colorscheme onedarker")
+vim.cmd("colorscheme tokyonight")

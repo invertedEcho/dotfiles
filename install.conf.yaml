@@ -17,6 +17,7 @@
     ~/.config/fish/functions: fish/functions
     ~/.config/kitty: kitty
     ~/.config/mpd: mpd
+    ~/.config/nvim: nvim
     ~/.config/ncmpcpp: ncmpcpp
     ~/.config/paru: paru
     ~/.config/polybar:

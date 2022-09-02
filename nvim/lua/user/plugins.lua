@@ -33,48 +33,49 @@ packer.init({
 })
 
 return packer.startup(function(use)
-    -- package manager
-	use "wbthomason/packer.nvim"
+	-- package manager
+	use("wbthomason/packer.nvim")
 
-    -- better look
-    use 'kyazdani42/nvim-web-devicons'
-    use 'kyazdani42/nvim-tree.lua'
-    use 'akinsho/bufferline.nvim'
-    use 'feline-nvim/feline.nvim'
-    use 'lukas-reineke/indent-blankline.nvim'
-    use 'ray-x/lsp_signature.nvim'
+	-- better look
+	use("kyazdani42/nvim-web-devicons")
+	use("kyazdani42/nvim-tree.lua")
+	use("akinsho/bufferline.nvim")
+	use("feline-nvim/feline.nvim")
+	use("lukas-reineke/indent-blankline.nvim")
+	use("ray-x/lsp_signature.nvim")
 
-    -- colorschemes
-    use 'lunarvim/colorschemes'
+	-- colorschemes
+	use("lunarvim/colorschemes")
+	use("folke/tokyonight.nvim")
 
-    -- lsp stuff
-    use 'neovim/nvim-lspconfig'
-    use 'onsails/lspkind-nvim'
-    use("jose-elias-alvarez/null-ls.nvim")
-	 use("williamboman/nvim-lsp-installer")
+	-- lsp stuff
+	use("neovim/nvim-lspconfig")
+	use("onsails/lspkind-nvim")
+	use("jose-elias-alvarez/null-ls.nvim")
+	use("williamboman/nvim-lsp-installer")
 
-    -- misc helper stuff
-    use 'windwp/nvim-autopairs'
-    use 'ojroques/nvim-bufdel'
-    use 'karb94/neoscroll.nvim'
+	-- misc helper stuff
+	use("windwp/nvim-autopairs")
+	use("ojroques/nvim-bufdel")
+	use("karb94/neoscroll.nvim")
 
-    -- auto completion
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-cmdline'
-    use 'hrsh7th/nvim-cmp'
+	-- auto completion
+	use("hrsh7th/cmp-nvim-lsp")
+	use("hrsh7th/cmp-buffer")
+	use("hrsh7th/cmp-path")
+	use("hrsh7th/cmp-cmdline")
+	use("hrsh7th/nvim-cmp")
 
-    -- vsnip
-    use 'hrsh7th/cmp-vsnip'
-    use 'hrsh7th/vim-vsnip'
+	-- vsnip
+	use("hrsh7th/cmp-vsnip")
+	use("hrsh7th/vim-vsnip")
 
-    -- terminal
-    use 'akinsho/toggleterm.nvim'
+	-- terminal
+	use("akinsho/toggleterm.nvim")
 
-    -- telescope
-    use 'nvim-lua/plenary.nvim'
-    use 'nvim-telescope/telescope.nvim'
+	-- telescope
+	use("nvim-lua/plenary.nvim")
+	use("nvim-telescope/telescope.nvim")
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
