@@ -21,6 +21,12 @@ key("n", "<c-j>", "<c-w>j")
 key("n", "<c-k>", "<c-w>k")
 key("n", "<c-l>", "<c-w>l")
 
+-- navigation
+key("n", "J", "10j")
+key("n", "K", "10k")
+key("n", "H", "10h")
+key("n", "L", "10l")
+
 -- nvimtree
 key("n", "<c-n>", U.make_cmd("NvimTreeFocus"))
 
