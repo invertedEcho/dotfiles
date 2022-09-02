@@ -5,18 +5,23 @@
 - clean: ['~']
 
 - link:
-  ~/.config/awesome: awesome
-  ~/.config/bspwm:
-    path: bspwm
-    mode: 755
-  ~/.config/fish: fish
-  ~/.config/kitty: kitty
-  ~/.config/mpd: mpd
-  ~/.config/ncmpcpp: ncmpcpp
-  ~/.config/paru: paru
-  ~/.config/polybar:
-    path: polybar
-    mode: 755
-  ~/.config/rofi: rofi
-  ~/.config/sxhkd: sxhkd
-  ~/.xinitrc: X/.xinitrc
+    ~/.config/awesome: awesome
+    ~/.config/bspwm:
+      path: bspwm
+      mode: 755
+    ~/.config/fish/completions: fish/completions
+    ~/.config/fish/conf.d: fish/conf.d
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/fish_plugins: fish/fish_plugins
+    ~/.config/fish/fish_variables: fish/fish_variables
+    ~/.config/fish/functions: fish/functions
+    ~/.config/kitty: kitty
+    ~/.config/mpd: mpd
+    ~/.config/ncmpcpp: ncmpcpp
+    ~/.config/paru: paru
+    ~/.config/polybar:
+      path: polybar
+      mode: 755
+    ~/.config/rofi: rofi
+    ~/.config/sxhkd: sxhkd
+    ~/.xinitrc: X/.xinitrc
