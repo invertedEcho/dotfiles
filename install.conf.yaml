@@ -1,0 +1,22 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+  ~/.config/awesome: awesome
+  ~/.config/bspwm:
+    path: bspwm
+    mode: 755
+  ~/.config/fish: fish
+  ~/.config/kitty: kitty
+  ~/.config/mpd: mpd
+  ~/.config/ncmpcpp: ncmpcpp
+  ~/.config/paru: paru
+  ~/.config/polybar:
+    path: polybar
+    mode: 755
+  ~/.config/rofi: rofi
+  ~/.config/sxhkd: sxhkd
+  ~/.xinitrc: X/.xinitrc
