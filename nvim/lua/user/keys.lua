@@ -36,6 +36,11 @@ key("n", "<c-s>", U.make_cmd("w"))
 -- telescope
 key("n", "<leader>f", U.make_cmd("Telescope find_files"))
 key("n", "<c-t>", U.make_cmd("Telescope live_grep"))
+key(
+	"n",
+	"ga",
+	U.bind(require("telescope").extensions.code_actions.code_actions, require("telescope.themes").get_dropdown({}))
+)
 
 -- debugging plugin
 key("v", "<s-k>", U.make_cmd("lua require('dapui').eval()"))

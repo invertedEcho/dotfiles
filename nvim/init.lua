@@ -5,8 +5,11 @@ require("user.lsp")
 require("user.null-ls")
 require("user.keys")
 require("user.toggleterm")
+require("user.telescope")
 require("nvim-tree").setup()
-require("nvim-autopairs").setup{}
+require("nvim-autopairs").setup({})
 require("neoscroll").setup()
-require("bufferline").setup{}
+require("bufferline").setup({})
 require("feline").setup()
+
+local test = 5

@@ -53,7 +53,10 @@ return packer.startup(function(use)
 	use("onsails/lspkind-nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("williamboman/nvim-lsp-installer")
-
+	use({
+		"kosayoda/nvim-lightbulb",
+		requires = "antoinemadec/FixCursorHold.nvim",
+	})
 	-- misc helper stuff
 	use("windwp/nvim-autopairs")
 	use("ojroques/nvim-bufdel")
@@ -76,6 +79,7 @@ return packer.startup(function(use)
 	-- telescope
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
+	use("~/telescope-code-actions.nvim")
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
