@@ -68,7 +68,11 @@ case $chosen in
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
 			mpc -q pause
 			amixer set Master mute
-			loginctl suspend
+      if [[ -f /usr/bin/systemctl ]]; then
+        systemctl suspend
+      elif [[ -f /usr/bin/s6-rc ]]; then
+        loginctl suspend
+      fi
 		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
 			exit 0
         else
