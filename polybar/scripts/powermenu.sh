@@ -39,7 +39,11 @@ case $chosen in
     $shutdown)
 		ans=$(confirm_exit &)
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
-			loginctl poweroff
+      if [[ -f /usr/bin/systemctl ]]; then
+        systemctl poweroff
+      elif [[ -f /usr/bin/s6-rc ]]; then
+        loginctl poweroff
+      fi
 		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
 			exit 0
         else

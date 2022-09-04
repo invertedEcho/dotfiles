@@ -37,6 +37,14 @@ XF86AudioRaiseVolume
 XF86AudioLowerVolume
   pulsemixer --change-volume -1
 
+XF86Audio{Prev,Next}
+  playerctl {previous,next}
+
+XF86AudioPlay
+  playerctl play-pause
+
+XF86AudioStop
+  playerctl stop
 
 
 #
