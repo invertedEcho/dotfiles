@@ -15,5 +15,5 @@ vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.opt.termguicolors = true
 vim.opt.splitright = true
 
-vim.cmd("colorscheme tokyonight")
+vim.cmd("colorscheme tokyonight-night")
 vim.cmd("let g:python3_host_prog = $HOME . '/.local/venv/nvim/bin/python'")

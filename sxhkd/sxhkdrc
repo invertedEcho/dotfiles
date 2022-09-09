@@ -46,6 +46,12 @@ XF86AudioPlay
 XF86AudioStop
   playerctl stop
 
+# backlight
+XF86MonBrightnessUp
+  xbacklight -inc 10
+
+XF86MonBrightnessDown
+  xbacklight -dec 10
 
 #
 # state/flags
