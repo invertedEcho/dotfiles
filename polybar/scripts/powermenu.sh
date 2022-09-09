@@ -53,7 +53,11 @@ case $chosen in
     $reboot)
 		ans=$(confirm_exit &)
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
-			loginctl reboot
+      if [[ -f /usr/bin/systemctl ]]; then
+        systemctl reboot
+      elif [[ -f /usr/bin/s6-rc ]]; then
+        loginctl reboot
+      fi
 		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
 			exit 0
         else
