@@ -129,6 +129,7 @@ local servers = {
 	"bashls",
 	"taplo",
 	"pyright",
+	"jdtls",
 }
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")

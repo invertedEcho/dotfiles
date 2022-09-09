@@ -95,6 +95,9 @@ return packer.startup(function(use)
 	-- formatter
 	use("averms/black-nvim")
 
+	-- java shit
+	use({ "mfussenegger/nvim-jdtls", ft = { "java" } })
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
