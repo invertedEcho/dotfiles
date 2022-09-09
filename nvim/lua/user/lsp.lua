@@ -91,7 +91,6 @@ local on_attach = function(client, bufnr)
 			buffer = bufnr,
 			callback = function()
 				lsp_formatting(bufnr)
-				vim.cmd("Black")
 			end,
 		})
 	end
