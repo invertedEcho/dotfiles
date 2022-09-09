@@ -87,6 +87,14 @@ return packer.startup(function(use)
 		run = ":TSUpdate",
 	})
 
+	-- other misc plugins
+	use("lewis6991/gitsigns.nvim")
+	use("rcarriga/nvim-notify")
+	use("stevearc/dressing.nvim")
+
+	-- formatter
+	use("averms/black-nvim")
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end

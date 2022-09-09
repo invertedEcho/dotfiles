@@ -13,6 +13,7 @@ key("i", "<c-l>", "<right>")
 
 -- terminal
 key("n", "<leader>tt", toggleterm.toggleDefault)
+key("n", "<leader>tg", toggleterm.toggleLazygit)
 key("t", "<Esc>", "<C-\\><C-n>")
 
 -- split navigation

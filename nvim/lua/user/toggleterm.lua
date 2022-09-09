@@ -6,10 +6,10 @@ local M = {}
 toggleterm.setup({
 	shell = "fish",
 	direction = "float",
-    on_open = function(term)
-        vim.cmd("startinsert!")
-        U.make_key({ noremap = true, buffer = term.bufnr, silent = true })("n", "q", U.make_cmd("close"))
-    end,
+	on_open = function(term)
+		vim.cmd("startinsert!")
+		U.make_key({ noremap = true, buffer = term.bufnr, silent = true })("n", "q", U.make_cmd("close"))
+	end,
 	float_opts = {
 		border = "curved",
 		winblend = 1,
@@ -18,8 +18,14 @@ toggleterm.setup({
 
 local default = Terminal:new({})
 
+local lazygit = Terminal:new({ cmd = "lazygit" })
+
 M.toggleDefault = function()
 	default:toggle(1, "float")
+end
+
+M.toggleLazygit = function()
+	lazygit:toggle(1, "float")
 end
 
 return M

@@ -16,3 +16,4 @@ vim.opt.termguicolors = true
 vim.opt.splitright = true
 
 vim.cmd("colorscheme tokyonight")
+vim.cmd("let g:python3_host_prog = $HOME . '/.local/venv/nvim/bin/python'")
