@@ -2,6 +2,6 @@
 
 My dotfiles.
 
-There is a install.sh, use at your own risk.
+Installing my dotfiles is as easy as running ./install in the repos root dir.
 
-# note: nvim config requires nvim nightly
+## note: nvim config requires nvim nightly
