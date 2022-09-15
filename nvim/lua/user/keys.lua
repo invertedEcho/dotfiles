@@ -40,6 +40,9 @@ key("n", "<leader>x", U.make_cmd("BufDel"))
 -- misc
 key("n", "<c-s>", U.make_cmd("w"))
 
+-- trouble
+key("n", "<leader>tT", U.make_cmd("Trouble"))
+
 -- telescope
 key("n", "<leader>f", U.make_cmd("Telescope find_files"))
 key("n", "<c-t>", U.make_cmd("Telescope live_grep"))
