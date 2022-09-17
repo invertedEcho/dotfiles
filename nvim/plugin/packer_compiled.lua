@@ -229,7 +229,7 @@ _G.packer_plugins = {
   ["telescope-code-actions.nvim"] = {
     loaded = true,
     path = "/home/user/.local/share/nvim/site/pack/packer/start/telescope-code-actions.nvim",
-    url = "/home/user/telescope-code-actions.nvim"
+    url = "/home/user/git-repos/telescope-code-actions.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

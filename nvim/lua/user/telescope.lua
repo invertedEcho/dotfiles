@@ -21,7 +21,7 @@ require("telescope").setup({
 		-- builtin picker
 	},
 	extensions = {
-		["telescope-code-actions"] = {},
+    ["telescope-code-actions"] = {},
 		-- Your extension configuration goes here:
 		-- extension_name = {
 		--   extension_config_key = value,

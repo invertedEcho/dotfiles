@@ -79,7 +79,7 @@ return packer.startup(function(use)
 	-- telescope
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
-	use("~/telescope-code-actions.nvim")
+	use("~/git-repos/telescope-code-actions.nvim")
 
 	-- treesitter
 	use({
