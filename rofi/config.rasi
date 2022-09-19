@@ -8,7 +8,7 @@ configuration {
 	sidebar-mode: 			false;
 }
 
-@theme "/dev/null"
+//@theme "/dev/null"
 
 * {
 	bg:				#151515;
@@ -90,3 +90,5 @@ element selected {
     	background-color:               @button;
     	border-radius:                  6px;
 }
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+@theme "/usr/share/rofi/themes/DarkBlue.rasi"
