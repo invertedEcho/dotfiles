@@ -25,4 +25,4 @@
       mode: 755
     ~/.config/rofi: rofi
     ~/.config/sxhkd: sxhkd
-    ~/.xinitrc: X/.xinitrc
+    ~/.xinitrc: .xinitrc
