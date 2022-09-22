@@ -176,7 +176,13 @@ keys.globalkeys = gears.table.join(
 	end, { description = "Previous title", group = "launcher" }),
 	awful.key({}, "XF86AudioPlay", function()
 		awful.spawn("mpc toggle")
-	end, { description = "Play-Pause", group = "launcher" })
+	end, { description = "Play-Pause", group = "launcher" }),
+	awful.key({}, "XF86MonBrightnessUp", function()
+		awful.spawn("xbacklight -inc 10")
+	end, { description = "brightness up", group = "launcher" }),
+	awful.key({}, "XF86MonBrightnessDown", function()
+		awful.spawn("xbacklight -dec 10")
+	end, { description = "brightness down", group = "launcher" })
 )
 
 -- Bind all key numbers to tags.
