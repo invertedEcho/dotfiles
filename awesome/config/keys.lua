@@ -172,10 +172,10 @@ keys.globalkeys = gears.table.join(
 		awful.spawn("playerctl next")
 	end, { description = "Next title", group = "launcher" }),
 	awful.key({}, "XF86AudioPrev", function()
-		awful.spawn("mpc prev")
+		awful.spawn("playerctl previous")
 	end, { description = "Previous title", group = "launcher" }),
 	awful.key({}, "XF86AudioPlay", function()
-		awful.spawn("mpc toggle")
+		awful.spawn("playerctl play-pause")
 	end, { description = "Play-Pause", group = "launcher" }),
 	awful.key({}, "XF86MonBrightnessUp", function()
 		awful.spawn("xbacklight -inc 10")
