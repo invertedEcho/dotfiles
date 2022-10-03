@@ -9,12 +9,9 @@
     ~/.config/bspwm:
       path: bspwm
       mode: 755
-    ~/.config/fish/completions: fish/completions
-    ~/.config/fish/conf.d: fish/conf.d
-    ~/.config/fish/config.fish: fish/config.fish
-    ~/.config/fish/fish_plugins: fish/fish_plugins
-    ~/.config/fish/fish_variables: fish/fish_variables
-    ~/.config/fish/functions: fish/functions
+    ~/.config/fish:
+      path: fish
+      force: true
     ~/.config/kitty: kitty
     ~/.config/mpd: mpd
     ~/.config/nvim: nvim
