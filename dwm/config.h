@@ -1,3 +1,4 @@
+#include <X11/XF86keysym.h>
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
@@ -59,13 +60,26 @@ static const Layout layouts[] = {
 static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 static const char *powermenucmd[]  = { "rofi", "-show", "power-menu", "-modi", "power-menu:~/.local/bin/rofi-power-menu", NULL };
+static const char *lowervolume[]  = { "pulsemixer", "--change-volume", "-1", NULL };
+static const char *uppervolume[]  = { "pulsemixer", "--change-volume", "+1", NULL };
+static const char *mutevolume[]  = { "pulsemixer", "-t", NULL };
+static const char *nexttrack[] = { "playerctl", "next", NULL };
+static const char *prevtrack[] = { "playerctl", "previous", NULL };
+static const char *toggletrack[] = { "playerctl", "play-pause", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
   { MODKEY|ShiftMask,             XK_i,      spawn,          {.v = powermenucmd } },
+  { 0,                            XF86XK_AudioMute,spawn,    {.v = mutevolume } },
+  { 0,                            XF86XK_AudioLowerVolume,spawn, {.v = lowervolume } },
+  { 0,                            XF86XK_AudioRaiseVolume,spawn, {.v = uppervolume } },
+  { 0,                            XF86XK_AudioNext,spawn,    {.v = nexttrack } },
+  { 0,                            XF86XK_AudioPrev,spawn,    {.v = prevtrack } },
+  { 0,                            XF86XK_AudioPlay, spawn,    {.v = toggletrack } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY,                       XK_f,      fullscreen,     {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
@@ -74,9 +88,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	// { MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+	// { MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
