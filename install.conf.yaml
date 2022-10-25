@@ -22,5 +22,6 @@
       mode: 755
     ~/.config/rofi: rofi
     ~/.config/sxhkd: sxhkd
+    ~/.config/wezterm: wezterm
     ~/.xinitrc: .xinitrc
     ~/.Xresources: .Xresources

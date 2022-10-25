@@ -58,7 +58,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
-static const char *termcmd[]  = { "kitty", NULL };
+static const char *termcmd[]  = { "wezterm", NULL };
 static const char *powermenucmd[]  = { "rofi", "-show", "power-menu", "-modi", "power-menu:~/.local/bin/rofi-power-menu", NULL };
 static const char *lowervolume[]  = { "pulsemixer", "--change-volume", "-1", NULL };
 static const char *uppervolume[]  = { "pulsemixer", "--change-volume", "+1", NULL };
