@@ -13,9 +13,6 @@ local WORKSPACE_PATH = HOME .. "/workspace/java/"
 
 -- Only for Linux and Mac
 local SYSTEM = "linux"
-if vim.fn.has("mac") == 1 then
-	SYSTEM = "mac"
-end
 
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 local workspace_dir = WORKSPACE_PATH .. project_name

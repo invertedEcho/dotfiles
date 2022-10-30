@@ -108,7 +108,7 @@ local on_attach = function(client, bufnr)
 	key("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
 	key("n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 	key("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
-	key("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>")
+	key("n", "<space>F", "<cmd>lua vim.lsp.buf.format()<CR>")
 	key("n", "<space>dg", "<cmd>lua vim.diagnostic.goto_next()<CR>")
 end
 
