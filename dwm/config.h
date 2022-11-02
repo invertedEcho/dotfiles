@@ -6,8 +6,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "JetBrains Mono:size=12" };
+static const char dmenufont[]       = "JetBrains Mono:size=12";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -66,6 +66,8 @@ static const char *mutevolume[]  = { "pulsemixer", "-t", NULL };
 static const char *nexttrack[] = { "playerctl", "next", NULL };
 static const char *prevtrack[] = { "playerctl", "previous", NULL };
 static const char *toggletrack[] = { "playerctl", "play-pause", NULL };
+static const char *brightnessup[] = { "xbacklight", "-inc", "10", NULL };
+static const char *brightnesslower[] = { "xbacklight", "-dec", "10", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -78,6 +80,8 @@ static const Key keys[] = {
   { 0,                            XF86XK_AudioNext,spawn,    {.v = nexttrack } },
   { 0,                            XF86XK_AudioPrev,spawn,    {.v = prevtrack } },
   { 0,                            XF86XK_AudioPlay, spawn,    {.v = toggletrack } },
+  { 0,                            XF86XK_MonBrightnessUp, spawn, {.v = brightnessup } },
+  { 0,                            XF86XK_MonBrightnessDown, spawn, {.v = brightnesslower} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_f,      fullscreen,     {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
