@@ -45,8 +45,8 @@ return packer.startup(function(use)
 	use("ray-x/lsp_signature.nvim")
 
 	-- colorschemes
-	use("lunarvim/colorschemes")
 	use("folke/tokyonight.nvim")
+	use("ayu-theme/ayu-vim")
 
 	-- lsp stuff
 	use("neovim/nvim-lspconfig")
