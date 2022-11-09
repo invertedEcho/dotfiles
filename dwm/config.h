@@ -2,7 +2,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const unsigned int gappx     = 12;
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -13,7 +13,7 @@ static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#1A1B26";
+static const char col_cyan[]        = "#0F1419";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -69,12 +69,16 @@ static const char *prevtrack[] = { "playerctl", "previous", NULL };
 static const char *toggletrack[] = { "playerctl", "play-pause", NULL };
 static const char *brightnessup[] = { "xbacklight", "-inc", "10", NULL };
 static const char *brightnesslower[] = { "xbacklight", "-dec", "10", NULL };
+static const char *xkill[] = { "xkill", NULL };
+static const char *scrot[] = { "scrot", "-s", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
   { MODKEY|ShiftMask,             XK_i,      spawn,          {.v = powermenucmd } },
+  { MODKEY,                       XK_x,      spawn,          {.v = xkill } },
+  { MODKEY,                       XK_s,      spawn,          {.v = scrot } },
   { 0,                            XF86XK_AudioMute,spawn,    {.v = mutevolume } },
   { 0,                            XF86XK_AudioLowerVolume,spawn, {.v = lowervolume } },
   { 0,                            XF86XK_AudioRaiseVolume,spawn, {.v = uppervolume } },
