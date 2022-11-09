@@ -6,4 +6,4 @@ xsetroot -cursor_name left_ptr &
 dunst &
 ~/.fehbg &
 ~/git-repos/dwm-bar/dwm_bar.sh &
-exec dwm
+exec dbus-run-session dwm

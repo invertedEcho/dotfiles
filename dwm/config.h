@@ -3,6 +3,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int gappx     = 12;
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -58,7 +59,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
-static const char *termcmd[]  = { "wezterm", NULL };
+static const char *termcmd[]  = { "kitty", NULL };
 static const char *powermenucmd[]  = { "rofi", "-show", "power-menu", "-modi", "power-menu:~/.local/bin/rofi-power-menu", NULL };
 static const char *lowervolume[]  = { "pulsemixer", "--change-volume", "-1", NULL };
 static const char *uppervolume[]  = { "pulsemixer", "--change-volume", "+1", NULL };
