@@ -107,8 +107,11 @@ return packer.startup(function(use)
 	-- formatter
 	use("averms/black-nvim")
 
-	-- java shit
+	-- java
 	use({ "mfussenegger/nvim-jdtls", after = { "java" } })
+
+	-- rust
+	use({ "simrat39/rust-tools.nvim" })
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
