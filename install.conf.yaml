@@ -13,6 +13,8 @@
       path: fish
       force: true
     ~/.config/kitty: kitty
+    ~/.config/hypr: hypr
+    ~/.config/waybar: waybar
     ~/.config/mpd: mpd
     ~/.config/nvim: nvim
     ~/.config/ncmpcpp: ncmpcpp
@@ -22,6 +24,5 @@
       mode: 755
     ~/.config/rofi: rofi
     ~/.config/sxhkd: sxhkd
-    ~/.config/wezterm: wezterm
     ~/.xinitrc: .xinitrc
     ~/.Xresources: .Xresources
