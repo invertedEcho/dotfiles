@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/window"],
     "modules-center": ["wlr/workspaces"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "keyboard-state", "clock"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "backlight", "temperature", "keyboard-state", "clock"],
     // Modules configuration
     "wlr/workspaces": {
 	"format": "{icon}",
@@ -125,8 +125,8 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    "battery#bat2": {
-        "bat": "BAT2"
+    "battery#bat0": {
+        "bat": "BAT0"
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
