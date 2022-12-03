@@ -15,6 +15,7 @@
     ~/.config/kitty: kitty
     ~/.config/hypr: hypr
     ~/.config/waybar: waybar
+    ~/.config/wofi: wofi
     ~/.config/mpd: mpd
     ~/.config/nvim: nvim
     ~/.config/ncmpcpp: ncmpcpp
