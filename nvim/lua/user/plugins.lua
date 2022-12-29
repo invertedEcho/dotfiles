@@ -108,7 +108,7 @@ return packer.startup(function(use)
 	use("averms/black-nvim")
 
 	-- java
-	use({ "mfussenegger/nvim-jdtls", after = { "java" } })
+	use({ "mfussenegger/nvim-jdtls" })
 
 	-- rust
 	use({ "simrat39/rust-tools.nvim" })

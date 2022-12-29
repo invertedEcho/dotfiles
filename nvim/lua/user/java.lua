@@ -49,7 +49,6 @@ local config = {
 	},
 
 	-- on_attach = require("config.lsp").on_attach,
-	capabilities = require("config.lsp").capabilities,
 	root_dir = root_dir,
 
 	-- Here you can configure eclipse.jdt.ls specific settings
@@ -142,6 +141,3 @@ require("jdtls.setup").add_commands()
 --   ]],
 --   false
 -- )
-
-vim.bo.shiftwidth = 2
-vim.bo.tabstop = 2

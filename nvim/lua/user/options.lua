@@ -17,3 +17,4 @@ vim.opt.termguicolors = true
 vim.opt.splitright = true
 
 vim.cmd("colorscheme ayu")
+vim.cmd("autocmd FileType java setlocal shiftwidth=4 softtabstop=4 expandtab")
