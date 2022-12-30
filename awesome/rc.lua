@@ -1,57 +1,30 @@
---
---
--- ▄▄▄       █     █░▓█████   ██████  ▒█████   ███▄ ▄███▓▓█████ 
--- ▒████▄    ▓█░ █ ░█░▓█   ▀ ▒██    ▒ ▒██▒  ██▒▓██▒▀█▀ ██▒▓█   ▀ 
--- ▒██  ▀█▄  ▒█░ █ ░█ ▒███   ░ ▓██▄   ▒██░  ██▒▓██    ▓██░▒███   
--- ░██▄▄▄▄██ ░█░ █ ░█ ▒▓█  ▄   ▒   ██▒▒██   ██░▒██    ▒██ ▒▓█  ▄ 
---  ▓█   ▓██▒░░██▒██▓ ░▒████▒▒██████▒▒░ ████▓▒░▒██▒   ░██▒░▒████▒
---  ▒▒   ▓▒█░░ ▓░▒ ▒  ░░ ▒░ ░▒ ▒▓▒ ▒ ░░ ▒░▒░▒░ ░ ▒░   ░  ░░░ ▒░ ░
---   ▒   ▒▒ ░  ▒ ░ ░   ░ ░  ░░ ░▒  ░ ░  ░ ▒ ▒░ ░  ░      ░ ░ ░  ░
---   ░   ▒     ░   ░     ░   ░  ░  ░  ░ ░ ░ ▒  ░      ░      ░   
---       ░  ░    ░       ░  ░      ░      ░ ░         ░      ░  ░
---                                                               
--- 
-local awful = require("awful")
-local beautiful = require("beautiful")
+require "awful.autofocus"
+local naughty = require "naughty"
 
-require("config.errorhandling")
-
-beautiful.init(awful.util.getdir("config") .. "theme.lua")
-
--- init configs
-require("config.wallpaper")
-require("config.layout")
-require("config.rules")
-require("config.tags")
-require("config.keys")
-require("config.titlebars")
-
--- init daemons
-require("evil")
-
--- init widgets
--- require("widgets.dashboard")
-require("widgets.topbar")
-
-require("config.notifications")
-require("awful.autofocus")
-
--- {{{ Signals
--- Signal function to execute when a new client appears.
-client.connect_signal("manage", function(c)
-    -- Set the windows at the slave,
-    -- i.e. put it at the end of others instead of setting it master.
-    -- if not awesome.startup then awful.client.setslave(c) end
-
-    if awesome.startup and not c.size_hints.user_position and
-        not c.size_hints.program_position then
-        -- Prevent clients from being unreachable after screen count changes.
-        awful.placement.no_offscreen(c)
-    end
+naughty.connect_signal("request::display_error", function(message, startup)
+  naughty.notification {
+    urgency = "critical",
+    title = "Oops, an error happened" .. (startup and " during startup!" or "!"),
+    message = message,
+  }
 end)
 
--- client.connect_signal("mouse::enter", function(c)
---  c:emit_signal("request::activate", "mouse_enter", {raise = true})
--- end)
--- autorun programs
-awful.spawn.with_shell("~/.config/awesome/config/autorun.sh")
+_G.theme = "forest"
+
+require("beautiful").init(require("gears").filesystem.get_configuration_dir() .. "themes/" .. theme .. "/theme.lua")
+
+F = {}
+
+require "squeals"
+require "conf"
+
+require "ui.action"
+require "ui.bar"
+require "ui.notifs"
+require "ui.prompt.exec"
+require "ui.prompt.run"
+require "ui.start"
+require "ui.titlebar"
+require "ui.utilities.exit"
+require "ui.utilities.scr"
+require "ui.utilities.theme_switch"

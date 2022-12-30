@@ -16,5 +16,6 @@ vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.opt.termguicolors = true
 vim.opt.splitright = true
 
-vim.cmd("colorscheme ayu")
+vim.cmd("set background=dark")
+vim.cmd("colorscheme gruvbox")
 vim.cmd("autocmd FileType java setlocal shiftwidth=4 softtabstop=4 expandtab")

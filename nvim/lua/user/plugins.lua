@@ -47,6 +47,7 @@ return packer.startup(function(use)
 	-- colorschemes
 	use("folke/tokyonight.nvim")
 	use("ayu-theme/ayu-vim")
+	use({ "ellisonleao/gruvbox.nvim" })
 
 	-- lsp stuff
 	use("neovim/nvim-lspconfig")

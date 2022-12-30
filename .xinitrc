@@ -8,4 +8,4 @@ xset r rate 150 50 &
 dunst &
 ~/git-repos/dwm-bar/dwm_bar.sh &
 gnome-keyring-daemon &
-exec dbus-launch dwm
+exec dbus-launch awesome
