@@ -64,16 +64,25 @@ awful.keyboard.append_global_keybindings {
 
   -- XF86 Keys
   awful.key({}, "XF86AudioLowerVolume", function()
-    awful.spawn "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    awful.spawn "pactl set-sink-volume @DEFAULT_SINK@ -2%"
   end),
   awful.key({}, "XF86AudioRaiseVolume", function()
-    awful.spawn "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+    awful.spawn "pactl set-sink-volume @DEFAULT_SINK@ +2%"
   end),
   awful.key({}, "XF86MonBrightnessUp", function()
     awful.spawn "brightnessctl s +5%"
   end),
   awful.key({}, "XF86MonBrightnessDown", function()
     awful.spawn "brightnessctl s 5%-"
+  end),
+  awful.key({}, "XF86AudioNext", function()
+    awful.spawn "playerctl next"
+  end),
+  awful.key({}, "XF86AudioPrev", function()
+    awful.spawn "playerctl previous"
+  end),
+  awful.key({}, "XF86AudioPlay", function()
+    awful.spawn "playerctl play-pause"
   end),
 
   -- Scratch
