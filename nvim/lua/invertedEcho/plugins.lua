@@ -41,12 +41,6 @@ return packer.startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    use {
-        'https://github.com/morhetz/gruvbox',
-        config = function()
-            vim.cmd('colorscheme gruvbox')
-        end
-    }
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
@@ -88,4 +82,5 @@ return packer.startup(function(use)
             require("trouble").setup {}
         end }
     use { 'ojroques/nvim-bufdel' }
+    use 'bluz71/vim-moonfly-colors'
 end)
