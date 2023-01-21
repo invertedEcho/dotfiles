@@ -8,4 +8,6 @@ xset r rate 150 50 &
 dunst &
 ~/git-repos/dwm-bar/dwm_bar.sh &
 gnome-keyring-daemon &
+lxpolkit &
+~/.fehbg &
 exec dbus-launch awesome
