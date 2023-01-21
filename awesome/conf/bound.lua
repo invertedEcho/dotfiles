@@ -42,7 +42,7 @@ awful.keyboard.append_global_keybindings {
     awful.spawn "kitty -e nvim"
   end),
   awful.key({ modkey, "Shift" }, "l", function()
-    awful.spawn "xsecurelock"
+    awful.spawn "betterlockscreen -l"
   end),
 }
 
