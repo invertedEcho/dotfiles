@@ -83,4 +83,13 @@ return packer.startup(function(use)
         end }
     use { 'ojroques/nvim-bufdel' }
     use 'bluz71/vim-moonfly-colors'
+    use {
+        'kosayoda/nvim-lightbulb',
+        requires = 'antoinemadec/FixCursorHold.nvim',
+    }
+    use 'j-hui/fidget.nvim'
+
+    use {'stevearc/dressing.nvim'}
+    use 'lewis6991/impatient.nvim'
+    use 'rcarriga/nvim-notify'
 end)
