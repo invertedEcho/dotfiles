@@ -87,6 +87,12 @@ return packer.startup(function(use)
         'kosayoda/nvim-lightbulb',
         requires = 'antoinemadec/FixCursorHold.nvim',
     }
+    use {
+        'https://github.com/morhetz/gruvbox',
+        config = function()
+            vim.cmd('colorscheme gruvbox')
+        end
+    }
     use 'j-hui/fidget.nvim'
 
     use {'stevearc/dressing.nvim'}
