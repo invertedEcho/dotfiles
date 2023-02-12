@@ -95,7 +95,15 @@ return packer.startup(function(use)
     }
     use 'j-hui/fidget.nvim'
 
-    use {'stevearc/dressing.nvim'}
+    use { 'stevearc/dressing.nvim' }
     use 'lewis6991/impatient.nvim'
     use 'rcarriga/nvim-notify'
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function() require("gitsigns").setup {} end
+    }
 end)
