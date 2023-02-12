@@ -7,4 +7,4 @@ dunst &
 gnome-keyring-daemon &
 lxpolkit &
 ~/.fehbg &
-exec dbus-launch awesome
+exec dbus-launch bspwm
