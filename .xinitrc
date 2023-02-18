@@ -2,6 +2,7 @@
 export _JAVA_AWT_WM_NONREPARENTING=1
 export JAVA_HOME=/usr/lib/jvm/default
 
+xsetroot -xcf /usr/share/icons/Adwaita/cursors/left_ptr 20
 xset r rate 150 50 &
 dunst &
 gnome-keyring-daemon &
