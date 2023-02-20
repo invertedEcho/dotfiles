@@ -8,4 +8,4 @@ dunst &
 gnome-keyring-daemon &
 lxpolkit &
 ~/.fehbg &
-exec dbus-launch bspwm
+exec dbus-launch i3
