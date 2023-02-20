@@ -5,25 +5,13 @@
 - clean: ["~"]
 
 - link:
-    ~/.config/awesome: awesome
-    ~/.config/bspwm:
-      path: bspwm
-      mode: 755
-    ~/.config/fish:
-      path: fish
-      force: true
     ~/.config/kitty: kitty
     ~/.config/hypr: hypr
     ~/.config/waybar: waybar
-    ~/.config/wofi: wofi
     ~/.config/mpd: mpd
     ~/.config/nvim: nvim
     ~/.config/ncmpcpp: ncmpcpp
     ~/.config/paru: paru
-    ~/.config/polybar:
-      path: polybar
-      mode: 755
-    ~/.config/rofi: rofi
-    ~/.config/sxhkd: sxhkd
+    ~/.config/i3: i3
     ~/.xinitrc: .xinitrc
     ~/.Xresources: .Xresources
