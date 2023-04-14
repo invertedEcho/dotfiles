@@ -18,3 +18,4 @@
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/fish_plugins: fish/fish_plugins
     ~/.config/fish/conf.d: fish/conf.d
+    ~/.local/bin/monitor.sh: scripts/monitor.sh
