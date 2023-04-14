@@ -171,3 +171,4 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
+bindsym $mod+x exec --no-startup-id xrandr --auto && ~/.fehbg && notify-send "Automatically setting monitors"
