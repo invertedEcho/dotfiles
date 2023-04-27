@@ -41,7 +41,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+q kill
 
 # rofi
-bindsym $mod+space exec --no-startup-id rofi -show drun -font "JetBrains Mono 12"
+bindsym $mod+d exec --no-startup-id rofi -show drun -font "JetBrains Mono 12"
 bindsym $mod+w exec --no-startup-id rofi -show window
 
 bindsym $mod+a exec --no-startup-id arandr
