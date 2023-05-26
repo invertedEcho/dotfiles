@@ -34,72 +34,80 @@ packer.init({
 
 return packer.startup(function(use)
     -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
+    use("wbthomason/packer.nvim")
 
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        requires = { { 'nvim-lua/plenary.nvim' } }
-    }
+    use({
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.1",
+        requires = { { "nvim-lua/plenary.nvim" } },
+    })
 
-    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-    use('theprimeagen/harpoon')
-    use('mbbill/undotree')
+    use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+    use("theprimeagen/harpoon")
+    use("mbbill/undotree")
     use("ray-x/lsp_signature.nvim")
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v1.x',
+    use({
+        "VonHeikemen/lsp-zero.nvim",
+        branch = "v1.x",
         requires = {
             -- LSP Support
-            { 'neovim/nvim-lspconfig' },             -- Required
-            { 'williamboman/mason.nvim' },           -- Optional
-            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+            { "neovim/nvim-lspconfig" },    -- Required
+            { "williamboman/mason.nvim" },  -- Optional
+            { "williamboman/mason-lspconfig.nvim" }, -- Optional
 
             -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },         -- Required
-            { 'hrsh7th/cmp-nvim-lsp' },     -- Required
-            { 'hrsh7th/cmp-buffer' },       -- Optional
-            { 'hrsh7th/cmp-path' },         -- Optional
-            { 'saadparwaiz1/cmp_luasnip' }, -- Optional
-            { 'hrsh7th/cmp-nvim-lua' },     -- Optional
+            { "hrsh7th/nvim-cmp" }, -- Required
+            { "hrsh7th/cmp-nvim-lsp" }, -- Required
+            { "hrsh7th/cmp-buffer" }, -- Optional
+            { "hrsh7th/cmp-path" }, -- Optional
+            { "saadparwaiz1/cmp_luasnip" }, -- Optional
+            { "hrsh7th/cmp-nvim-lua" }, -- Optional
 
             -- Snippets
-            { 'L3MON4D3/LuaSnip' },             -- Required
-            { 'rafamadriz/friendly-snippets' }, -- Optional
-        }
-    }
-    use("akinsho/toggleterm.nvim")
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+            { "L3MON4D3/LuaSnip" },    -- Required
+            { "rafamadriz/friendly-snippets" }, -- Optional
         },
-        tag = 'nightly'                    -- optional, updated every week. (see issue #1193)
-    }
-    use 'feline-nvim/feline.nvim'
-    use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
-    use { 'folke/trouble.nvim',
+    })
+    use("akinsho/toggleterm.nvim")
+    use({
+        "nvim-tree/nvim-tree.lua",
+        requires = {
+            "nvim-tree/nvim-web-devicons", -- optional, for file icons
+        },
+        tag = "nightly",          -- optional, updated every week. (see issue #1193)
+    })
+    use("feline-nvim/feline.nvim")
+    use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
+    use({
+        "folke/trouble.nvim",
         config = function()
-            require("trouble").setup {}
-        end }
-    use { 'ojroques/nvim-bufdel' }
-    use 'bluz71/vim-moonfly-colors'
-    use {
-        'kosayoda/nvim-lightbulb',
-        requires = 'antoinemadec/FixCursorHold.nvim',
-    }
-    use 'navarasu/onedark.nvim'
-    use 'j-hui/fidget.nvim'
+            require("trouble").setup({})
+        end,
+    })
+    use({ "ojroques/nvim-bufdel" })
+    use("bluz71/vim-moonfly-colors")
+    use({
+        "kosayoda/nvim-lightbulb",
+        requires = "antoinemadec/FixCursorHold.nvim",
+    })
+    use("navarasu/onedark.nvim")
+    use("j-hui/fidget.nvim")
 
-    use { 'stevearc/dressing.nvim' }
-    use 'lewis6991/impatient.nvim'
-    use 'rcarriga/nvim-notify'
-    use {
+    use({ "stevearc/dressing.nvim" })
+    use("lewis6991/impatient.nvim")
+    use("rcarriga/nvim-notify")
+    use({
         "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
-    }
-    use {
-        'lewis6991/gitsigns.nvim',
-        config = function() require("gitsigns").setup {} end
-    }
-    use "rebelot/kanagawa.nvim"
+        config = function()
+            require("nvim-autopairs").setup({})
+        end,
+    })
+    use({
+        "lewis6991/gitsigns.nvim",
+        config = function()
+            require("gitsigns").setup({})
+        end,
+    })
+    use("rebelot/kanagawa.nvim")
+    use("sbdchd/neoformat")
 end)
