@@ -13,6 +13,7 @@
     ~/.config/ncmpcpp: ncmpcpp
     ~/.config/paru: paru
     ~/.config/i3: i3
+    ~/.config/wezterm: wezterm
     ~/.xinitrc: .xinitrc
     ~/.Xresources: .Xresources
     ~/.config/fish/config.fish: fish/config.fish
