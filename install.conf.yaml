@@ -19,4 +19,5 @@
     ~/.config/fish/fish_plugins: fish/fish_plugins
     ~/.config/fish/conf.d: fish/conf.d
     ~/.local/bin/monitor.sh: scripts/monitor.sh
-    ~/.local/bin/night_mode.sh: scripts/night_mode.sh
+    ~/.local/bin/night-mode.sh: scripts/night-mode.sh
+    ~/.local/bin/toggle-bar.sh: scripts/toggle-bar.sh
