@@ -1,5 +1,11 @@
-local builtin = require('telescope.builtin')
+local M = {}
 
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<C-t>', builtin.live_grep, {})
-vim.keymap.set('n', '<C-y>', builtin.resume, {})
+M.setup = function()
+  local telescope = require('telescope')
+
+  telescope.setup({})
+
+  require('nyarthan.keymaps').telescope()
+end
+
+return M

@@ -1,113 +1,93 @@
-local install_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-    PACKER_BOOTSTRAP = vim.fn.system({
-        "git",
-        "clone",
-        "--depth",
-        "1",
-        "https://github.com/wbthomason/packer.nvim",
-        install_path,
-    })
-    print("Installing packer close and reopen Neovim...")
-    vim.cmd([[packadd packer.nvim]])
-end
-
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]])
-
-local status_ok, packer = pcall(require, "packer")
-if not status_ok then
-    return
-end
-
-packer.init({
-    display = {
-        open_fn = function()
-            return require("packer.util").float({ border = "rounded" })
-        end,
+local M = {
+  'folke/lazy.nvim',
+  'nvim-lua/plenary.nvim',
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    lazy = false,
+    priority = 1000,
+    config = require('invertedEcho.colorscheme').setup,
+  },
+  {
+    'nvim-tree/nvim-tree.lua',
+    lazy = false,
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = require('invertedEcho.nvim_tree').setup,
+  },
+  {
+    'hrsh7th/nvim-cmp',
+    config = require('invertedEcho.cmp').setup,
+    event = 'BufEnter',
+    dependencies = {
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-nvim-lua',
+      'hrsh7th/cmp-cmdline',
+      'L3MON4D3/LuaSnip',
+      'saadparwaiz1/cmp_luasnip',
+      'onsails/lspkind.nvim',
     },
-})
+  },
+  { 'williamboman/mason.nvim', config = true, cmd = 'Mason' },
+  { 'williamboman/mason-lspconfig.nvim', config = true, event = 'BufEnter' },
+  {
+    'neovim/nvim-lspconfig',
+    event = 'BufEnter',
+    config = require('invertedEcho.lsp').setup,
+  },
+  {
+    'nvim-treesitter/nvim-treesitter',
+    build = 'TSUpdate',
+    config = require('invertedEcho.treesitter').setup,
+    event = 'BufEnter',
+  },
+  { 'JoosepAlviste/nvim-ts-context-commentstring', event = 'BufEnter' },
+  {
+    'nvim-telescope/telescope.nvim',
+    cmd = 'Telescope',
+    config = require('invertedEcho.telescope').setup,
+    keys = '<leader>t',
+  },
+  {
+    'mhartington/formatter.nvim',
+    event = 'BufEnter',
+    config = require('invertedEcho.formatter').setup,
+  },
+  {
+    'numToStr/FTerm.nvim',
+    keys = '<c-\\>',
+    config = require('invertedEcho.terminal').setup,
+  },
+  {
+    'windwp/nvim-autopairs',
+    event = 'BufEnter',
+    config = true,
+  },
+  {
+    'lewis6991/gitsigns.nvim',
+    event = 'BufEnter',
+    config = true,
+  },
+  {
+    'numToStr/Comment.nvim',
+    config = require('invertedEcho.comment').setup,
+    event = 'BufEnter',
+  },
+  'b0o/SchemaStore.nvim',
+  {
+    'folke/trouble.nvim',
+    event = 'BufEnter',
+  },
+  {
+    'jose-elias-alvarez/typescript.nvim',
+    event = 'BufEnter',
+  },
+    {
+    'nathom/filetype.nvim',
+    lazy = false,
+    config = require('invertedEcho.filetype').setup,
+  },
+}
 
-return packer.startup(function(use)
-    -- Packer can manage itself
-    use("wbthomason/packer.nvim")
-
-    use({
-        "nvim-telescope/telescope.nvim",
-        tag = "0.1.1",
-        requires = { { "nvim-lua/plenary.nvim" } },
-    })
-
-    use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
-    use("theprimeagen/harpoon")
-    use("mbbill/undotree")
-    use("ray-x/lsp_signature.nvim")
-    use({
-        "VonHeikemen/lsp-zero.nvim",
-        branch = "v1.x",
-        requires = {
-            -- LSP Support
-            { "neovim/nvim-lspconfig" },    -- Required
-            { "williamboman/mason.nvim" },  -- Optional
-            { "williamboman/mason-lspconfig.nvim" }, -- Optional
-
-            -- Autocompletion
-            { "hrsh7th/nvim-cmp" }, -- Required
-            { "hrsh7th/cmp-nvim-lsp" }, -- Required
-            { "hrsh7th/cmp-buffer" }, -- Optional
-            { "hrsh7th/cmp-path" }, -- Optional
-            { "saadparwaiz1/cmp_luasnip" }, -- Optional
-            { "hrsh7th/cmp-nvim-lua" }, -- Optional
-
-            -- Snippets
-            { "L3MON4D3/LuaSnip" },    -- Required
-            { "rafamadriz/friendly-snippets" }, -- Optional
-        },
-    })
-    use("akinsho/toggleterm.nvim")
-    use({
-        "nvim-tree/nvim-tree.lua",
-        requires = {
-            "nvim-tree/nvim-web-devicons", -- optional, for file icons
-        },
-        tag = "nightly",          -- optional, updated every week. (see issue #1193)
-    })
-    use("feline-nvim/feline.nvim")
-    use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
-    use({
-        "folke/trouble.nvim",
-        config = function()
-            require("trouble").setup({})
-        end,
-    })
-    use({ "ojroques/nvim-bufdel" })
-    use("bluz71/vim-moonfly-colors")
-    use({
-        "kosayoda/nvim-lightbulb",
-        requires = "antoinemadec/FixCursorHold.nvim",
-    })
-    use("navarasu/onedark.nvim")
-    use("j-hui/fidget.nvim")
-
-    use({ "stevearc/dressing.nvim" })
-    use("lewis6991/impatient.nvim")
-    use("rcarriga/nvim-notify")
-    use({
-        "windwp/nvim-autopairs",
-        config = function()
-            require("nvim-autopairs").setup({})
-        end,
-    })
-    use({
-        "lewis6991/gitsigns.nvim",
-        config = function()
-            require("gitsigns").setup({})
-        end,
-    })
-    use("rebelot/kanagawa.nvim")
-    use("sbdchd/neoformat")
-end)
+return M
