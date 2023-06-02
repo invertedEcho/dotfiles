@@ -5,7 +5,7 @@ M.setup = function()
     border = 'single',
   })
 
-  require('nyarthan.keymaps').terminal()
+  require('invertedEcho.keymaps').terminal()
 end
 
 return M

@@ -5,7 +5,7 @@ M.setup = function()
 
   telescope.setup({})
 
-  require('nyarthan.keymaps').telescope()
+  require('invertedEcho.keymaps').telescope()
 end
 
 return M
