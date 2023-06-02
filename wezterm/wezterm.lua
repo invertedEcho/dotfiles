@@ -4,7 +4,7 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "tokyonight"
 config.enable_tab_bar = false
 config.show_new_tab_button_in_tab_bar = false
 config.default_cursor_style = "BlinkingUnderline"
