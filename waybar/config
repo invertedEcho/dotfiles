@@ -65,5 +65,13 @@
             "default": ["", ""]
         },
         "on-click": "pavucontrol"
-    }
+    },
+    "custom/spotify": {
+        "exec": "/usr/bin/python3 /home/user/otherstuff/mediaplayer.py --player spotify",
+        "format": "{}  ",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    },
 }
