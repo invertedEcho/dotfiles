@@ -47,7 +47,6 @@ M.setup = function()
       },
     },
     renderer = {
-      root_folder_label = false,
       add_trailing = false,
       group_empty = false,
       full_name = true,
