@@ -1,15 +1,11 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar at the bottom of your screen
-    "height": 24, // Waybar height
-    "width": 1366, // Waybar width
-    // Choose the order of the modules
-    "modules-left": ["wlr/workspaces", "custom/spotify"],
+    "layer": "top",
+    "height": 25,
+    "modules-left": ["wlr/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "backlight", "battery", "clock"],
     "wlr/workspaces": {
         "disable-scroll": true,
-        "all-outputs": false,
         "format": "{icon}",
         "format-icons": {
             "1": "",
@@ -20,60 +16,67 @@
             "6": "",
             "7": "",
             "urgent": "",
-        },
+        }
     },
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
     },
     "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
-    "cpu": {
-        "format": "{usage}% "
-    },
-    "memory": {
-        "format": "{}% "
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""]
     },
     "battery": {
         "bat": "BAT0",
         "states": {
-            "good": 95,
+            // "good": 95,
             "warning": 30,
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "",
+        "format-full": "100% ",
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-disconnected": "Disconnected ⚠"
+    	"format": "{ifname}",
+	    "format-ethernet": "{ifname} ",
+        "format-wifi": "{essid} ",
+        "format-linked": "{ifname} (No IP) ",
+       	"format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        //"scroll-step": 1,
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-muted": "",
+        "scroll-step": 0,
+        "format": "{icon} {volume}    {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}",
+        "format-source-muted": "",
         "format-icons": {
-            "headphones": "",
-            "handsfree": "",
+            "headphone": "",
+            "hands-free": "",
             "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", ""]
+            "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
-    },
-    "custom/spotify": {
-        "exec": "/usr/bin/python3 /home/user/otherstuff/mediaplayer.py --player spotify",
-        "format": "{}  ",
-        "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous"
     },
 }

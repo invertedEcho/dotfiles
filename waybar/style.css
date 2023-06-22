@@ -1,101 +1,141 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "Ubuntu Nerd Font";
-    font-size: 13px;
+    font-family: JetBrains Mono;
+    font-size: 14px;
     min-height: 0;
+    margin: 0 0px;
 }
 
 window#waybar {
-    background: transparent;
-    color: white;
+    background-color: #3c3836;
+    border-bottom: none;
+    color: #d1d8dd;
+    transition-property: background-color;
+    transition-duration: 0.5s;
 }
 
-#window {
-    font-weight: bold;
-    font-family: "Ubuntu";
+window#waybar.hidden {
+    opacity: 0.2;
 }
-/*
-#workspaces {
-    padding: 0 5px;
-}
-*/
 
 #workspaces button {
     padding: 0 5px;
-    background: transparent;
-    color: white;
-    border-top: 2px solid transparent;
+    color: #d1d8dd;
+    border-radius: 5px;
 }
 
-#workspaces button.active {
-    color: #c9545d;
-    border-top: 3px solid #c9545d;
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inherit;
+    border-bottom: none;
+    border-radius: 5px;
+}
+
+#workspaces button.focused {
+    background-color: #d1d8dd;
+    color: #131512;
+    border-bottom: none;
+    border-radius: 5px;
+}
+
+#workspaces button.urgent {
+    background-color: #738E9B;
 }
 
 #mode {
-    background: #64727D;
-    border-bottom: 3px solid white;
+    background-color: #96A9B5;
+    border-bottom: 3px solid #d1d8dd;
 }
 
-#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
-    padding: 0 3px;
-    margin: 0 2px;
+#clock,
+#battery,
+#backlight,
+#network,
+#pulseaudio,
+#mode,
+#idle_inhibitor,
+#mpd {
+    padding: 0 14px;
+    margin: 0 0px;
+    color: #d1d8dd;
 }
 
 #clock {
-    font-weight: bold;
+    color: #131512;
+    background-color: #d1d8dd;
 }
 
 #battery {
-}
-
-#battery icon {
-    color: red;
+    background-color: #d1d8dd;
+    color: #131512;
 }
 
 #battery.charging {
+    color: #131512;
+    background-color: #d1d8dd;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: black;
+        background-color: #d1d8dd;
+        color: #131512;
     }
 }
 
-#battery.warning:not(.charging) {
-    color: white;
+#battery.critical:not(.charging) {
+    background-color: #131512;
+    color: #131512;
     animation-name: blink;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
-#cpu {
+label:focus {
+    background-color: #131512;
 }
 
-#memory {
+#backlight {
+    background-color: #d1d8dd;
+    color: #131512;
 }
 
 #network {
+    background-color: #d1d8dd;
+    color: #131512;
 }
 
 #network.disconnected {
-    background: #f53c3c;
+    background-color: #d1d8dd;
 }
 
 #pulseaudio {
+    background-color: #d1d8dd;
+    color: #131512;
+    border-radius: 5px 0px 0px 5px;
 }
 
 #pulseaudio.muted {
+    background-color: #d1d8dd;
+    color: #131512;
 }
 
-#custom-spotify {
-    color: rgb(102, 220, 105);
+#idle_inhibitor {
+    background-color: rgba(0, 0, 0, 0);
+    color: #d1d8dd;
+    border-radius: 5px;
+    margin-right: 2px;
+    margin-left: 3px;
 }
 
-#tray {
+#idle_inhibitor.activated {
+    background-color: #d1d8dd;
+    color: #131512;
+    border-radius: 5px;
+    margin-right: 2px;
+    margin-left: 5px;
 }
 
