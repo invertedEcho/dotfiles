@@ -83,11 +83,12 @@ local M = {
     'jose-elias-alvarez/typescript.nvim',
     event = 'BufEnter',
   },
-    {
+  {
     'nathom/filetype.nvim',
     lazy = false,
     config = require('invertedEcho.filetype').setup,
   },
+  { 'akinsho/bufferline.nvim' },
 }
 
 return M
