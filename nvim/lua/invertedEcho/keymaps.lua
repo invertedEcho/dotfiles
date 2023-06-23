@@ -29,6 +29,10 @@ M.setup = function()
 
   -- utilities
   key('n', '<leader>rr', U.make_cmd('luafile %'))
+  key('n', '<tab>', U.make_cmd('BufferLineCycleNext'))
+  key('n', '<s-tab>', U.make_cmd('BufferLineCyclePrev'))
+  key('n', '<s-t>', U.make_cmd('tabnew'))
+  key('n', '<leader>x', U.make_cmd('BufDel'))
 end
 
 M.lsp = function(bufnr)
