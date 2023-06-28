@@ -32,7 +32,7 @@ M.setup = function()
   key('n', '<tab>', U.make_cmd('BufferLineCycleNext'))
   key('n', '<s-tab>', U.make_cmd('BufferLineCyclePrev'))
   key('n', '<s-t>', U.make_cmd('tabnew'))
-  key('n', '<leader>x', U.make_cmd('BufDel'))
+  key('n', '<leader>x', U.make_cmd('bd'))
 end
 
 M.lsp = function(bufnr)
