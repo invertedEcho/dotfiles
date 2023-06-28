@@ -33,7 +33,7 @@ window#waybar.hidden {
     border-radius: 5px;
 }
 
-#workspaces button.focused {
+#workspaces button.active {
     background-color: #d1d8dd;
     color: #131512;
     border-bottom: none;
@@ -49,6 +49,8 @@ window#waybar.hidden {
     border-bottom: 3px solid #d1d8dd;
 }
 
+#memory,
+#cpu,
 #clock,
 #battery,
 #backlight,

@@ -3,30 +3,31 @@
     "height": 25,
     "modules-left": ["wlr/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "backlight", "battery", "clock"],
+    "modules-right": ["pulseaudio", "network", "backlight", "battery", "clock", "cpu", "memory"],
     "wlr/workspaces": {
+        "active-only": false,
+        "on-click": "activate",
         "disable-scroll": true,
         "format": "{icon}",
         "format-icons": {
-            "1": "",
-            "2": "󰈹",
-            "3": "",
-            "4": "",
-            "5": "󰙯",
-            "6": "",
-            "7": "",
+            "1": "1 ",
+            "2": "2 󰈹",
+            "3": "3 ",
+            "4": "4 ",
+            "5": "5 󰙯",
+            "6": "6 ",
+            "7": "7 ",
+            "8": "8 ",
+            "9": "9 󱞁",
             "urgent": "",
         }
     },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
     },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
+    "memory": {
+        "format": "{}% "
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
