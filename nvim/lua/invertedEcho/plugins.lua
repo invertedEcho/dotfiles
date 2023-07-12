@@ -89,6 +89,7 @@ local M = {
     config = require('invertedEcho.filetype').setup,
   },
   { 'akinsho/bufferline.nvim' },
+  { 'rose-pine/neovim' },
 }
 
 return M
