@@ -2,7 +2,7 @@
     "layer": "top",
     "height": 25,
     "modules-left": ["wlr/workspaces"],
-    "modules-center": ["hyprland/window"],
+    "modules-center": [],
     "modules-right": ["pulseaudio", "network", "backlight", "battery", "clock", "cpu", "memory"],
     "wlr/workspaces": {
         "active-only": false,
