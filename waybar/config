@@ -1,83 +1,70 @@
 {
-    "layer": "top",
-    "height": 25,
-    "modules-left": ["wlr/workspaces"],
-    "modules-center": [],
-    "modules-right": ["pulseaudio", "network", "backlight", "battery", "clock", "cpu", "memory"],
-    "wlr/workspaces": {
-        "active-only": false,
-        "on-click": "activate",
-        "disable-scroll": true,
-        "format": "{icon}",
-        "format-icons": {
-            "1": "1 ",
-            "2": "2 󰈹",
-            "3": "3 ",
-            "4": "4 ",
-            "5": "5 󰙯",
-            "6": "6 ",
-            "7": "7 ",
-            "8": "8 ",
-            "9": "9 󱞁",
-            "urgent": "",
-        }
+  "layer": "bottom",
+  "modules-left": ["wlr/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right" : ["cpu", "memory", "pulseaudio", "battery", "tray"],
+  "hyprland/window" : {
+    "format" : "{}",
+    "separate-outputs" : true,
+  },
+  "wlr/workspaces" : {
+    "active-only" : false,
+    "all-outputs" : true,
+    "format" : "{icon}",
+    "on-click" : "activate",
+    "on-scroll-up" : "hyprctl dispatch workspace e+1",
+    "on-scroll-down" : "hyprctl dispatch workspace e-1",
+    "format-icons": {
+        "1": "1 ",
+        "2": "2 󰈹",
+        "3": "3 ",
+        "4": "4 ",
+        "5": "5 󰙯",
+        "6": "6 ",
+        "7": "7 ",
+        "8": "8 ",
+        "9": "9 󱞁",
+        "urgent": "",
+    }
+  },
+  "wireplumber" : {
+    "tooltip" : false,
+    "format" : "VOL {volume}%",
+    "format-muted" : "VOL mute",
+  },
+  "pulseaudio" : {
+    "tooltip" : false,
+    "scroll-step" : 5,
+    "on-click" : "",
+    "format" : "VOL {volume}%",
+    "format-muted" : "VOL mute",
+  },
+  "battery" : {
+    "format" : "BAT {capacity}%  ",
+    "on-click" : "",
+    "states" : {
+      "warning" : 30,
+      "critical" : 15,
     },
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "{}% "
-    },
-    "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-    },
-    "backlight": {
-        "format": "{percent}% {icon}",
-        "format-icons": ["", ""]
-    },
-    "battery": {
-        "bat": "BAT0",
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "",
-        "format-full": "100% ",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "network": {
-    	"format": "{ifname}",
-	    "format-ethernet": "{ifname} ",
-        "format-wifi": "{essid} ",
-        "format-linked": "{ifname} (No IP) ",
-       	"format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "tooltip-format": "{ifname}: {ipaddr}/{cidr}"
-    },
-    "pulseaudio": {
-        "scroll-step": 0,
-        "format": "{icon} {volume}    {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": " {volume}",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-    },
+  },
+  "clock" : {
+    "interval" : 1,
+    "format" : "{:%a %d %b %H:%M:%S}",
+    "format-alt" : "{:%H:%M}",
+    "locale" : "fr_FR.UTF-8",
+    "timezone" : "Europe/Paris",
+  },
+  "cpu" : {
+    "format" : "CPU {usage}%",
+    "on-click" : "",
+    "tooltip" : false,
+  },
+  "memory" : {
+    "on-click" : "",
+    "format" : "RAM {}%",
+  },
+  "tray" : {
+    "icon-size" : 21,
+    "spacing" : 10,
+  },
 }

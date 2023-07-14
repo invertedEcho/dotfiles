@@ -1,143 +1,206 @@
+@import "/home/user/.cache/wal/colors-waybar.css";
+
 * {
-    border: none;
-    border-radius: 0;
-    font-family: JetBrains Mono;
-    font-size: 14px;
-    min-height: 0;
-    margin: 0 0px;
+	border: none;
+	border-radius: 0;
+	font-family: "Iosevka Nerd Font";
+    font-style: normal;
+    font-weight: bold;
+	font-size: 14px;
+	min-height: 28px;
 }
 
 window#waybar {
-    background-color: #0f1419;
-    border-bottom: none;
-    color: #d1d8dd;
-    transition-property: background-color;
-    transition-duration: 0.5s;
+	background: transparent;
 }
 
-window#waybar.hidden {
-    opacity: 0.2;
+window#waybar.empty #window {
+	background: transparent;
 }
 
-#workspaces button {
-    padding: 0 5px;
-    color: #d1d8dd;
-    border-radius: 5px;
+#window {
+    margin-top: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 6px;
+    transition: none;
+    color: @foreground;
+    background: @background;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: inherit;
-    border-bottom: none;
-    border-radius: 5px;
-}
-
-#workspaces button.active {
-    background-color: #d1d8dd;
-    color: #131512;
-    border-bottom: none;
-    border-radius: 5px;
-}
-
-#workspaces button.urgent {
-    background-color: #738E9B;
+window#waybar.alacritty #window,
+window#waybar.Firefox #window,
+window#waybar.Nextcloud #window,
+window#waybar.keepassxc #window,
+window#waybar.libreoffice #window,
+window#waybar.mpv #window,
+window#waybar.Navigator #window,
+window#waybar.qutebrowser #window {
+    color: @foreground;
+    background: @background;
 }
 
 #mode {
-    background-color: #96A9B5;
-    border-bottom: 3px solid #d1d8dd;
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-bottom: 0;
+    border-radius: 6px;
+    color: @foreground;
+    background: @background;
+    transition: none;
 }
 
-#memory,
-#cpu,
-#clock,
-#battery,
-#backlight,
-#network,
-#pulseaudio,
-#mode,
-#idle_inhibitor,
+#workspaces {
+    margin-top: 8px;
+    margin-left: 12px;
+    margin-right: 8px;
+    margin-bottom: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 6px;
+    color: @foreground;
+    background: @background;
+    transition: none;
+}
+
+#workspaces button {
+    transition: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #828282;
+    background: transparent;
+    font-size: 12px;
+}
+
+#workspaces button.focused {
+    color: @foreground;
+}
+
+#workspaces button.active {
+    color: @foreground;
+}
+
+#workspaces button:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    color: #cccccc;
+}
+
 #mpd {
-    padding: 0 14px;
-    margin: 0 0px;
-    color: #d1d8dd;
+    margin-top: 8px;
+    margin-left: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 0;
+    border-radius: 6px;
+    color: @foreground;
+    background: @background;
+    transition: none;
 }
 
-#clock {
-    color: #131512;
-    background-color: #d1d8dd;
-}
-
-#battery {
-    background-color: #d1d8dd;
-    color: #131512;
-}
-
-#battery.charging {
-    color: #131512;
-    background-color: #d1d8dd;
-}
-
-@keyframes blink {
-    to {
-        background-color: #d1d8dd;
-        color: #131512;
-    }
-}
-
-#battery.critical:not(.charging) {
-    background-color: #131512;
-    color: #131512;
-    animation-name: blink;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-label:focus {
-    background-color: #131512;
-}
-
-#backlight {
-    background-color: #d1d8dd;
-    color: #131512;
+#mpd.disconnected,
+#mpd.stopped {
+    color: @foreground;
+    background: @background;
 }
 
 #network {
-    background-color: #d1d8dd;
-    color: #131512;
-}
-
-#network.disconnected {
-    background-color: #d1d8dd;
+    margin-top: 8px;
+    margin-left: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 0;
+    border-radius: 6px;
+    transition: none;
+    color: @foreground;
+    background: @background;
 }
 
 #pulseaudio {
-    background-color: #d1d8dd;
-    color: #131512;
-    border-radius: 5px 0px 0px 5px;
+    margin-top: 8px;
+    margin-left: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 0;
+    border-radius: 6px;
+    transition: none;
+    color: @foreground;
+    background: @background;
 }
 
-#pulseaudio.muted {
-    background-color: #d1d8dd;
-    color: #131512;
+#temperature {
+    margin-top: 8px;
+    margin-left: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 0;
+    border-radius: 6px;
+    transition: none;
+    color: @foreground;
+    background: @background;
 }
 
-#idle_inhibitor {
-    background-color: rgba(0, 0, 0, 0);
-    color: #d1d8dd;
-    border-radius: 5px;
-    margin-right: 2px;
-    margin-left: 3px;
+#cpu {
+    margin-top: 8px;
+    margin-left: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 0;
+    border-radius: 6px;
+    transition: none;
+    color: @foreground;
+    background: @background;
 }
 
-#idle_inhibitor.activated {
-    background-color: #d1d8dd;
-    color: #131512;
-    border-radius: 5px;
-    margin-right: 2px;
-    margin-left: 5px;
+#memory {
+    margin-top: 8px;
+    margin-left: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 0;
+    border-radius: 6px;
+    transition: none;
+    color: @foreground;
+    background: @background;
 }
 
+#clock {
+    margin-top: 8px;
+    margin-left: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 0;
+    border-radius: 6px;
+    transition: none;
+    color: @foreground;
+    background: @background;
+}
+
+#tray {
+    margin-top: 8px;
+    margin-left: -4px;
+    margin-right: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 0;
+    border-radius: 6px;
+    transition: none;
+    color: @foreground;
+    background: @background;
+}
+
+#battery {
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-right: 12px;
+    padding-left: 16px;
+    margin-bottom: 0;
+    border-radius: 6px;
+    transition: none;
+    color: @foreground;
+    background: @background;
+}
+
+#battery.warning { color: orange; }
+#battery.critical { color: orange; }
