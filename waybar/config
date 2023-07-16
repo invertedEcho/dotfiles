@@ -40,7 +40,10 @@
     "format-muted" : "VOL mute",
   },
   "battery" : {
-    "format" : "BAT {capacity}%  ",
+    "interval" : 3,
+    "format" : "BAT {capacity}%",
+    "format-charging": "BAT {capacity}% 󰂄",
+    "format-plugged": "BAT {capacity}% ",
     "on-click" : "",
     "states" : {
       "warning" : 30,
@@ -49,10 +52,9 @@
   },
   "clock" : {
     "interval" : 1,
-    "format" : "{:%a %d %b %H:%M:%S}",
+    "format" : "{:%a %d %b %H:%M}",
     "format-alt" : "{:%H:%M}",
-    "locale" : "fr_FR.UTF-8",
-    "timezone" : "Europe/Paris",
+    "timezone" : "Europe/Berlin",
   },
   "cpu" : {
     "format" : "CPU {usage}%",
