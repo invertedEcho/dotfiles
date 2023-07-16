@@ -2,14 +2,13 @@
   "layer": "bottom",
   "modules-left": ["wlr/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
-  "modules-right" : ["cpu", "memory", "pulseaudio", "battery", "tray"],
+  "modules-right" : ["cpu", "memory", "network", "pulseaudio", "battery", "tray"],
   "hyprland/window" : {
     "format" : "{}",
-    "separate-outputs" : true,
+    "separate-outputs" : false,
   },
   "wlr/workspaces" : {
     "active-only" : false,
-    "all-outputs" : true,
     "format" : "{icon}",
     "on-click" : "activate",
     "on-scroll-up" : "hyprctl dispatch workspace e+1",
@@ -64,6 +63,11 @@
   "memory" : {
     "on-click" : "",
     "format" : "RAM {}%",
+  },
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "󰈀  {ifname}",
+    "on-click": "wezterm -e nmtui",
   },
   "tray" : {
     "icon-size" : 21,
