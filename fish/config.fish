@@ -15,3 +15,4 @@ if status is-login
         exec Hyprland
     end
 end
+fish_add_path /home/user/.spicetify
