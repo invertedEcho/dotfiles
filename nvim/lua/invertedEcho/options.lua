@@ -36,4 +36,3 @@ vim.opt.spell = false
 vim.opt.spelllang = { 'en_us' }
 vim.opt.guifont = { 'JetBrainsMonoNL Nerd Font', ':h11' }
 vim.opt.cmdheight = 0
-vim.g.neovide_cursor_animation_length = 0.03
