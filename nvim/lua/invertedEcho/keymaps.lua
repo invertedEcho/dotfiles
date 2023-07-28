@@ -35,6 +35,8 @@ M.setup = function()
   key('n', '<leader>x', U.make_cmd('bd'))
 
   key('n', '<leader>r', U.make_cmd('LspRestart'))
+  key('n', '<s-y>', U.make_cmd('mksession! ~/session.vim'))
+  key('n', '<s-u>', U.make_cmd('source ~/session.vim'))
 end
 
 M.lsp = function(bufnr)
@@ -79,7 +81,7 @@ M.telescope = function()
   key('n', '<leader>tf', U.make_cmd('Telescope find_files'))
   key('n', '<leader>tt', U.make_cmd('Telescope live_grep'))
   key('n', '<leader>t*', U.make_cmd('Telescope grep_string'))
-  key('n', '<leader>t<cr>', U.make_cmd('Telescope resume'))
+  key('n', '<leader>ty', U.make_cmd('Telescope resume'))
   key('n', '<leader>tgs', U.make_cmd('Telescope git_status'))
 end
 
