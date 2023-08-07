@@ -33,6 +33,7 @@ M.setup = function()
   key('n', '<s-tab>', U.make_cmd('BufferLineCyclePrev'))
   key('n', '<s-t>', U.make_cmd('tabnew'))
   key('n', '<leader>x', U.make_cmd('bd'))
+  key('n', '<leader>xx', U.make_cmd(':%bd|e#'))
 
   key('n', '<leader>r', U.make_cmd('LspRestart'))
   key('n', '<s-y>', U.make_cmd('mksession! ~/session.vim'))
