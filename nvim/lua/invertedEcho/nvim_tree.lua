@@ -41,10 +41,6 @@ M.setup = function()
       number = false,
       relativenumber = false,
       signcolumn = 'yes',
-      mappings = {
-        custom_only = false,
-        list = {},
-      },
     },
     renderer = {
       add_trailing = false,
