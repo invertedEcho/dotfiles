@@ -87,24 +87,15 @@ window#waybar.qutebrowser #window {
     color: #cccccc;
 }
 
-#mpd {
-    margin-top: 8px;
-    margin-left: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 0;
-    border-radius: 6px;
-    color: @foreground;
-    background: @background;
-    transition: none;
-}
-
-#mpd.disconnected,
-#mpd.stopped {
-    color: @foreground;
-    background: @background;
-}
-
+#temperature,
+#cpu,
+#pulseaudio,
+#backlight,
+#memory,
+#clock,
+#battery,
+#tray,
+#battery,
 #network {
     margin-top: 8px;
     margin-left: 8px;
@@ -117,102 +108,5 @@ window#waybar.qutebrowser #window {
     background: @background;
 }
 
-#pulseaudio {
-    margin-top: 8px;
-    margin-left: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 0;
-    border-radius: 6px;
-    transition: none;
-    color: @foreground;
-    background: @background;
-}
-
-#temperature {
-    margin-top: 8px;
-    margin-left: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 0;
-    border-radius: 6px;
-    transition: none;
-    color: @foreground;
-    background: @background;
-}
-
-#cpu {
-    margin-top: 8px;
-    margin-left: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 0;
-    border-radius: 6px;
-    transition: none;
-    color: @foreground;
-    background: @background;
-}
-
-#backlight {
-    margin-top: 8px;
-    margin-left: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 0;
-    border-radius: 6px;
-    transition: none;
-    color: @foreground;
-    background: @background;
-}
-
-#memory {
-    margin-top: 8px;
-    margin-left: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 0;
-    border-radius: 6px;
-    transition: none;
-    color: @foreground;
-    background: @background;
-}
-
-#clock {
-    margin-top: 8px;
-    margin-left: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 0;
-    border-radius: 6px;
-    transition: none;
-    color: @foreground;
-    background: @background;
-}
-
-#tray {
-    margin-top: 8px;
-    margin-left: -4px;
-    margin-right: 12px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 0;
-    border-radius: 6px;
-    transition: none;
-    color: @foreground;
-    background: @background;
-}
-
-#battery {
-    margin-top: 8px;
-    margin-left: 8px;
-    margin-right: 12px;
-    padding-left: 16px;
-    margin-bottom: 0;
-    border-radius: 6px;
-    transition: none;
-    color: @foreground;
-    background: @background;
-}
-
 #battery.warning { color: orange; }
-#battery.critical { color: orange; }
+#battery.critical { color: red; }
