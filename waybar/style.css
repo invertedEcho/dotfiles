@@ -153,6 +153,18 @@ window#waybar.qutebrowser #window {
     background: @background;
 }
 
+#backlight {
+    margin-top: 8px;
+    margin-left: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 0;
+    border-radius: 6px;
+    transition: none;
+    color: @foreground;
+    background: @background;
+}
+
 #memory {
     margin-top: 8px;
     margin-left: 8px;
