@@ -79,6 +79,7 @@
     "spacing" : 10,
   },
   "custom/todos": {
+    "format": "TODOS: {}",
     "exec": "wc -l < ~/.rofi_todos",
     "exec-if": "test -f ~/.rofi_todos",
     "on-click": "rofi -modi TODO:rofi-todo.sh -show TODO",
