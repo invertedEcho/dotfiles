@@ -5,14 +5,10 @@
 - clean: ["~"]
 
 - link:
-    ~/.config/kitty: kitty
     ~/.config/hypr: hypr
     ~/.config/waybar: waybar
-    ~/.config/mpd: mpd
     ~/.config/nvim: nvim
-    ~/.config/ncmpcpp: ncmpcpp
     ~/.config/paru: paru
-    ~/.config/i3: i3
     ~/.config/wezterm: wezterm
     ~/.config/swaylock: swaylock
     ~/.xinitrc: .xinitrc
