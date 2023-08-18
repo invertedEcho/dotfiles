@@ -14,6 +14,7 @@
     ~/.config/paru: paru
     ~/.config/i3: i3
     ~/.config/wezterm: wezterm
+    ~/.config/swaylock: swaylock
     ~/.xinitrc: .xinitrc
     ~/.Xresources: .Xresources
     ~/.config/fish/config.fish: fish/config.fish
