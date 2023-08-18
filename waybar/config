@@ -2,7 +2,7 @@
   "layer": "top",
   "modules-left": ["wlr/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
-  "modules-right" : ["cpu", "memory", "network", "bluetooth", "custom/todos", "pulseaudio", "backlight", "battery", "tray"],
+  "modules-right" : ["cpu", "memory", "network", "bluetooth", "pulseaudio", "backlight", "battery", "tray"],
   "hyprland/window" : {
     "format" : "{}",
     "separate-outputs" : false,
@@ -86,13 +86,5 @@
   "tray": {
     "icon-size" : 21,
     "spacing" : 10,
-  },
-  "custom/todos": {
-    "format": "TODOS: {}",
-    "exec": "wc -l < ~/.rofi_todos",
-    "exec-if": "test -f ~/.rofi_todos",
-    "on-click": "rofi -modi TODO:rofi-todo.sh -show TODO",
-    "interval": 1,
-    "tooltip": true
   }
 }
