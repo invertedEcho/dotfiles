@@ -21,4 +21,3 @@
     ~/.local/bin/log-time.sh: scripts/log-time.sh
     ~/.local/bin/lock.sh: scripts/lock.sh
     ~/.local/bin/monitors-hyprland.sh: scripts/monitors-hyprland.sh
-    ~/.local/bin/rofi-todo.sh: scripts/rofi-todo.sh
