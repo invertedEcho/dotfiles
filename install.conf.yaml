@@ -5,19 +5,8 @@
 - clean: ["~"]
 
 - link:
-    ~/.config/hypr: hypr
-    ~/.config/waybar: waybar
     ~/.config/nvim: nvim
-    ~/.config/paru: paru
     ~/.config/wezterm: wezterm
-    ~/.config/swaylock: swaylock
-    ~/.xinitrc: .xinitrc
-    ~/.Xresources: .Xresources
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/fish_plugins: fish/fish_plugins
     ~/.config/fish/conf.d: fish/conf.d
-    ~/.local/bin/night-mode.sh: scripts/night-mode.sh
-    ~/.local/bin/toggle-bar.sh: scripts/toggle-bar.sh
-    ~/.local/bin/log-time.sh: scripts/log-time.sh
-    ~/.local/bin/lock.sh: scripts/lock.sh
-    ~/.local/bin/monitors-hyprland.sh: scripts/monitors-hyprland.sh
