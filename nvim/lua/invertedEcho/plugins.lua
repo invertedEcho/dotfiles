@@ -95,6 +95,37 @@ local M = {
     lazy = false,
     opts = {},
   },
+  {
+    'tomiis4/Hypersonic.nvim',
+    event = 'CmdlineEnter',
+    cmd = 'Hypersonic',
+    config = function()
+      require('hypersonic').setup({
+        -- config
+      })
+    end,
+  },
+  {
+    'kylechui/nvim-surround',
+    version = '*', -- Use for stability; omit to use `main` branch for the latest features
+    event = 'VeryLazy',
+    config = function()
+      require('nvim-surround').setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end,
+  },
+  {
+    'stevearc/dressing.nvim',
+    opts = {},
+  },
+  {
+    'rcarriga/nvim-notify',
+    config = function()
+      require('notify')
+    end,
+    lazy = false,
+  },
 }
 
 return M

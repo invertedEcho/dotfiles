@@ -34,5 +34,4 @@ vim.opt.iskeyword:append('-')
 vim.opt.termguicolors = true
 vim.opt.spell = false
 vim.opt.spelllang = { 'en_us' }
-vim.opt.guifont = { 'JetBrainsMonoNL Nerd Font', ':h11' }
 vim.opt.cmdheight = 0

@@ -3,7 +3,6 @@ vim.g.maplocalleader = ' '
 
 require('invertedEcho.bootstrap')
 
-require('invertedEcho.bufferline')
 require('invertedEcho.util')
 require('invertedEcho.options')
 require('invertedEcho.keymaps').setup()
@@ -13,3 +12,4 @@ require('lazy').setup('invertedEcho.plugins', {
     lazy = true,
   },
 })
+require('invertedEcho.bufferline')
