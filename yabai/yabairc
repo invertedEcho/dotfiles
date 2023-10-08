@@ -1,6 +1,7 @@
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
+yabai -m config top_padding    10
 yabai -m config bottom_padding 10
 yabai -m config left_padding   10
 yabai -m config right_padding  10
@@ -20,7 +21,6 @@ yabai -m config active_window_opacity 1.0
 yabai -m config normal_window_opacity 1.0
 
 yabai -m signal --add event=window_created action='yabai -m query --windows --window $YABAI_WINDOW_ID | jq -er ".resizable == 0 and .floating == 0" && yabai -m window $YABAI_WINDOW_ID --toggle float'
-yabai -m signal --add event=space_changed action="~/.local/bin/update_monitors.sh"
 
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Activity Monitor$" manage=off
