@@ -7,6 +7,7 @@
 - link:
     ~/.config/nvim: nvim
     ~/.config/wezterm: wezterm
+    ~/.config/yabai: yabai
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/fish_plugins: fish/fish_plugins
     ~/.config/fish/conf.d: fish/conf.d
