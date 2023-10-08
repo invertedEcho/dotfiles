@@ -47,6 +47,7 @@ M.setup = function()
     { name = 'astro' },
     { name = 'prismals' },
     { name = 'jedi_language_server' },
+    { name = 'phpactor' },
   }
 
   for _, server in ipairs(servers) do
