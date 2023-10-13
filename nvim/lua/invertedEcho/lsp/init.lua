@@ -48,6 +48,10 @@ M.setup = function()
     { name = 'prismals' },
     { name = 'jedi_language_server' },
     { name = 'phpactor' },
+    {
+      name = 'tailwindcss',
+      settings = require('invertedEcho.lsp.settings.tailwindcss'),
+    },
   }
 
   for _, server in ipairs(servers) do

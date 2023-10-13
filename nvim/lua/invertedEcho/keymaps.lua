@@ -80,10 +80,11 @@ M.telescope = function()
   local key = U.make_key({ noremap = true, silent = true })
 
   key('n', '<leader>tf', U.make_cmd('Telescope find_files'))
+  key('n', '<leader>tg', U.make_cmd('Telescope find_files hidden=true'))
   key('n', '<leader>tt', U.make_cmd('Telescope live_grep'))
   key('n', '<leader>t*', U.make_cmd('Telescope grep_string'))
   key('n', '<leader>ty', U.make_cmd('Telescope resume'))
-  key('n', '<leader>tgs', U.make_cmd('Telescope git_status'))
+  -- key('n', '<leader>tgs', U.make_cmd('Telescope git_status'))
 end
 
 M.terminal = function()

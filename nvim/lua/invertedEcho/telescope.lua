@@ -3,7 +3,7 @@ local M = {}
 M.setup = function()
   local telescope = require('telescope')
 
-  telescope.setup({})
+  telescope.setup()
 
   require('invertedEcho.keymaps').telescope()
 end
