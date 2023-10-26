@@ -1,0 +1,32 @@
+cmd - return : wezterm
+cmd + ctrl -r : yabai --restart-service && brew services restart sketchybar
+
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+cmd + alt - h : yabai -m window --resize left:-40:0
+cmd + alt - l : yabai -m window --resize right:40:0
+
+cmd + ctrl - l : yabai -m space --focus next || yabai -m space --focus first
+cmd + ctrl - h : yabai -m space --focus prev || yabai -m space --focus last
+
+cmd - 1 : yabai -m space --focus 1
+cmd - 2 : yabai -m space --focus 2
+cmd - 3 : yabai -m space --focus 3
+cmd - 4 : yabai -m space --focus 4
+cmd - 5 : yabai -m space --focus 5
+cmd - 6 : yabai -m space --focus 6
+cmd - 7 : yabai -m space --focus 7
+
+shift + cmd - 1 : yabai -m window --space 1; yabai -m space --focus 1
+shift + cmd - 2 : yabai -m window --space 2; yabai -m space --focus 2
+shift + cmd - 3 : yabai -m window --space 3; yabai -m space --focus 3
+shift + cmd - 4 : yabai -m window --space 4; yabai -m space --focus 4
+shift + cmd - 5 : yabai -m window --space 5; yabai -m space --focus 5
+shift + cmd - 6 : yabai -m window --space 6; yabai -m space --focus 6
+
+cmd + shift - space : yabai -m window --toggle float
+
+cmd + shift + ctrl - f : yabai -m window --toggle native-fullscreen
