@@ -124,11 +124,17 @@ local M = {
     end,
   },
   {
-    'morhetz/gruvbox',
+    'folke/tokyonight.nvim',
     lazy = false,
+    priority = 1000,
+    opts = {},
     config = function()
-      U.cmd('colorscheme gruvbox')
+      vim.cmd('colorschem tokyonight-night')
     end,
+  },
+  {
+    'sindrets/diffview.nvim',
+    lazy = false,
   },
 }
 

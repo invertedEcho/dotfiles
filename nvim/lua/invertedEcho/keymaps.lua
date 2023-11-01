@@ -91,6 +91,7 @@ M.terminal = function()
   local key = U.make_key({ noremap = true, silent = true })
 
   key('n', '<c-\\>', require('FTerm').toggle)
+  key('t', '<c-\\>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
 end
 
 return M

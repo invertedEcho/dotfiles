@@ -52,6 +52,7 @@ M.setup = function()
       name = 'tailwindcss',
       settings = require('invertedEcho.lsp.settings.tailwindcss'),
     },
+    { name = 'pyright' },
   }
 
   for _, server in ipairs(servers) do

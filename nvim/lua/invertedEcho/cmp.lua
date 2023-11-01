@@ -2,7 +2,6 @@ local M = {}
 
 M.setup = function()
   local cmp = require('cmp')
-  local luasnip = require('luasnip')
   local lspkind = require('lspkind')
 
   lspkind.init({
