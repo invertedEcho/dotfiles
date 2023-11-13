@@ -9,7 +9,6 @@ yabai -m config window_gap     5
 
 yabai -m config layout bsp
 
-yabai -m config mouse_follows_focus on
 yabai -m config focus_follows_mouse autofocus
 
 yabai -m config mouse_modifier cmd
@@ -28,7 +27,11 @@ yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add title="^Discord Updater$" manage=off
 yabai -m rule --add app="^Steam Helper$" manage=off
+yabai -m rule --add app="^Path Finder$" manage=off
 
 # XCode stuff
 yabai -m rule --add app="^Simulator$" manage=off
 yabai -m rule --add title="^Devices$" manage=off
+
+# Android stuff
+yabai -m rule --ad title="^SDK Quickfix Installation$" manage=off
