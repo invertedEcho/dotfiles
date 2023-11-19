@@ -120,6 +120,7 @@ local M = {
     config = function()
       require('gitblame').setup({
         enabled = true,
+        delay = 1500,
       })
     end,
   },
