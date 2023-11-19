@@ -19,6 +19,8 @@ yabai -m config window_opacity on
 yabai -m config active_window_opacity 1.0
 yabai -m config normal_window_opacity 1.0
 
+yabai -m config window_shadow off
+
 yabai -m signal --add event=window_created action='yabai -m query --windows --window $YABAI_WINDOW_ID | jq -er ".resizable == 0 and .floating == 0" && yabai -m window $YABAI_WINDOW_ID --toggle float'
 
 yabai -m rule --add app="^System Settings$" manage=off
@@ -28,10 +30,19 @@ yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add title="^Discord Updater$" manage=off
 yabai -m rule --add app="^Steam Helper$" manage=off
 yabai -m rule --add app="^Path Finder$" manage=off
+yabai -m rule --add app="^Yet Another Anime Game Launcher$" manage=off
 
 # XCode stuff
 yabai -m rule --add app="^Simulator$" manage=off
 yabai -m rule --add title="^Devices$" manage=off
 
-# Android stuff
-yabai -m rule --ad title="^SDK Quickfix Installation$" manage=off
+# Android Studio stuff
+yabai -m rule --add title="^SDK Quickfix Installation$" manage=off
+
+# Bind applications to specific workspaces
+# space=^n -> send to space and focus space
+yabai -m rule --add app="^Xcode$" space=^1
+yabai -m rule --add app="^Firefox$" space=^2
+yabai -m rule --add app="^Obsidian$" space=^4
+yabai -m rule --add title="^WhatsApp$" space=^5
+yabai -m rule --add app="^Discord$" space=^5
