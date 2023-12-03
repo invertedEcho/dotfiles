@@ -108,16 +108,6 @@ local M = {
     lazy = false,
   },
   {
-    'f-person/git-blame.nvim',
-    lazy = false,
-    config = function()
-      require('gitblame').setup({
-        enabled = true,
-        delay = 1500,
-      })
-    end,
-  },
-  {
     'folke/tokyonight.nvim',
     lazy = false,
     priority = 1000,
