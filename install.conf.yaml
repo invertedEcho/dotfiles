@@ -7,7 +7,7 @@
 - link:
     ~/.config/nvim: common/nvim
     ~/.config/wezterm: common/wezterm
-    ~/.aerospace.toml: .aerospace.toml
+    ~/.aerospace.toml: macos/.aerospace.toml
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/fish_plugins: fish/fish_plugins
     ~/.config/fish/conf.d: fish/conf.d
