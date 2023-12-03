@@ -77,20 +77,13 @@ local M = {
     event = 'BufEnter',
   },
   { 'akinsho/bufferline.nvim' },
-  { 'rose-pine/neovim' },
-  {
-    'folke/zen-mode.nvim',
-    lazy = false,
-    opts = {},
-  },
+  -- RegEx helper
   {
     'tomiis4/Hypersonic.nvim',
     event = 'CmdlineEnter',
     cmd = 'Hypersonic',
     config = function()
-      require('hypersonic').setup({
-        -- config
-      })
+      require('hypersonic').setup({})
     end,
   },
   {
@@ -98,14 +91,14 @@ local M = {
     version = '*', -- Use for stability; omit to use `main` branch for the latest features
     event = 'VeryLazy',
     config = function()
-      require('nvim-surround').setup({
-        -- Configuration here, or leave empty to use defaults
-      })
+      require('nvim-surround').setup({})
     end,
   },
   {
     'stevearc/dressing.nvim',
     opts = {},
+    config = require('invertedEcho.dressing').setup,
+    lazy = false
   },
   {
     'rcarriga/nvim-notify',
