@@ -98,7 +98,7 @@ local M = {
     'stevearc/dressing.nvim',
     opts = {},
     config = require('invertedEcho.dressing').setup,
-    lazy = false
+    lazy = false,
   },
   {
     'rcarriga/nvim-notify',
@@ -119,6 +119,13 @@ local M = {
   {
     'sindrets/diffview.nvim',
     lazy = false,
+  },
+  {
+    'norcalli/nvim-colorizer.lua',
+    lazy = false,
+    config = function()
+      require('colorizer').setup()
+    end,
   },
 }
 
