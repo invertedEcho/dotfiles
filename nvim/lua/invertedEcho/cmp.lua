@@ -3,16 +3,18 @@ local M = {}
 M.setup = function()
   local cmp = require('cmp')
   local lspkind = require('lspkind')
+  local luasnip = require('luasnip')
 
   lspkind.init({
     mode = 'text_symbol',
     preset = 'codicons',
   })
 
+  ---@diagnostic disable-next-line: redundant-parameter Some day I will take a look at this
   cmp.setup({
     snippet = {
       expand = function(args)
-        require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+        luasnip.lsp_expand(args.body) -- For `luasnip` users.
       end,
     },
     mapping = cmp.mapping.preset.insert({
@@ -33,24 +35,18 @@ M.setup = function()
     }),
     experimental = { ghost_text = true },
     window = {
-      completion = {
-        col_offset = -1,
-        side_padding = 0,
-      },
+      completion = cmp.config.window.bordered({}),
+      documentation = cmp.config.window.bordered({}),
+      scrollbar = false,
+    },
+    completion = {
+      completeopt = 'menu,menuone,preview,noselect',
     },
     formatting = {
       format = lspkind.cmp_format({
-        mode = 'symbol',
         maxwidth = 50,
         ellipsis_char = '...',
-        menu = {
-          buffer = '[BUF]',
-          nvim_lsp = '[LSP]',
-          luasnip = '[SNP]',
-          nvim_lua = '[VIM]',
-        },
       }),
-      fields = { 'kind', 'abbr', 'menu' },
     },
   })
 end
