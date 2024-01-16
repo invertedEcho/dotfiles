@@ -146,8 +146,9 @@ local M = {
   },
   {
     'mfussenegger/nvim-dap-python',
+    lazy = false,
     config = function()
-      require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
+      require('dap-python').setup()
     end,
   },
 }
