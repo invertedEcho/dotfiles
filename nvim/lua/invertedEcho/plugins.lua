@@ -97,15 +97,12 @@ local M = {
   {
     'stevearc/dressing.nvim',
     opts = {},
-    config = require('invertedEcho.dressing').setup,
-    lazy = false,
   },
   {
     'rcarriga/nvim-notify',
     config = function()
       require('notify')
     end,
-    lazy = false,
   },
   {
     'folke/tokyonight.nvim',
@@ -118,11 +115,9 @@ local M = {
   },
   {
     'sindrets/diffview.nvim',
-    lazy = false,
   },
   {
     'norcalli/nvim-colorizer.lua',
-    lazy = false,
     config = function()
       require('colorizer').setup()
     end,
@@ -138,7 +133,22 @@ local M = {
   },
   {
     'axkirillov/hbac.nvim',
-    config = true,
+  },
+  {
+    'mfussenegger/nvim-dap',
+    lazy = false,
+    config = function()
+      require('dap')
+    end,
+  },
+  {
+    'rcarriga/nvim-dap-ui',
+  },
+  {
+    'mfussenegger/nvim-dap-python',
+    config = function()
+      require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
+    end,
   },
 }
 

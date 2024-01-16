@@ -7,3 +7,4 @@
 - link:
     ~/.config/nvim: nvim
     ~/.config/wezterm: wezterm
+    ~/.config/ranger: ranger
