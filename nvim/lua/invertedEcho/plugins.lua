@@ -103,8 +103,14 @@ local M = {
   },
   {
     'rcarriga/nvim-notify',
+    lazy = false,
     config = function()
-      require('notify')
+      local notify = require('notify')
+      vim.notify = notify
+      notify.setup({
+        fps = 144,
+        stages = 'slide',
+      })
     end,
   },
   {
@@ -113,7 +119,7 @@ local M = {
     priority = 1000,
     opts = {},
     config = function()
-      vim.cmd('colorschem tokyonight-night')
+      vim.cmd('colorscheme tokyonight-night')
     end,
   },
   {
