@@ -110,6 +110,8 @@ local M = {
       notify.setup({
         fps = 144,
         stages = 'slide',
+        max_width = 90,
+        max_height = 60,
       })
     end,
   },
