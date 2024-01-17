@@ -96,7 +96,10 @@ local M = {
   },
   {
     'stevearc/dressing.nvim',
-    opts = {},
+    lazy = false,
+    config = function()
+      require('dressing').setup({})
+    end,
   },
   {
     'rcarriga/nvim-notify',
