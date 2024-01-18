@@ -39,8 +39,12 @@ M.setup = function()
   key('n', '<s-y>', U.make_cmd('mksession! ~/session.vim'))
   key('n', '<s-u>', U.make_cmd('source ~/session.vim'))
 
-  key('n', '<leader>tb', U.make_cmd('DapToggleBreakpoint'))
-  key('n', '<leader>tc', U.make_cmd('DapContinue'))
+  -- dap
+  key('n', '<leader>db', U.make_cmd('DapToggleBreakpoint'))
+  key('n', '<leader>dc', U.make_cmd('DapContinue'))
+  key('n', '<leader>di', U.make_cmd('DapStepInto'))
+  key('n', '<leader>do', U.make_cmd('DapStepOut'))
+  key('n', '<leader>dt', U.make_cmd('Terminate'))
 end
 
 M.lsp = function(bufnr)
