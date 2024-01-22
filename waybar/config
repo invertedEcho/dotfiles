@@ -1,6 +1,6 @@
 {
   "layer": "top",
-  "modules-left": ["wlr/workspaces", "hyprland/window"],
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
   "modules-right" : ["cpu", "memory", "network", "bluetooth", "pulseaudio", "backlight", "battery", "tray"],
   "hyprland/window" : {

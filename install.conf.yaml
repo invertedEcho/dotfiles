@@ -8,4 +8,9 @@
     ~/.config/nvim: nvim
     ~/.config/wezterm: wezterm
     ~/.config/ranger: ranger
+    ~/.config/hypr: hypr
+    ~/.config/paru: paru
+    ~/.config/waybar: waybar
+    ~/.config/wofi: wofi
     ~/.tmux.conf: tmux.conf
+    ~/.local/bin/toggle-bar.sh: scripts/toggle-bar.sh
