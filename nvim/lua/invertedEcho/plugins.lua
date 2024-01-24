@@ -126,6 +126,7 @@ local M = {
   },
   {
     'norcalli/nvim-colorizer.lua',
+    lazy = false,
     config = function()
       require('colorizer').setup()
     end,
@@ -141,6 +142,13 @@ local M = {
   },
   {
     'axkirillov/hbac.nvim',
+    lazy = false,
+    config = function()
+      require('hbac').setup({
+        autoclose = true,
+        threshold = 5,
+      })
+    end,
   },
   {
     'mfussenegger/nvim-dap',
