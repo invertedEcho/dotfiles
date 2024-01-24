@@ -12,5 +12,6 @@
     ~/.config/paru: paru
     ~/.config/waybar: waybar
     ~/.config/wofi: wofi
+    ~/.config/mako: mako
     ~/.tmux.conf: tmux.conf
     ~/.local/bin/toggle-bar.sh: scripts/toggle-bar.sh
