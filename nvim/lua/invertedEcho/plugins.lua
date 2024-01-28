@@ -201,6 +201,16 @@ local M = {
     'theHamsta/nvim-dap-virtual-text',
     opts = {},
   },
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    lazy = false,
+    config = function()
+      require('lualine').setup({
+        options = { section_separators = '', component_separators = '' },
+      })
+    end,
+  },
 }
 
 return M
