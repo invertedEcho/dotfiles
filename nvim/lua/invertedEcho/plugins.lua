@@ -141,16 +141,6 @@ local M = {
     ft = { 'markdown' },
   },
   {
-    'axkirillov/hbac.nvim',
-    lazy = false,
-    config = function()
-      require('hbac').setup({
-        autoclose = true,
-        threshold = 5,
-      })
-    end,
-  },
-  {
     'mfussenegger/nvim-dap',
     dependencies = {
       {
