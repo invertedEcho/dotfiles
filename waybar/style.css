@@ -86,6 +86,7 @@ window#waybar.qutebrowser #window {
 }
 
 #temperature,
+#taskbar,
 #cpu,
 #pulseaudio,
 #backlight,
