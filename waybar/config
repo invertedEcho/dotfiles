@@ -1,6 +1,6 @@
 {
   "layer": "top",
-  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-left": ["hyprland/workspaces", "hyprland/window", "wlr/taskbar"],
   "modules-center": ["clock"],
   "modules-right" : ["cpu", "memory", "network", "bluetooth", "pulseaudio", "backlight", "battery", "tray"],
   "hyprland/window" : {
@@ -25,6 +25,12 @@
         "9": "9 󱞁",
         "urgent": "",
     }
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "all-outputs": "false"
   },
   "bluetooth": {
   	"format": " {status}",
