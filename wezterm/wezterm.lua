@@ -13,5 +13,5 @@ return {
 		{ key = "RightArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bf" }) },
 	},
 	window_decorations = "RESIZE",
-  enable_wayland = false,
+  enable_wayland = true,
 }
