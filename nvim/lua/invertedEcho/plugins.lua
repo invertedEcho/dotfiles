@@ -48,8 +48,12 @@ local M = {
     config = require('invertedEcho.formatter').setup,
   },
   {
-    'numToStr/FTerm.nvim',
-    keys = '<c-\\>',
+    'akinsho/toggleterm.nvim',
+    keys = {
+      '<c-\\>',
+      '<leader>g',
+    },
+    -- keys = '<c-\\>',
     config = require('invertedEcho.terminal').setup,
   },
   {
@@ -121,7 +125,7 @@ local M = {
     priority = 1000,
     opts = {},
     config = function()
-      vim.cmd('colorscheme tokyonight-night')
+      vim.cmd('colorscheme tokyonight-storm')
     end,
   },
   {

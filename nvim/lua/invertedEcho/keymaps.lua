@@ -98,8 +98,10 @@ end
 M.terminal = function()
   local key = U.make_key({ noremap = true, silent = true })
 
-  key('n', '<c-\\>', require('FTerm').toggle)
-  key('t', '<c-\\>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
+  key('n', '<c-\\>', U.make_cmd('ToggleTerm'))
+  key('t', '<c-\\>', '<C-\\><C-n>')
+
+  key('n', '<leader>g', U.make_cmd('TermExec cmd="lazygit" direction=float'))
 end
 
 return M
