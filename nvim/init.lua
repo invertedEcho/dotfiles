@@ -14,7 +14,3 @@ require('lazy').setup('invertedEcho.plugins', {
 
 require('invertedEcho.options')
 require('invertedEcho.bufferline')
-
-if vim.g.neovide then
-  require('invertedEcho.neovide')
-end

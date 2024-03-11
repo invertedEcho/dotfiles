@@ -72,6 +72,7 @@ M.setup = function()
       settings = require('invertedEcho.lsp.settings.tailwindcss'),
     },
     { name = 'pyright' },
+    { name = 'mdx_analyzer' },
   }
 
   for _, server in ipairs(servers) do

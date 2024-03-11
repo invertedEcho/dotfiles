@@ -92,7 +92,7 @@ M.telescope = function()
   key('n', '<leader>t*', U.make_cmd('Telescope grep_string'))
   key('n', '<leader>ty', U.make_cmd('Telescope resume'))
   key('n', '<leader>ts', U.make_cmd('Telescope git_status'))
-  key('n', '<leader>tB', U.make_cmd('Telescope buffers'))
+  key('n', '<leader>tb', U.make_cmd('Telescope buffers'))
 end
 
 M.terminal = function()
