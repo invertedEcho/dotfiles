@@ -13,6 +13,5 @@
     ~/.config/waybar: waybar
     ~/.config/wofi: wofi
     ~/.config/mako: mako
-    ~/.config/neovide: neovide
     ~/.tmux.conf: tmux.conf
     ~/.local/bin/toggle-bar.sh: scripts/toggle-bar.sh
