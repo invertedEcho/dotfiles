@@ -357,9 +357,6 @@ local M = {
     end,
   },
   {
-    'Exafunction/codeium.vim',
-    event = 'BufEnter',
-  },
 }
 
 return M
