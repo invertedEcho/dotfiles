@@ -14,3 +14,4 @@
     ~/.config/mako: mako
     ~/.tmux.conf: tmux.conf
     ~/.local/bin/toggle-bar.sh: scripts/toggle-bar.sh
+    ~/.local/bin/night-mode.sh: scripts/night-mode.sh
