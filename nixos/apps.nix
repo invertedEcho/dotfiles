@@ -19,7 +19,6 @@
      spotify
      neovide
      gcc13
-     mpvpaper
      mpv
      gnome.nautilus
      # waybar
@@ -37,5 +36,8 @@
      grim
      slurp
      tokyo-night-gtk
+     libnotify
+     gammastep
+     mako
   ];
 }
