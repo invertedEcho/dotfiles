@@ -1,0 +1,41 @@
+{ pkgs, ... } : {
+  environment.systemPackages = with pkgs; [
+     rustup
+     gnumake
+     vim
+     htop
+     killall
+     nvtop
+     wget
+     firefox
+     neovim
+     kitty
+     wl-clipboard
+     loupe
+     wofi
+     pavucontrol
+     python3
+     wezterm
+     spotify
+     neovide
+     gcc13
+     mpvpaper
+     mpv
+     gnome.nautilus
+     # waybar
+     steam
+     webcord
+     xwayland
+     lazygit
+     nodePackages_latest.typescript-language-server
+     tailwindcss-language-server
+     prettierd
+     ripgrep
+     vscode-langservers-extracted
+     iwgtk
+     file
+     grim
+     slurp
+     tokyo-night-gtk
+  ];
+}
