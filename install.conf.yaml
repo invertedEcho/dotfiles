@@ -7,7 +7,6 @@
 - link:
     ~/.config/nvim: nvim
     ~/.config/wezterm: wezterm
-    ~/.config/ranger: ranger
     ~/.config/hypr: hypr
     ~/.config/paru: paru
     ~/.config/waybar: waybar
