@@ -6,12 +6,11 @@
 
 - link:
     ~/.config/nvim: nvim
-    ~/.config/wezterm: wezterm
     ~/.config/hypr: hypr
     ~/.config/paru: paru
     ~/.config/waybar: waybar
     ~/.config/wofi: wofi
     ~/.config/mako: mako
-    ~/.tmux.conf: tmux.conf
+    ~/.config/kitty: kitty
     ~/.local/bin/toggle-bar.sh: scripts/toggle-bar.sh
     ~/.local/bin/night-mode.sh: scripts/night-mode.sh
