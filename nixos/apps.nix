@@ -39,5 +39,6 @@
      libnotify
      gammastep
      mako
+     playerctl
   ];
 }

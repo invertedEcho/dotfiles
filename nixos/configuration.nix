@@ -19,24 +19,11 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   sound.enable = true;
-  hardware.pulseaudio.enable = true;
-
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
-
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
-
-  hardware.nvidia = {
-     modesetting.enable = true;
-     open = false;
-  };
 
   users.users.echo = {
      isNormalUser = true;
      extraGroups = [ "wheel" ];
+     shell = pkgs.fish;
    };
 
   fonts.packages = with pkgs; [
@@ -58,6 +45,10 @@
 
   services.openssh.enable = true;
   services.printing.enable = true;
+  services.gvfs.enable = true;
+
+  # TODO: This seems wrong. It's needed so Hyprland recognizes the GPU, i think this just pulls in the nvidia driver, but it's a Xorg configuration
+  services.xserver.videoDrivers = ["nvidia"];
 
   networking.wireless.iwd.enable = true;
 

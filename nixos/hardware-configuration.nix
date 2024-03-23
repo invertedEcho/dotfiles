@@ -19,8 +19,25 @@
     };
 
   networking.interfaces.enp5s0.useDHCP = lib.mkDefault true;
-  networking.interfaces.wlan0.useDHCP = lib.mkDefault true;
+  # TODO: If wlan0 interface is present but can't be brought up?, this will disrupt startup as systemd tries to start the service
+  # created by nixos. Fix this by allowing the service to silently faily or in a more nixos like way
+  # networking.interfaces.wlan0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
+  hardware.pulseaudio.enable = true;
+
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
+
+  hardware.nvidia = {
+     modesetting.enable = true;
+     open = false;
+  };
 }
