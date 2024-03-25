@@ -46,9 +46,12 @@
   services.openssh.enable = true;
   services.printing.enable = true;
   services.gvfs.enable = true;
+  services.usbmuxd.enable = true;
 
-  # TODO: This seems wrong. It's needed so Hyprland recognizes the GPU, i think this just pulls in the nvidia driver, but it's a Xorg configuration
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver = {
+    # TODO: This seems wrong. It's needed so Hyprland recognizes the GPU, i think this just pulls in the nvidia driver, but it's a Xorg configuration
+    videoDrivers = ["nvidia"];
+  };
 
   networking.wireless.iwd.enable = true;
 
