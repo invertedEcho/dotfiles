@@ -122,9 +122,6 @@ local M = {
     lazy = false,
     priority = 1000,
     opts = {},
-    config = function()
-      vim.cmd('colorscheme tokyonight-storm')
-    end,
   },
   {
     'norcalli/nvim-colorizer.lua',
@@ -216,15 +213,6 @@ local M = {
         url = 'https://vtip.43z.one', -- Or https://vimiscool.tech/neotip
         -- url = 'https://vimiscool.tech/neotip', -- Or https://vimiscool.tech/neotip
       })
-    end,
-  },
-  {
-    'carbon-steel/detour.nvim',
-    lazy = false,
-    config = function()
-      -- keymaps should only be in `keymaps.lua`
-      vim.keymap.set('n', '<c-w><enter>', ':Detour<cr>')
-      vim.keymap.set('n', '<c-w>.', ':DetourCurrentWindow<cr>')
     end,
   },
   {
@@ -354,6 +342,18 @@ local M = {
           path = string.format('%s/fidget.nvim.log', vim.fn.stdpath('cache')),
         },
       })
+    end,
+  },
+  {
+    'Exafunction/codeium.vim',
+    event = 'BufEnter',
+  },
+  {
+    'rose-pine/neovim',
+    name = 'rose-pine',
+    lazy = false,
+    config = function()
+      vim.cmd('colorscheme rose-pine-moon')
     end,
   },
 }

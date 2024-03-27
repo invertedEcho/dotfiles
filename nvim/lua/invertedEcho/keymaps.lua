@@ -45,6 +45,8 @@ M.setup = function()
   key('n', '<leader>di', U.make_cmd('DapStepInto'))
   key('n', '<leader>do', U.make_cmd('DapStepOut'))
   key('n', '<leader>dt', U.make_cmd('Terminate'))
+
+  key('n', "<leader>ti", U.make_cmd("Trouble"))
 end
 
 M.lsp = function(bufnr)
