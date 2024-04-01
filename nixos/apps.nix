@@ -32,7 +32,6 @@ in
      python3
      wezterm
      spotify
-     neovide
      gcc13
      mpv
      gnome.nautilus
@@ -43,6 +42,7 @@ in
      xwayland
      lazygit
      nodePackages_latest.typescript-language-server
+     nodePackages_latest.bash-language-server
      tailwindcss-language-server
      prettierd
      ripgrep
@@ -61,5 +61,12 @@ in
      tela-icon-theme
      fishPlugins.z
      chromium
+     home-manager
+     oh-my-fish
+     polkit
+     polkit-kde-agent
+     swaybg
+     util-linux
+     waypaper
   ];
 }
