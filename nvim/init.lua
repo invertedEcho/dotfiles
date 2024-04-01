@@ -1,16 +1,7 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+require("invertedEcho.options")
 
-require('invertedEcho.bootstrap')
+require("invertedEcho.bootstrap")
 
-require('invertedEcho.util')
-require('invertedEcho.keymaps').setup()
+require("invertedEcho.util")
 
-require('lazy').setup('invertedEcho.plugins', {
-  defaults = {
-    lazy = true,
-  },
-})
-
-require('invertedEcho.options')
-require('invertedEcho.bufferline')
+require("invertedEcho.plugins")
