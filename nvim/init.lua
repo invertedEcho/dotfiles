@@ -1,7 +1,9 @@
-require("invertedEcho.options")
+require('invertedEcho.options')
 
-require("invertedEcho.bootstrap")
+require('invertedEcho.bootstrap')
 
-require("invertedEcho.util")
+require('invertedEcho.util')
 
-require("invertedEcho.plugins")
+require('invertedEcho.plugins')
+
+require('invertedEcho.keys')
