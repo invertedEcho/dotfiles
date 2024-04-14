@@ -6,4 +6,12 @@ cmp.setup({
     ['<c-k>'] = cmp.mapping.select_prev_item(),
     ['<C-i>'] = cmp.mapping.confirm({ select = true }),
   }),
+  window = {
+    completion = cmp.config.window.bordered({}),
+    documentation = cmp.config.window.bordered({}),
+    scrollbar = false,
+  },
+  completion = {
+    completeopt = 'menu,menuone,preview,noselect',
+  },
 })
