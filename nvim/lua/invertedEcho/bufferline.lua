@@ -1,1 +1,3 @@
-require('bufferline').setup()
+require('bufferline').setup({
+  diagnostics = 'nvim_lsp',
+})

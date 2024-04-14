@@ -4,23 +4,38 @@ require('lazy').setup({
     version = '*',
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
-      require('bufferline').setup()
+      require('bufferline').setup({
+        options = {
+          diagnostics = 'vim-lsp',
+          indicator = {
+            style = 'underline',
+          },
+          offsets = {
+            {
+              filetype = 'NvimTree',
+              text = 'File Explorer',
+              highlight = 'Directory',
+              seperator = true,
+            },
+          },
+        },
+      })
       set_key('n', '<tab>', '<cmd>BufferLineCycleNext<cr>')
       set_key('n', '<s-tab>', '<cmd>BufferLineCyclePrev<cr>')
+      set_key('n', '<leader>p', '<cmd>BufferLineTogglePin<cr>')
+      set_key('n', '<leader>bp', '<cmd>BufferLinePick<cr>')
     end,
   },
   {
     'nvim-telescope/telescope.nvim',
     dependencies = 'nvim-lua/plenary.nvim',
-    config = require('invertedEcho.telescope'),
-    cmd = 'Telescope',
+    lazy = false,
+    config = require('invertedEcho.telescope').setup,
+    -- cmd = 'Telescope',
   },
   {
     'rose-pine/neovim',
     name = 'rose-pine',
-    config = function()
-      vim.cmd('colorscheme rose-pine-moon')
-    end,
   },
   {
     'hrsh7th/nvim-cmp',
@@ -85,6 +100,20 @@ require('lazy').setup({
     'stevearc/conform.nvim',
     config = function()
       require('invertedEcho.conform')
+    end,
+  },
+  {
+    'j-hui/fidget.nvim',
+    opts = {
+      -- options
+    },
+  },
+  {
+    'folke/tokyonight.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd('colorscheme tokyonight-storm')
     end,
   },
 }, {
