@@ -116,6 +116,16 @@ require('lazy').setup({
       vim.cmd('colorscheme tokyonight-storm')
     end,
   },
+  {
+    'akinsho/toggleterm.nvim',
+    keys = {
+      '<c-\\>',
+      '<leader>g',
+    },
+    config = function()
+      require('invertedEcho.toggleterm')
+    end,
+  },
 }, {
   ui = {
     border = 'rounded',
