@@ -34,10 +34,6 @@ require('lazy').setup({
     -- cmd = 'Telescope',
   },
   {
-    'rose-pine/neovim',
-    name = 'rose-pine',
-  },
-  {
     'hrsh7th/nvim-cmp',
     lazy = false,
     config = function()
@@ -104,9 +100,15 @@ require('lazy').setup({
   },
   {
     'j-hui/fidget.nvim',
-    opts = {
-      -- options
-    },
+    config = function()
+      require('fidget').setup({
+        progress = {
+          display = {
+            done_icon = '✔',
+          },
+        },
+      })
+    end,
   },
   {
     'folke/tokyonight.nvim',
@@ -124,6 +126,34 @@ require('lazy').setup({
     },
     config = function()
       require('invertedEcho.toggleterm')
+    end,
+  },
+  {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end,
+  },
+  {
+    'stevearc/dressing.nvim',
+    opts = {},
+  },
+  {
+    'norcalli/nvim-colorizer.lua',
+    event = 'BufEnter',
+    config = function()
+      require('colorizer').setup()
+    end,
+  },
+  {
+    'rcarriga/nvim-notify',
+    config = function()
+      local notify = require('notify')
+      vim.notify = notify
+      notify.setup({
+        fps = 144,
+        stages = 'slide',
+      })
     end,
   },
 }, {
