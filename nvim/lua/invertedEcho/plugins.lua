@@ -4,26 +4,7 @@ require('lazy').setup({
     version = '*',
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
-      require('bufferline').setup({
-        options = {
-          diagnostics = 'vim-lsp',
-          indicator = {
-            style = 'underline',
-          },
-          offsets = {
-            {
-              filetype = 'NvimTree',
-              text = 'File Explorer',
-              highlight = 'Directory',
-              seperator = true,
-            },
-          },
-        },
-      })
-      set_key('n', '<tab>', '<cmd>BufferLineCycleNext<cr>')
-      set_key('n', '<s-tab>', '<cmd>BufferLineCyclePrev<cr>')
-      set_key('n', '<leader>p', '<cmd>BufferLineTogglePin<cr>')
-      set_key('n', '<leader>bp', '<cmd>BufferLinePick<cr>')
+      require('invertedEcho.bufferline')
     end,
   },
   {
@@ -155,6 +136,11 @@ require('lazy').setup({
         stages = 'slide',
       })
     end,
+  },
+  {
+    'pmizio/typescript-tools.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
+    opts = {},
   },
 }, {
   ui = {
