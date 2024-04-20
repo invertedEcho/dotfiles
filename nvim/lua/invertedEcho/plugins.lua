@@ -64,13 +64,7 @@ require('lazy').setup({
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
-      -- TODO: make seperators not triangle but just vertical line
-      require('lualine').setup({
-        options = {
-          theme = 'palenight',
-          component_seperators = { left = nil, right = nil },
-        },
-      })
+      require('invertedEcho.lualine')
     end,
   },
   {
@@ -82,13 +76,7 @@ require('lazy').setup({
   {
     'j-hui/fidget.nvim',
     config = function()
-      require('fidget').setup({
-        progress = {
-          display = {
-            done_icon = '✔',
-          },
-        },
-      })
+      require('fidget').setup()
     end,
   },
   {

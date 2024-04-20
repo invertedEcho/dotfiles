@@ -1,15 +1,12 @@
 require('conform').setup({
+  format_on_save = {
+    async = true,
+  },
   formatters_by_ft = {
     lua = { 'stylua' },
     python = { 'black' },
     javascript = { 'prettierd' },
     typescript = { 'prettierd' },
+    typescriptreact = { 'prettierd' },
   },
-})
-
-vim.api.nvim_create_autocmd('BufWritePre', {
-  pattern = '*',
-  callback = function(args)
-    require('conform').format({ bufnr = args.buf })
-  end,
 })

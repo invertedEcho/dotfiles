@@ -63,7 +63,6 @@ in
      fishPlugins.z
      chromium
      home-manager
-     oh-my-fish
      polkit
      polkit-kde-agent
      swaybg
@@ -73,6 +72,7 @@ in
      lua-language-server
      stylua
      obsidian
-     nodejs_20
+     nodejs_18
+     corepack
   ];
 }

@@ -1,6 +1,6 @@
 require('nvim-tree').setup({
   view = {
-    side = 'right',
+    side = 'left',
   },
 })
 set_key('n', '<c-n>', '<cmd>NvimTreeToggle<CR>')

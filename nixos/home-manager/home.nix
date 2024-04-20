@@ -6,7 +6,7 @@
   home.stateVersion = "23.11";
 
   home.packages = [
-    pkgs.oh-my-fish
+    pkgs.fishPlugins.tide
   ];
 
   home.sessionVariables = {
