@@ -73,5 +73,8 @@ in
      jq
      lua-language-server
      stylua
+     obsidian
+     nodejs_20
+     numix-cursor-theme
   ];
 }
