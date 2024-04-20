@@ -43,6 +43,8 @@ in
      lazygit
      nodePackages_latest.typescript-language-server
      nodePackages_latest.bash-language-server
+     nodePackages_latest.pyright
+     python311Packages.jedi-language-server
      tailwindcss-language-server
      prettierd
      ripgrep
@@ -68,5 +70,11 @@ in
      swaybg
      util-linux
      waypaper
+     jq
+     lua-language-server
+     stylua
+     obsidian
+     nodejs_20
+     numix-cursor-theme
   ];
 }

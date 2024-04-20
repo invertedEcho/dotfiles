@@ -17,7 +17,7 @@ if $IS_LAPTOP; then
   hyprctl keyword monitor $LAPTOP_SCREEN_NAME, disable
   notify-send "Successfully setup monitors for Office."
 else
-  hyprctl keyword monitor HDMI-A-1,highres,1920x0,1
-  hyprctl keyword monitor DP-2,1920x1080@14,0x0,1
+  hyprctl keyword monitor HDMI-A-1,highres,0x0,1
+  hyprctl keyword monitor DP-3,1920x1080@144,1920x0,1
   notify-send "Successfully setup monitors for Home."
 fi
