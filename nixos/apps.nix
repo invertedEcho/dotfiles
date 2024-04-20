@@ -60,7 +60,6 @@ in
      playerctl
      libimobiledevice
      ifuse
-     tela-icon-theme
      fishPlugins.z
      chromium
      home-manager
@@ -75,6 +74,5 @@ in
      stylua
      obsidian
      nodejs_20
-     numix-cursor-theme
   ];
 }

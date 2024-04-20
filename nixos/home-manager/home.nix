@@ -9,10 +9,6 @@
     pkgs.oh-my-fish
   ];
 
-  home.file = {
-  };
-
-
   home.sessionVariables = {
     EDITOR = "nvim";
   };
@@ -22,31 +18,31 @@
     lg = "lazygit";
   };
 
-  gtk.cursorTheme = {
-    name = "Bibata-Modern-Ice";
+  gtk = {
+    enable = true;
+
+    theme = {
+      package = pkgs.orchis-theme;
+      name = "orchis-theme";
+    };
+
+    iconTheme = {
+      package = pkgs.tela-icon-theme;
+      name = "Tela";
+    };
+
+    font = {
+      name = "Sans";
+      size = 11;
+    };
   };
 
-home.pointerCursor = 
-  let 
-    getFrom = url: hash: name: {
-        gtk.enable = true;
-        x11.enable = true;
-        name = name;
-        size = 24;
-        package = 
-          pkgs.runCommand "moveUp" {} ''
-            mkdir -p $out/share/icons
-            ln -s ${pkgs.fetchzip {
-              url = url;
-              hash = hash;
-            }} $out/share/icons/${name}
-        '';
-      };
-  in
-    getFrom 
-      "https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.6/Bibata-Modern-Ice.tar.xz"
-      "sha256-wCrIjQo7eKO+piIz88TZDpMnc51iCWDYBR7HBV8/CPI="
-      "Bibata-Modern-Ice";
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 16;
+  };
 
   programs.git = {
     enable = true;

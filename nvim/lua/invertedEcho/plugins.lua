@@ -142,6 +142,13 @@ require('lazy').setup({
     dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
     opts = {},
   },
+  {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('invertedEcho.comment')
+    end,
+    event = 'BufEnter',
+  },
 }, {
   ui = {
     border = 'rounded',

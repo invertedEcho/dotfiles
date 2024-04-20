@@ -49,6 +49,12 @@
   services.usbmuxd.enable = true;
 
   services.xserver = {
+    displayManager = {
+      gdm = {
+	enable = true;
+	wayland = true;
+      };
+    };
     # TODO: This seems wrong. It's needed so Hyprland recognizes the GPU, i think this just pulls in the nvidia driver, but it's a Xorg configuration
     videoDrivers = ["nvidia"];
   };
