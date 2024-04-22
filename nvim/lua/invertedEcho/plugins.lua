@@ -122,6 +122,7 @@ require('lazy').setup({
       notify.setup({
         fps = 144,
         stages = 'slide',
+        top_down = false,
       })
     end,
   },
