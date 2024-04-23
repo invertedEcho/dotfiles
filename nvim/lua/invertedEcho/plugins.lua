@@ -11,6 +11,7 @@ require('lazy').setup({
     'nvim-telescope/telescope.nvim',
     dependencies = 'nvim-lua/plenary.nvim',
     lazy = false,
+    -- TODO: Why do we need to export a table with a setup function to get telescope setup here?
     config = require('invertedEcho.telescope').setup,
     -- cmd = 'Telescope',
   },
@@ -137,6 +138,14 @@ require('lazy').setup({
       require('invertedEcho.comment')
     end,
     event = 'BufEnter',
+  },
+  {
+    'folke/trouble.nvim',
+    event = 'BufEnter',
+    -- Extract to own lua file
+    config = function()
+      set_key('n', '<leader>to', '<cmd>Trouble<cr>')
+    end,
   },
 }, {
   ui = {
