@@ -124,6 +124,7 @@ require('lazy').setup({
     dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
     opts = {},
     -- needed so typescript-tools doesn't setup itself before lsp-zero
+    -- and we get the extend_lspconfig issue
     event = 'BufEnter',
   },
   {

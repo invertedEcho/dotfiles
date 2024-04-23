@@ -6,7 +6,14 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = { 'eslint' },
+  ensure_installed = {
+    'eslint',
+    'tailwindcss',
+    'pyright',
+    'bashls',
+    'lua_ls',
+    'phpactor',
+  },
   handlers = {
     lsp_zero.default_setup,
   },
