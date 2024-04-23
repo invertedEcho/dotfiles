@@ -10,10 +10,9 @@ require('lazy').setup({
   {
     'nvim-telescope/telescope.nvim',
     dependencies = 'nvim-lua/plenary.nvim',
-    lazy = false,
-    -- TODO: Why do we need to export a table with a setup function to get telescope setup here?
-    config = require('invertedEcho.telescope').setup,
-    -- cmd = 'Telescope',
+    config = function()
+      require('invertedEcho.telescope')
+    end,
   },
   {
     'hrsh7th/nvim-cmp',
@@ -25,7 +24,6 @@ require('lazy').setup({
   {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v3.x',
-    -- FIXME
     lazy = false,
     config = function()
       require('invertedEcho.lsp')
@@ -118,19 +116,15 @@ require('lazy').setup({
   {
     'rcarriga/nvim-notify',
     config = function()
-      local notify = require('notify')
-      vim.notify = notify
-      notify.setup({
-        fps = 144,
-        stages = 'slide',
-        top_down = false,
-      })
+      require('invertedEcho.notify')
     end,
   },
   {
     'pmizio/typescript-tools.nvim',
     dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
     opts = {},
+    -- needed so typescript-tools doesn't setup itself before lsp-zero
+    event = 'BufEnter',
   },
   {
     'numToStr/Comment.nvim',
@@ -142,10 +136,12 @@ require('lazy').setup({
   {
     'folke/trouble.nvim',
     event = 'BufEnter',
-    -- Extract to own lua file
     config = function()
-      set_key('n', '<leader>to', '<cmd>Trouble<cr>')
+      require('invertedEcho.trouble')
     end,
+  },
+  {
+    'windwp/nvim-ts-autotag',
   },
 }, {
   ui = {

@@ -1,6 +1,11 @@
-require('bufferline').setup({
+local bufferline = require('bufferline')
+bufferline.setup({
   options = {
-    diagnostics = 'vim-lsp',
+    style_preset = {
+      bufferline.style_preset.no_italic,
+      bufferline.style_preset.no_bold,
+    },
+    diagnostics = 'nvim_lsp',
     indicator = {
       style = 'underline',
     },
@@ -14,7 +19,8 @@ require('bufferline').setup({
     },
   },
 })
-set_key('n', '<tab>', '<cmd>BufferLineCycleNext<cr>')
-set_key('n', '<s-tab>', '<cmd>BufferLineCyclePrev<cr>')
-set_key('n', '<leader>p', '<cmd>BufferLineTogglePin<cr>')
-set_key('n', '<leader>bp', '<cmd>BufferLinePick<cr>')
+
+SetKey('n', '<tab>', '<cmd>BufferLineCycleNext<cr>')
+SetKey('n', '<s-tab>', '<cmd>BufferLineCyclePrev<cr>')
+SetKey('n', '<leader>p', '<cmd>BufferLineTogglePin<cr>')
+SetKey('n', '<leader>bp', '<cmd>BufferLinePick<cr>')

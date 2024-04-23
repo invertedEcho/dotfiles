@@ -1,5 +1,5 @@
 require('toggleterm').setup({})
 
-set_key('n', '<c-\\>', '<cmd>ToggleTerm<cr>')
-set_key('n', '<leader>g', '<cmd>TermExec cmd="lazygit" direction=float<cr>')
-set_key('t', '<c-\\>', '<C-\\><C-n>')
+SetKey('n', '<c-\\>', '<cmd>ToggleTerm<cr>')
+SetKey('n', '<leader>g', '<cmd>TermExec cmd="lazygit" direction=float<cr>')
+SetKey('t', '<c-\\>', '<C-\\><C-n>')
