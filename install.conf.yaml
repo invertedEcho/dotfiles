@@ -17,3 +17,4 @@
     ~/.local/bin/edit-nixos-configs.sh: scripts/edit-nixos-configs.sh
     ~/.local/bin/setup-monitors.sh: scripts/setup-monitors.sh
     ~/.config/home-manager: nixos/home-manager
+    ~/.ideavimrc: intellij-settings/.ideavimrc
