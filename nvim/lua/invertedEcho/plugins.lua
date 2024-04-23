@@ -144,6 +144,14 @@ require('lazy').setup({
   {
     'windwp/nvim-ts-autotag',
   },
+  {
+    'kylechui/nvim-surround',
+    version = '*',
+    event = 'VeryLazy',
+    config = function()
+      require('nvim-surround').setup({})
+    end,
+  },
 }, {
   ui = {
     border = 'rounded',
