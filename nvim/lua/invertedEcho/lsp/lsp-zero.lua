@@ -13,6 +13,7 @@ require('mason-lspconfig').setup({
     'bashls',
     'lua_ls',
     'phpactor',
+    'jsonls',
   },
   handlers = {
     lsp_zero.default_setup,
