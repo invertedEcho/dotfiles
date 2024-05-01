@@ -1,51 +1,51 @@
 window {
-margin: 0px;
-border: 1px solid #bd93f9;
-background-color: #282a36;
+    margin: 0px;
+    border: 1px solid #bb9af7;
+    background-color: #1a1b26;
 }
 
 #input {
-margin: 5px;
-border: none;
-color: #f8f8f2;
-background-color: #44475a;
+    margin: 5px;
+    border: none;
+    color: #c0caf5;
+    background-color: #24283b;
 }
 
 #inner-box {
-margin: 5px;
-border: none;
-background-color: #282a36;
+    margin: 5px;
+    border: none;
+    background-color: #1a1b26;
 }
 
 #outer-box {
-margin: 5px;
-border: none;
-background-color: #282a36;
+    margin: 5px;
+    border: none;
+    background-color: #1a1b26;
 }
 
 #scroll {
-margin: 0px;
-border: none;
+    margin: 0px;
+    border: none;
 }
 
 #text {
-margin: 5px;
-border: none;
-color: #f8f8f2;
+    margin: 5px;
+    border: none;
+    color: #c0caf5;
 } 
 
 #entry.activatable #text {
-color: #282a36;
+    color: #1a1b26;
 }
 
 #entry > * {
-color: #f8f8f2;
+    color: #c0caf5;
 }
 
 #entry:selected {
-background-color: #44475a;
+    background-color: #33467c;
 }
 
 #entry:selected #text {
-font-weight: bold;
+    font-weight: bold;
 }
