@@ -1,96 +1,94 @@
 {
-  "layer": "top",
-  "modules-left": ["hyprland/workspaces", "hyprland/window", "wlr/taskbar"],
-  "modules-center": ["clock"],
-  "modules-right" : ["cpu", "memory", "network", "bluetooth", "pulseaudio", "backlight", "battery", "tray"],
-  "hyprland/window" : {
-    "format" : "{}",
-    "separate-outputs" : false,
-  },
-  "hyprland/workspaces" : {
-    "active-only" : false,
-    "format" : "{icon}",
-    "on-click" : "activate",
-    "on-scroll-up" : "hyprctl dispatch workspace e+1",
-    "on-scroll-down" : "hyprctl dispatch workspace e-1",
-    "format-icons": {
-        "1": "1 ",
-        "2": "2 󰈹",
-        "3": "3 󱞁",
-        "4": "4 󱧌",
-        "5": "5 ",
-        "6": "6",
-        "7": "7",
-        "8": "8",
-        "9": "9",
-        "urgent": "",
-    }
-  },
-  "wlr/taskbar": {
-    "format": "{icon}",
-    "tooltip-format": "{title}",
-    "on-click": "activate",
-    "all-outputs": "false"
-  },
-  "bluetooth": {
-  	"format": " {status}",
-  	"format-connected": " {device_alias}",
-  	"format-connected-battery": " {device_alias} {device_battery_percentage}%",
-  	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-  	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-  	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-  	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
-  },
-  "wireplumber" : {
-    "tooltip" : false,
-    "format" : "VOL {volume}%",
-    "format-muted" : "VOL mute",
-  },
-  "pulseaudio" : {
-    "tooltip" : false,
-    "scroll-step" : 5,
-    "on-click" : "",
-    "format" : "VOL {volume}%",
-    "format-muted" : "VOL mute",
-  },
-  "battery" : {
-    "interval" : 3,
-    "format" : "BAT {capacity}%",
-    "format-charging": "BAT {capacity}% 󰂄",
-    "format-plugged": "BAT {capacity}% ",
-    "on-click" : "",
-    "states" : {
-      "warning" : 30,
-      "critical" : 15,
+    "layer": "top",
+    "margin-left": 10,
+    "margin-right": 10,
+    "margin-top": 5,
+    "spacing": 1,
+
+    "modules-left": ["custom/wofi", "hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "temperature", "memory", "disk", "pulseaudio", "network", "tray"],
+
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1 ",
+            "2": "2 󰈹",
+	    "5": "5 ",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            // "urgent": "",
+            // "active": "",
+            // "default": ""
+         },
     },
-  },
-  "clock" : {
-    "interval" : 1,
-    "format" : "{:%a %d %b %H:%M}",
-    "format-alt" : "{:%H:%M}",
-    "timezone" : "Europe/Berlin",
-  },
-  "cpu" : {
-    "format" : "CPU {usage}%",
-    "on-click" : "",
-    "tooltip" : false,
-  },
-  "backlight" : {
-    "format" : "󰃞 {percent}%",
-    "on-click" : "",
-    "tooltip" : false,
-  },
-  "memory" : {
-    "on-click" : "",
-    "format" : "RAM {}%",
-  },
-  "network": {
-    "format-wifi": "  {essid}",
-    "format-ethernet": "󰈀  {ifname}",
-    "on-click": "wezterm -e nmtui",
-  },
-  "tray": {
-    "icon-size" : 21,
-    "spacing" : 10,
-  }
+    "tray": {
+        "icon-size": 18,
+        "spacing": 5,
+        "show-passive-items": true,
+    },
+    "clock": {
+        "interval": 60,
+        "format": "  {:%a %b %d  %I:%M %p}", // %b %d %Y  --Date formatting
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+   "temperature": {
+        "critical-threshold": 80,
+        "interval": 2,
+        "format": " {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    "cpu": {
+        "interval": 2,
+        "format": "  {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 2,
+        "format": "  {}%"
+    },
+   "disk": {
+        "interval": 15,
+        "format": "󰋊 {percentage_used}%",
+    },
+    "network": {
+        "format-wifi": " :{ipaddr}",
+        "format-ethernet": "󰈀 {ipaddr}/{cidr}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}% 󰂯",
+        "format-bluetooth-muted": "󰖁 {icon} 󰂯",
+        "format-muted": "󰖁 {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "󱡒",
+            "headset": "󰋎",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/wofi": {
+      "format": "{icon}",
+      "format-icons": "󰣇",
+      "exec-on-event": "true",
+      "on-click": "wofi --show=drun",
+    },
+    "custom/sepp": {
+        "format": "|"
+    },
 }

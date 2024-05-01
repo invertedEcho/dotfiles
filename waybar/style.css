@@ -1,112 +1,144 @@
+@import "mocha.css";
+
 * {
-	border: none;
-	border-radius: 0;
-	font-family: "JetBrainsMono Nerd Font";
-    font-style: normal;
-    font-weight: bold;
-	font-size: 14px;
-	min-height: 28px;
+  min-height: 0;
+  font-family: "JetBrainsMono Nerd Font", "Hack Nerd Font", FontAwesome, Roboto,
+    Helvetica, Arial, sans-serif;
+  font-size: 13px;
 }
 
 window#waybar {
-	background: transparent;
+  color: @text;
+  background: @base;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  border-radius: 90px;
 }
 
-window#waybar.empty #window {
-	background: transparent;
+window#waybar.empty {
+  opacity: 0.3;
 }
 
-#window {
-    margin-top: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 6px;
-    transition: none;
-    color: @foreground;
-    background: @background;
+.modules-left {
+  border: none;
+  padding: 5px 5px;
 }
 
-window#waybar.alacritty #window,
-window#waybar.Firefox #window,
-window#waybar.Nextcloud #window,
-window#waybar.keepassxc #window,
-window#waybar.libreoffice #window,
-window#waybar.mpv #window,
-window#waybar.Navigator #window,
-window#waybar.qutebrowser #window {
-    color: @foreground;
-    background: @background;
+.modules-right {
+  border: none;
+  padding: 5px 5px;
 }
 
-#mode {
-    margin-top: 8px;
-    margin-right: 8px;
-    margin-bottom: 0;
-    border-radius: 6px;
-    color: @foreground;
-    background: @background;
-    transition: none;
+.modules-center {
+  border: none;
+  padding: 5px 5px;
+}
+
+button {
+  border: none;
+  border-radius: 0;
+}
+
+button:hover {
+  background: @base;
+  border-radius: 90px;
+}
+
+#custom-wofi {
+  color: @blue;
+  font-weight: 600;
+  margin-right: 10px;
+  padding-left: 15px;
+  padding-right: 19px;
+  border-radius: 90px;
+  background: @crust
 }
 
 #workspaces {
-    margin-top: 8px;
-    margin-left: 12px;
-    margin-right: 8px;
-    margin-bottom: 0;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-radius: 6px;
-    color: @foreground;
-    background: @background;
-    transition: none;
+  font-weight: 600;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 90px;
+  background: @crust
 }
+
 
 #workspaces button {
-    transition: none;
-    padding-left: 8px;
-    padding-right: 8px;
-    color: #828282;
-    background: transparent;
-    font-size: 12px;
+  color: @text;
+  font-weight: 600;
+  margin: 0px;
+  padding: 0px 5px;
 }
 
-#workspaces button.focused {
-    color: @foreground;
+#workspaces button.urgent {
+  color: @red;
+}
+#workspaces button.empty {
+  color: @surface2;
 }
 
 #workspaces button.active {
-    color: @foreground;
+  color: @blue;
 }
 
-#workspaces button:hover {
-    transition: none;
-    box-shadow: inherit;
-    text-shadow: inherit;
-    color: #cccccc;
+#workspaces button.focused {
+  color: @green;
 }
 
-#temperature,
-#taskbar,
 #cpu,
-#pulseaudio,
-#backlight,
+#temperature,
 #memory,
-#clock,
-#battery,
-#tray,
-#battery,
-#bluetooth,
-#network {
-    margin-top: 8px;
-    margin-left: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 0;
-    border-radius: 6px;
-    transition: none;
-    color: @foreground;
-    background: @background;
+#disk {
+  color: @blue;
+  font-weight: 600;
+  margin-right: 10px;
+  padding: 6px 15px;
+  border-radius: 90px;
+  background: @crust
 }
 
-#battery.warning { color: orange; }
-#battery.critical { color: red; }
+#pulseaudio {
+  color: @crust;
+  font-weight: 600;
+  margin-right: 10px;
+  padding: 6px 15px;
+  border-radius: 90px;
+  background: @blue
+}
+
+#network {
+  color: @crust;
+  font-weight: 600;
+  margin-right: 10px;
+  padding: 6px 15px;
+  border-radius: 90px;
+  background: @green
+}
+
+#tray {
+  color: @text;
+  font-weight: 600;
+  padding: 6px 15px;
+  border-radius: 90px;
+  background: @crust
+}
+
+#clock {
+  color: @blue;
+  font-weight: 600;
+  margin-right: 10px;
+  padding: 6px 15px;
+  border-radius: 90px;
+  background: @crust
+}
+
+#custom-sepp {
+    color: @surface2;
+    font-size: 20px;
+        padding-left: 4px;
+        padding-right: 10px;
+}
+
+#network.disconnected {
+  background-color: @red;
+}
