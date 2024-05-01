@@ -74,5 +74,18 @@ in
      obsidian
      nodejs_18
      corepack
+     pkg-config
+     openssl
+     legendary-gl
+     lutris-unwrapped
+     wineWow64Packages.waylandFull
+     wineWowPackages.waylandFull
+     android-tools
+     vulkan-tools
+     rbw
+     rofi-rbw-wayland
+     pinentry
+     wtype
+     php83Packages.composer
   ];
 }

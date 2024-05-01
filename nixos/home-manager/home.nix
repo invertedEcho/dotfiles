@@ -23,7 +23,7 @@
 
     theme = {
       package = pkgs.orchis-theme;
-      name = "orchis-theme";
+      name = "Orchis";
     };
 
     iconTheme = {

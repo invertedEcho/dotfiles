@@ -26,6 +26,9 @@
      shell = pkgs.fish;
    };
 
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = ["JetBrainsMono"]; })
   ];
@@ -58,6 +61,18 @@
     # TODO: This seems wrong. It's needed so Hyprland recognizes the GPU, i think this just pulls in the nvidia driver, but it's a Xorg configuration
     videoDrivers = ["nvidia"];
   };
+
+  services.udev.packages = [
+    pkgs.android-udev-rules
+  ];
+
+  programs.adb = {
+    enable = true;
+  };
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-24.8.6"
+  ];
 
   networking.wireless.iwd.enable = true;
 
