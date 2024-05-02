@@ -2,9 +2,8 @@
 
 * {
   min-height: 0;
-  font-family: "JetBrainsMono Nerd Font", "Hack Nerd Font", FontAwesome, Roboto,
-    Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 14px;
 }
 
 window#waybar {
