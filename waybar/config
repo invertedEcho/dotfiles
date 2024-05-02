@@ -1,8 +1,8 @@
 {
     "layer": "top",
-    "margin-left": 10,
-    "margin-right": 10,
-    "margin-top": 5,
+    "margin-left": 0,
+    "margin-right": 0,
+    "margin-top": 0,
     "spacing": 1,
 
     "modules-left": ["custom/wofi", "hyprland/workspaces"],
@@ -64,7 +64,8 @@
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+	"on-click": "iwgtk"
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",

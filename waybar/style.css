@@ -11,7 +11,6 @@ window#waybar {
   background: @base;
   transition-property: background-color;
   transition-duration: 0.5s;
-  border-radius: 90px;
 }
 
 window#waybar.empty {
