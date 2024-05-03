@@ -11,3 +11,5 @@ vim.opt.mouse = ''
 vim.opt.smartindent = true
 vim.opt.wrap = false
 vim.opt.undofile = true
+
+vim.opt.guicursor = 'i:block'
