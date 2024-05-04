@@ -26,8 +26,11 @@
      shell = pkgs.fish;
    };
 
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  environment.sessionVariables.PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+    NIX_BUILD_SHELL = "fish";
+  };
 
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = ["JetBrainsMono"]; })
@@ -52,7 +55,10 @@
   services.usbmuxd.enable = true;
 
   services.xserver = {
+    enable = true;
+    displayManager.sessionPackages = [ pkgs.hyprland ];
     displayManager = {
+      defaultSession = "hyprland";
       gdm = {
 	enable = true;
 	wayland = true;
