@@ -161,6 +161,12 @@ require('lazy').setup({
     end,
     ft = { 'markdown' },
   },
+  {
+    'rmagatti/auto-session',
+    config = function()
+      require('auto-session').setup({})
+    end,
+  },
 }, {
   ui = {
     border = 'rounded',
