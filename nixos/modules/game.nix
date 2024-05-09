@@ -1,19 +1,22 @@
 { pkgs, ... }:
 
 {
+  hardware = {
+    opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+    };
 
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    nvidia.modesetting.enable = true;
   };
 
-  hardware.nvidia.modesetting.enable = true;
+  programs = {
+    steam.enable = true;
+    steam.gamescopeSession.enable = true;
 
-  programs.steam.enable = true;
-  programs.steam.gamescopeSession.enable = true;
-
-  programs.gamemode.enable = true;
+    gamemode.enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
     lutris

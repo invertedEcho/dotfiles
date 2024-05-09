@@ -1,22 +1,24 @@
 { config, pkgs, ... }:
 
 {
-  home.username = "echo";
-  home.homeDirectory = "/home/echo";
-  home.stateVersion = "23.11";
+  home = {
+    username = "echo";
+    homeDirectory = "/home/echo";
+    stateVersion = "23.11";
 
-  home.packages = [
-    pkgs.fishPlugins.tide
-  ];
+    packages = [
+      pkgs.fishPlugins.tide
+    ];
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-    FLAKE = "/home/echo/dev/priv/dotfiles/nixos";
-  };
+    sessionVariables = {
+      EDITOR = "nvim";
+      FLAKE = "/home/echo/dev/priv/dotfiles/nixos";
+    };
 
-  home.shellAliases = {
-    n = "nvim";
-    lg = "lazygit";
+    shellAliases = {
+      n = "nvim";
+      lg = "lazygit";
+    };
   };
 
   gtk = {
@@ -45,24 +47,26 @@
     size = 16;
   };
 
-  programs.git = {
-    enable = true;
-    userName = "Jakob Stechow";
-    userEmail = "jakob.stechow@pm.me";
-  };
+  programs = {
+    git = {
+      enable = true;
+      userName = "Jakob Stechow";
+      userEmail = "jakob.stechow@pm.me";
+    };
 
-  programs.fish = {
-    enable = true;
-    # Disable fish greeting
-    interactiveShellInit = ''
-      set fish_greeting
-    '';
-  };
+    fish = {
+      enable = true;
+      # Disable fish greeting
+      interactiveShellInit = ''
+	set fish_greeting
+      '';
+    };
 
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-  };
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
 
-  programs.home-manager.enable = true;
+    home-manager.enable = true;
+  };
 }

@@ -1,25 +1,27 @@
 { pkgs, ... }:
 
 {
-  services.openssh.enable = true;
-  services.printing.enable = true;
-  services.gvfs.enable = true;
-  services.usbmuxd.enable = true;
+  services = {
+    openssh.enable = true;
+    printing.enable = true;
+    gvfs.enable = true;
+    usbmuxd.enable = true;
 
-  services.xserver = {
-    enable = true;
-    displayManager.sessionPackages = [ pkgs.hyprland ];
-    displayManager = {
-      defaultSession = "hyprland";
-      gdm = {
-	enable = true;
-	wayland = true;
+    xserver = {
+      enable = true;
+      displayManager.sessionPackages = [ pkgs.hyprland ];
+      displayManager = {
+	defaultSession = "hyprland";
+	gdm = {
+	  enable = true;
+	  wayland = true;
+	};
       };
+      videoDrivers = ["nvidia"];
     };
-    videoDrivers = ["nvidia"];
-  };
 
-  services.udev.packages = [
-    pkgs.android-udev-rules
-  ];
+    udev.packages = [
+      pkgs.android-udev-rules
+    ];
+  };
 }

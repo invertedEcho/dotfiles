@@ -85,5 +85,9 @@ in
      php83Packages.composer
      nh
      hyprlock
+     protonmail-bridge
+     thunderbird
+     gnome.gnome-keyring
+     statix
   ];
 }

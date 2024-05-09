@@ -24,14 +24,17 @@
   # networking.interfaces.wlan0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-  hardware.pulseaudio.enable = true;
+  hardware = {
+    cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+    pulseaudio.enable = true;
 
-  hardware.nvidia = {
-     modesetting.enable = true;
-     open = false;
+    nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+
+    nvidia = {
+       modesetting.enable = true;
+       open = false;
+    };
   };
 }
