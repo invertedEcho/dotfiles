@@ -11,6 +11,7 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
+    FLAKE = "/home/echo/dev/priv/dotfiles/nixos";
   };
 
   home.shellAliases = {
@@ -56,6 +57,11 @@
     interactiveShellInit = ''
       set fish_greeting
     '';
+  };
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
   };
 
   programs.home-manager.enable = true;

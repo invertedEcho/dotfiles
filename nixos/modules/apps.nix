@@ -37,7 +37,6 @@ in
      gnome.nautilus
      # waybar
      customWaybar
-     steam
      webcord
      xwayland
      lazygit
@@ -60,6 +59,7 @@ in
      playerctl
      libimobiledevice
      ifuse
+     # todo: move to home-manager
      fishPlugins.z
      chromium
      home-manager
@@ -76,10 +76,6 @@ in
      corepack
      pkg-config
      openssl
-     legendary-gl
-     lutris-unwrapped
-     wineWow64Packages.waylandFull
-     wineWowPackages.waylandFull
      android-tools
      vulkan-tools
      rbw
@@ -87,5 +83,7 @@ in
      pinentry
      wtype
      php83Packages.composer
+     nh
+     hyprlock
   ];
 }

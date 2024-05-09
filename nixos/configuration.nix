@@ -4,7 +4,11 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./apps.nix
+      # what about wildcard import?
+      ./modules/apps.nix
+      ./modules/game.nix
+      ./modules/services.nix
+      ./modules/programs.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -21,60 +25,19 @@
   sound.enable = true;
 
   users.users.echo = {
-     isNormalUser = true;
-     extraGroups = [ "wheel" ];
-     shell = pkgs.fish;
+    isNormalUser = true;
+    extraGroups = [ "wheel" ];
+    shell = pkgs.fish;
    };
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
-    NIX_BUILD_SHELL = "fish";
   };
 
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = ["JetBrainsMono"]; })
   ];
-
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
-
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
-  programs.git.enable = true;
-  programs.fish.enable = true;
-
-  services.openssh.enable = true;
-  services.printing.enable = true;
-  services.gvfs.enable = true;
-  services.usbmuxd.enable = true;
-
-  services.xserver = {
-    enable = true;
-    displayManager.sessionPackages = [ pkgs.hyprland ];
-    displayManager = {
-      defaultSession = "hyprland";
-      gdm = {
-	enable = true;
-	wayland = true;
-      };
-    };
-    # TODO: This seems wrong. It's needed so Hyprland recognizes the GPU, i think this just pulls in the nvidia driver, but it's a Xorg configuration
-    videoDrivers = ["nvidia"];
-  };
-
-  services.udev.packages = [
-    pkgs.android-udev-rules
-  ];
-
-  programs.adb = {
-    enable = true;
-  };
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-24.8.6"
