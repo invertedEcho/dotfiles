@@ -7,7 +7,7 @@
 
     "modules-left": ["custom/wofi", "hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["cpu", "temperature", "memory", "disk", "pulseaudio", "network", "tray"],
+    "modules-right": ["cpu", "battery", "memory", "disk", "pulseaudio", "network", "tray"],
 
     "hyprland/workspaces": {
         "on-click": "activate",
@@ -38,11 +38,13 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
-   "temperature": {
-        "critical-threshold": 80,
-        "interval": 2,
-        "format": " {temperatureC}°C",
-        "format-icons": ["", "", ""]
+   "battery": {
+        "interval": 60,
+	"states": {
+	  "warning": 30,
+	  "critical": 15
+	},
+        "format": "{capacity}% ",
     },
     "cpu": {
         "interval": 2,

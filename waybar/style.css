@@ -84,7 +84,7 @@ button:hover {
 }
 
 #cpu,
-#temperature,
+#battery,
 #memory,
 #disk {
   color: @blue;
