@@ -7,7 +7,7 @@
 
     "modules-left": ["custom/wofi", "hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["cpu", "battery", "memory", "disk", "pulseaudio", "network", "tray"],
+    "modules-right": ["battery", "pulseaudio", "network", "tray"],
 
     "hyprland/workspaces": {
         "on-click": "activate",
@@ -45,19 +45,6 @@
 	  "critical": 15
 	},
         "format": "{capacity}% ",
-    },
-    "cpu": {
-        "interval": 2,
-        "format": "  {usage}%",
-        "tooltip": false
-    },
-    "memory": {
-        "interval": 2,
-        "format": "  {}%"
-    },
-   "disk": {
-        "interval": 15,
-        "format": "󰋊 {percentage_used}%",
     },
     "network": {
         "format-wifi": " :{ipaddr}",

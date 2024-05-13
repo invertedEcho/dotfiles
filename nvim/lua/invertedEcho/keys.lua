@@ -16,3 +16,4 @@ SetKey('n', '<c-l>', '<c-w>l')
 
 -- delete buffer
 SetKey('n', '<leader>x', '<cmd>bd<cr>')
+SetKey('n', '<leader>ax', '<cmd>%bd|e#<cr>')
