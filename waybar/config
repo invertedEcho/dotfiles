@@ -7,7 +7,7 @@
 
     "modules-left": ["custom/wofi", "hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["battery", "pulseaudio", "network", "tray"],
+    "modules-right": ["backlight", "battery", "pulseaudio", "network", "tray"],
 
     "hyprland/workspaces": {
         "on-click": "activate",
@@ -38,18 +38,24 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
+    "backlight": {
+	"format": "{percent}% {icon}",
+	"format-icons": ["󰃠"]
+    },
    "battery": {
         "interval": 60,
 	"states": {
 	  "warning": 30,
 	  "critical": 15
 	},
-        "format": "{capacity}% ",
+        "format": "{icon}  {capacity}%",
+	"format-icons": ["", "", "", "", ""],
+	"format-charging": "󰂄 {capacity}%",
     },
     "network": {
-        "format-wifi": " :{ipaddr}",
+        "format-wifi": "  {essid} {signalStrength}%",
         "format-ethernet": "󰈀 {ipaddr}/{cidr}",
-        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-wifi": "{ipaddr}",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",

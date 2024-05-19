@@ -86,6 +86,7 @@ button:hover {
 #cpu,
 #battery,
 #memory,
+#backlight,
 #disk {
   color: @blue;
   font-weight: 600;
