@@ -6,9 +6,6 @@ bufferline.setup({
       bufferline.style_preset.no_bold,
     },
     diagnostics = 'nvim_lsp',
-    indicator = {
-      style = 'underline',
-    },
     offsets = {
       {
         filetype = 'NvimTree',
