@@ -133,6 +133,7 @@ require('lazy').setup({
       require('invertedEcho.comment')
     end,
     event = 'BufEnter',
+    dependencies = { 'JoosepAlviste/nvim-ts-context-commentstring' }
   },
   {
     'folke/trouble.nvim',

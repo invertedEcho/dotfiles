@@ -14,6 +14,11 @@ SetKey('n', '<c-j>', '<c-w>j')
 SetKey('n', '<c-k>', '<c-w>k')
 SetKey('n', '<c-l>', '<c-w>l')
 
+
+-- resize windows
+SetKey('n', '<c-->', '<c-w>-')
+SetKey('n', '<c-=>', '<c-w>+')
+
 -- delete buffer
 SetKey('n', '<leader>x', '<cmd>bd<cr>')
 SetKey('n', '<leader>ax', '<cmd>%bd|e#<cr>')
