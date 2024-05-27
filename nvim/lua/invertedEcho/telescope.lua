@@ -4,6 +4,12 @@ telescope.setup({
     colorscheme = {
       enable_preview = true,
     },
+    find_files = {
+      theme = 'ivy',
+    },
+    live_grep = {
+      theme = 'ivy',
+    },
   },
 })
 SetKey('n', '<leader>tf', '<cmd>Telescope find_files<cr>')
