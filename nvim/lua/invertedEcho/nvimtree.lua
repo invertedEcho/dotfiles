@@ -1,14 +1,14 @@
 require('nvim-tree').setup({
   view = {
     side = 'left',
-    adaptive_size = true
+    adaptive_size = true,
   },
   git = {
     ignore = false,
   },
 })
 
-SetKey('n', '<c-n>', '<cmd>NvimTreeFindFile<CR>')
+SetKey('n', '<c-n>', '<cmd>NvimTreeFindFileToggle<CR>')
 
 -- This function copied from the wiki handles going to the last used hidden buffer when deleting ("closing") a buffer.
 vim.api.nvim_create_autocmd('BufEnter', {
