@@ -3,7 +3,6 @@
 {
   imports =
     [
-      ./hardware-configuration.nix
       # what about wildcard import?
       ./modules/apps.nix
       ./modules/game.nix

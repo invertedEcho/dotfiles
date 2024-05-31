@@ -26,7 +26,7 @@
 
     theme = {
       package = pkgs.orchis-theme;
-      name = "Orchis";
+      name = "Orchis-Dark";
     };
 
     iconTheme = {

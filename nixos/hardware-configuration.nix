@@ -7,6 +7,7 @@
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
   boot.kernelModules = [ "kvm-amd" ];
+  boot.supportedFilesystems = [ "ntfs" ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/16ffa14e-4ca3-44c8-b1c3-b086a5ec27f1";
