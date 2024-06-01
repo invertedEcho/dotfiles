@@ -1,18 +1,5 @@
 { pkgs, ... } :
-let
-  customWaybar = pkgs.waybar.override {
-    wireplumber = pkgs.wireplumber.overrideAttrs (oldAttrs: rec {
-      version = "0.4.17";
-      src = pkgs.fetchFromGitLab {
-        domain = "gitlab.freedesktop.org";
-        owner = "pipewire";
-        repo = "wireplumber";
-        rev = version;
-        hash = "sha256-vhpQT67+849WV1SFthQdUeFnYe/okudTQJoL3y+wXwI=";
-      };
-    });
-  };
-in
+
 {
   environment.systemPackages = with pkgs; [
      rustup
@@ -20,7 +7,6 @@ in
      vim
      htop
      killall
-     nvtop
      wget
      firefox
      neovim
@@ -35,8 +21,7 @@ in
      gcc13
      mpv
      gnome.nautilus
-     # waybar
-     customWaybar
+     waybar
      webcord
      xwayland
      lazygit
@@ -55,7 +40,6 @@ in
      tokyo-night-gtk
      libnotify
      gammastep
-     mako
      playerctl
      libimobiledevice
      ifuse
@@ -89,5 +73,7 @@ in
      thunderbird
      gnome.gnome-keyring
      statix
+     swaynotificationcenter
+     kooha
   ];
 }

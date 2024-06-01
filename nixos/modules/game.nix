@@ -20,6 +20,8 @@
 
   environment.systemPackages = with pkgs; [
     lutris
+    wineWow64Packages.base
+    wineWow64Packages.waylandFull
   ];
 
 }
