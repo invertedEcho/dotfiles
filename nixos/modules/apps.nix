@@ -46,7 +46,6 @@
      # todo: move to home-manager
      fishPlugins.z
      chromium
-     home-manager
      polkit
      polkit-kde-agent
      swaybg

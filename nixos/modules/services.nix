@@ -7,20 +7,21 @@
     gvfs.enable = true;
     usbmuxd.enable = true;
 
-    displayManager = {
-      defaultSession = "hyprland";
-      sessionPackages = [ pkgs.hyprland ];
-    };
+    # displayManager = {
+    #   defaultSession = "plasma";
+    #   sessionPackages = [ pkgs.hyprland ];
+    # };
 
     xserver = {
       enable = true;
       videoDrivers = ["nvidia"];
-      displayManager = {
-	gdm = {
-	  enable = true;
-	  wayland = true;
-	};
-      };
+    };
+
+    displayManager = {
+      sddm.enable = true;
+    };
+    desktopManager = {
+      plasma6.enable = true;
     };
 
     udev.packages = [
