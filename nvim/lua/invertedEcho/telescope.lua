@@ -4,10 +4,14 @@ telescope.setup({
     colorscheme = {
       enable_preview = true,
     },
+    -- Can you really not set a theme globally??
     find_files = {
       theme = 'ivy',
     },
     live_grep = {
+      theme = 'ivy',
+    },
+    buffers = {
       theme = 'ivy',
     },
   },
