@@ -22,6 +22,7 @@
 	    home-manager.useGlobalPkgs = true;
 	    home-manager.useUserPackages = true;
 	    home-manager.users.echo = import ./modules/home.nix;
+	    home-manager.backupFileExtension = ".bak";
 	  }
 	];
       };
