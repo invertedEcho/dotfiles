@@ -120,20 +120,12 @@ require('lazy').setup({
     end,
   },
   {
-    'pmizio/typescript-tools.nvim',
-    dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
-    opts = {},
-    -- needed so typescript-tools doesn't setup itself before lsp-zero
-    -- and we get the extend_lspconfig issue
-    event = 'BufEnter',
-  },
-  {
     'numToStr/Comment.nvim',
     config = function()
       require('invertedEcho.comment')
     end,
     event = 'BufEnter',
-    dependencies = { 'JoosepAlviste/nvim-ts-context-commentstring' }
+    dependencies = { 'JoosepAlviste/nvim-ts-context-commentstring' },
   },
   {
     'folke/trouble.nvim',

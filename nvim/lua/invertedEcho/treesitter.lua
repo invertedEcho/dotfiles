@@ -8,6 +8,7 @@ require('nvim-treesitter.configs').setup({
     'json',
     'toml',
     'rust',
+    'comment',
   },
   highlight = {
     enable = true,

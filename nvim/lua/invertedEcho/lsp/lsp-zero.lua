@@ -14,6 +14,7 @@ require('mason-lspconfig').setup({
     'lua_ls',
     'phpactor',
     'jsonls',
+    'vtsls',
   },
   handlers = {
     lsp_zero.default_setup,
