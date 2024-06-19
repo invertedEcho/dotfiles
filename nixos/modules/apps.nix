@@ -1,10 +1,7 @@
-{ pkgs, ... } :
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
-    androidenv.androidsdk
-    androidenv.androidndk
-    androidenv.platform-tools
     rustup
     gnumake
     vim
@@ -24,6 +21,7 @@
     gcc13
     mpv
     gnome.nautilus
+    gnome.gnome-disk-utility
     waybar
     webcord
     xwayland
@@ -49,8 +47,6 @@
     # todo: move to home-manager
     fishPlugins.z
     chromium
-    polkit
-    polkit-kde-agent
     swaybg
     util-linux
     waypaper
@@ -71,13 +67,12 @@
     php83Packages.composer
     nh
     hyprlock
-    protonmail-bridge
     thunderbird
-    gnome.gnome-keyring
     statix
     swaynotificationcenter
     kooha
-    sddm-chili-theme
     openjdk17-bootstrap
+    rclone
+    wlogout
   ];
 }

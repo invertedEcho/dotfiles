@@ -15,9 +15,7 @@ _:
     git.enable = true;
     fish.enable = true;
 
-    adb = {
-      enable = true;
-    };
+    adb = { enable = true; };
 
     nh = {
       enable = true;
@@ -25,5 +23,5 @@ _:
       clean.extraArgs = "--keep-since 5d --keep 15";
       flake = "/home/$USER/dev/priv/dotfiles";
     };
-   };
+  };
 }

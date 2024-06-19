@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
   home = {
@@ -6,9 +6,7 @@
     homeDirectory = "/home/echo";
     stateVersion = "23.11";
 
-    packages = [
-      pkgs.fishPlugins.tide
-    ];
+    packages = [ pkgs.fishPlugins.tide ];
 
     sessionVariables = {
       EDITOR = "nvim";
@@ -58,7 +56,7 @@
       enable = true;
       # Disable fish greeting
       interactiveShellInit = ''
-	set fish_greeting
+        set fish_greeting
       '';
     };
 

@@ -14,18 +14,12 @@
 
     xserver = {
       enable = true;
-      videoDrivers = ["nvidia"];
+      videoDrivers = [ "nvidia" ];
     };
 
-    displayManager = {
-      sddm.enable = true;
-    };
-    desktopManager = {
-      plasma6.enable = true;
-    };
+    displayManager = { sddm.enable = true; };
+    desktopManager = { plasma6.enable = true; };
 
-    udev.packages = [
-      pkgs.android-udev-rules
-    ];
+    udev.packages = [ pkgs.android-udev-rules ];
   };
 }
