@@ -25,7 +25,8 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ];
     shell = pkgs.fish;
-    hashedPassword = "$y$j9T$kSZUSuNWFeX4o6GlPHxk20$Pcc5XjIXXCYGh/B4fqRK/zLsEYpRpRsiP9p5oLiFCC2";
+    hashedPassword =
+      "$y$j9T$kSZUSuNWFeX4o6GlPHxk20$Pcc5XjIXXCYGh/B4fqRK/zLsEYpRpRsiP9p5oLiFCC2";
   };
 
   # TODO: document these, why are they needed and what do they do
@@ -42,6 +43,26 @@
   networking.wireless.iwd.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  security.polkit.enable = true;
+  # TODO: i think starting hyprland manually does not trigger the graphical-session.target
+  # also starting manually from hyprland exec-once, so this is probably stupid
+  systemd = {
+    user.services.polkit-gnome-authentication-agent-1 = {
+      description = "polkit-gnome-authentication-agent-1";
+      wantedBy = [ "graphical-session.target" ];
+      wants = [ "graphical-session.target" ];
+      after = [ "graphical-session.target" ];
+      serviceConfig = {
+        Type = "simple";
+        ExecStart =
+          "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+        Restart = "on-failure";
+        RestartSec = 1;
+        TimeoutStopSec = 10;
+      };
+    };
+  };
 
   system.stateVersion = "23.11";
 }

@@ -82,5 +82,9 @@
     act
     solaar
     wlogout
+    polkit
+    polkit_gnome
+    # .nix formatter
+    nixfmt-classic
   ];
 }
