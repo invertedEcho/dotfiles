@@ -136,6 +136,9 @@ require('lazy').setup({
   },
   {
     'windwp/nvim-ts-autotag',
+    config = function()
+      require('invertedEcho.ts-autotag')
+    end,
   },
   {
     'kylechui/nvim-surround',
