@@ -1,6 +1,10 @@
 _:
 
 {
+  virtualisation.docker = {
+    enable = true;
+  };
+
   programs = {
     gnupg.agent = {
       enable = true;
@@ -23,5 +27,7 @@ _:
       clean.extraArgs = "--keep-since 5d --keep 15";
       flake = "/home/$USER/dev/priv/dotfiles";
     };
+
+    # dconf.enable = true;
   };
 }

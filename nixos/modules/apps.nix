@@ -67,12 +67,20 @@
     php83Packages.composer
     nh
     hyprlock
+    protonmail-bridge-gui
     thunderbird
     statix
     swaynotificationcenter
     kooha
     openjdk17-bootstrap
     rclone
+    postgresql_16
+    # needed for react native building, android-nixpkgs should provide these but they are currently broken ):
+    aapt
+    cmake
+    # end
+    act
+    solaar
     wlogout
   ];
 }
