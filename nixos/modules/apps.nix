@@ -26,9 +26,10 @@
     webcord
     xwayland
     lazygit
-    nodePackages_latest.typescript-language-server
-    nodePackages_latest.bash-language-server
-    nodePackages_latest.pyright
+    nodePackages.typescript-language-server
+    nodePackages.bash-language-server
+    nodePackages.pyright
+    nodePackages.eslint
     python311Packages.jedi-language-server
     tailwindcss-language-server
     prettierd
@@ -86,5 +87,12 @@
     polkit_gnome
     # .nix formatter
     nixfmt-classic
+    onlyoffice-bin
+    inetutils
+    qemu
+    qemu_full
+    parted
+    appimage-run
+    pass
   ];
 }
