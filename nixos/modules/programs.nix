@@ -21,7 +21,12 @@
       xwayland.enable = true;
     };
 
-    git.enable = true;
+    git = {
+      enable = true;
+      config = {
+	push.autoSetupRemote = true;
+      };
+    };
     fish.enable = true;
 
     adb = { enable = true; };
