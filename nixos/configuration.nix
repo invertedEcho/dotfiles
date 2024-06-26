@@ -6,6 +6,8 @@
     ./modules/game.nix
     ./modules/services.nix
     ./modules/programs.nix
+    ./modules/nvidia.nix
+    ./modules/audio.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -18,8 +20,6 @@
   time.timeZone = "Europe/Berlin";
 
   i18n.defaultLocale = "en_US.UTF-8";
-
-  sound.enable = true;
 
   users.users.echo = {
     isNormalUser = true;

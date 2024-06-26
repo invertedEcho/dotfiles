@@ -6,11 +6,7 @@
     printing.enable = true;
     gvfs.enable = true;
     usbmuxd.enable = true;
-
-    xserver = {
-      enable = true;
-      videoDrivers = [ "nvidia" ];
-    };
+    xserver.enable = true;
 
     udev.packages = [ pkgs.android-udev-rules ];
   };

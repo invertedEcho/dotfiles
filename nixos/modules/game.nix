@@ -7,8 +7,6 @@
       driSupport = true;
       driSupport32Bit = true;
     };
-
-    nvidia.modesetting.enable = true;
   };
 
   programs = {

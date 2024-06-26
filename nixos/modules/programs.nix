@@ -23,9 +23,7 @@
 
     git = {
       enable = true;
-      config = {
-	push.autoSetupRemote = true;
-      };
+      config = { push.autoSetupRemote = true; };
     };
     fish.enable = true;
 

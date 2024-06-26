@@ -81,7 +81,7 @@
     },
     "custom/wofi": {
       "format": "{icon}",
-      "format-icons": "󰣇",
+      "format-icons": "",
       "exec-on-event": "true",
       "on-click": "wofi --show=drun",
     },
