@@ -17,6 +17,21 @@
       n = "nvim";
       lg = "lazygit";
     };
+
+    pointerCursor = {
+	gtk.enable = true;
+	package = pkgs.bibata-cursors;
+	name = "Bibata-Modern-Classic";
+	size = 16;
+    };
+ #    xdg.desktopEntries = {
+ #      obsidian = {
+	# name = "Firefox";
+	# genericName = "Note taking app";
+	# exec = "appimage-run ~/.local/bin/Obsidian-1.6.3.AppImage";
+	# terminal = false;
+ #      };
+ #    };
   };
 
   gtk = {
@@ -36,13 +51,6 @@
       name = "Sans";
       size = 11;
     };
-  };
-
-  home.pointerCursor = {
-    gtk.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Classic";
-    size = 16;
   };
 
   programs = {

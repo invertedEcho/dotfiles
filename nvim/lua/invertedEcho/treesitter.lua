@@ -9,6 +9,7 @@ require('nvim-treesitter.configs').setup({
     'toml',
     'rust',
     'comment',
+    'php',
   },
   highlight = {
     enable = true,

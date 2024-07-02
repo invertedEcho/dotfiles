@@ -1,7 +1,17 @@
 { pkgs, ... }:
 
-{
+let
+  baseconfig = { allowUnfree = true; };
+  unstable = import <nixos-unstable> { config = baseconfig; };
+in {
   environment.systemPackages = with pkgs; [
+    unstable.neovim
+    # TODO: Move to shell.nix file in project
+    (php83.buildEnv {
+      extensions = ({ enabled, all }: enabled ++ (with all; [
+        imagick
+      ]));
+    })
     rustup
     gnumake
     vim
@@ -54,7 +64,6 @@
     jq
     lua-language-server
     stylua
-    obsidian
     nodejs_22
     corepack_22
     pkg-config
@@ -94,5 +103,9 @@
     parted
     appimage-run
     pass
+    jetbrains.idea-community-bin
+    androidStudioPackages.canary
+    shellcheck
+    stripe-cli
   ];
 }

@@ -160,9 +160,20 @@ require('lazy').setup({
   {
     'rmagatti/auto-session',
     config = function()
-      require('auto-session').setup({})
+      require('auto-session').setup({
+        auto_session_enabled = true,
+        auto_save_enabled = true,
+        auto_restore_enabled = true,
+      })
     end,
   },
+  {
+    'mfussenegger/nvim-lint',
+    config = function()
+      require('invertedEcho.lint')
+    end,
+  },
+  {},
 }, {
   ui = {
     border = 'rounded',
