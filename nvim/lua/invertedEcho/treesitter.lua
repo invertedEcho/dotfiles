@@ -10,6 +10,7 @@ require('nvim-treesitter.configs').setup({
     'rust',
     'comment',
     'php',
+    'dart',
   },
   highlight = {
     enable = true,

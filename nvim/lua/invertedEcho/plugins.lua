@@ -173,7 +173,14 @@ require('lazy').setup({
       require('invertedEcho.lint')
     end,
   },
-  {},
+  {
+    'akinsho/flutter-tools.nvim',
+    lazy = false,
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+    },
+    config = true,
+  },
 }, {
   ui = {
     border = 'rounded',
