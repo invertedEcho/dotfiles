@@ -27,7 +27,7 @@
     };
     fish.enable = true;
 
-    adb = { enable = true; };
+    adb.enable = true;
 
     nh = {
       enable = true;

@@ -107,5 +107,8 @@ in {
     androidStudioPackages.canary
     shellcheck
     stripe-cli
+    unrar
+    tmux
+    unzip
   ];
 }

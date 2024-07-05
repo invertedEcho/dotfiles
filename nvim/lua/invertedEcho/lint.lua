@@ -1,5 +1,5 @@
 require('lint').linters_by_ft = {
-  python = { 'pylint' },
+  python = { 'flake8' },
   typescript = { ' eslint ' },
   typescriptreact = { 'eslint' },
   nix = { 'nix' },

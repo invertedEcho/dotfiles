@@ -11,7 +11,8 @@ require('mason-lspconfig').setup({
     'tailwindcss',
     'pyright',
     'bashls',
-    'lua_ls',
+    -- TODO: lua-lanugage-server from system, mason installed one wont work because nixos dynamically linked libraries
+    -- 'lua_ls',
     'phpactor',
     'jsonls',
     'vtsls',
