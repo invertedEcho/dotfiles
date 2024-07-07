@@ -1,16 +1,13 @@
 { pkgs, ... }:
 
 let
-  baseconfig = { allowUnfree = true; };
-  unstable = import <nixos-unstable> { config = baseconfig; };
+  unstable = pkgs.unstable;
 in {
   environment.systemPackages = with pkgs; [
     unstable.neovim
     # TODO: Move to shell.nix file in project
     (php83.buildEnv {
-      extensions = ({ enabled, all }: enabled ++ (with all; [
-        imagick
-      ]));
+      extensions = ({ enabled, all }: enabled ++ (with all; [ imagick ]));
     })
     rustup
     gnumake
@@ -27,7 +24,6 @@ in {
     pavucontrol
     python3
     wezterm
-    spotify
     gcc13
     mpv
     gnome.nautilus
@@ -85,10 +81,6 @@ in {
     openjdk17-bootstrap
     rclone
     postgresql_16
-    # needed for react native building, android-nixpkgs should provide these but they are currently broken ):
-    aapt
-    cmake
-    # end
     act
     solaar
     wlogout
@@ -96,19 +88,21 @@ in {
     polkit_gnome
     # .nix formatter
     nixfmt-classic
-    onlyoffice-bin
+    # onlyoffice-bin
     inetutils
-    qemu
-    qemu_full
     parted
     appimage-run
     pass
     jetbrains.idea-community-bin
-    androidStudioPackages.canary
+    # androidStudioPackages.canary
     shellcheck
     stripe-cli
     unrar
     tmux
     unzip
+    sway
+    brightnessctl
+    squashfsTools
+    wdisplays
   ];
 }

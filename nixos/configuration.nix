@@ -6,7 +6,6 @@
     ./modules/game.nix
     ./modules/services.nix
     ./modules/programs.nix
-    ./modules/nvidia.nix
     ./modules/audio.nix
   ];
 
