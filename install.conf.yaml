@@ -7,7 +7,6 @@
 - link:
     ~/.config/nvim: nvim
     ~/.config/hypr: hypr
-    ~/.config/paru: paru
     ~/.config/waybar: waybar
     ~/.config/wofi: wofi
     ~/.config/swaync: swaync
