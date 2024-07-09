@@ -19,6 +19,12 @@
     initrd.kernelModules = [ ];
     kernelModules = [ "kvm-intel" ];
     extraModulePackages = [ ];
+    loader = {
+      grub.enable = true;
+      grub.device = "nodev";
+      efi.canTouchEfiVariables = true;
+    };
+    initrd.luks.devices.cryptroot.device = "/dev/disk/by-uuid/4f6f96b2-5dbd-4474-9256-6a5f2216dc11"
   };
 
   fileSystems."/" = {

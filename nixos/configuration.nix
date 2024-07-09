@@ -9,10 +9,6 @@
     ./modules/audio.nix
   ];
 
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "nodev";
-  boot.loader.efi.canTouchEfiVariables = true;
-
   nixpkgs.config.allowUnfree = true;
 
   networking.hostName = "nixos";
