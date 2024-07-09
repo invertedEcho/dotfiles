@@ -5,6 +5,8 @@ let
 in {
   environment.systemPackages = with pkgs; [
     unstable.neovim
+    # TODO: move to stable once ver 1.11.0 reaches stable
+    unstable.rbw
     # TODO: Move to shell.nix file in project
     (php83.buildEnv {
       extensions = ({ enabled, all }: enabled ++ (with all; [ imagick ]));
@@ -66,7 +68,6 @@ in {
     openssl
     android-tools
     vulkan-tools
-    rbw
     rofi-rbw-wayland
     pinentry
     wtype
@@ -94,7 +95,7 @@ in {
     appimage-run
     pass
     jetbrains.idea-community-bin
-    # androidStudioPackages.canary
+    android-studio
     shellcheck
     stripe-cli
     unrar
