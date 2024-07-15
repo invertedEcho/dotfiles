@@ -19,6 +19,7 @@ bufferline.setup({
 
 SetKey('n', '<tab>', '<cmd>BufferLineCycleNext<cr>')
 SetKey('n', '<s-tab>', '<cmd>BufferLineCyclePrev<cr>')
-SetKey('n', '<leader>p', '<cmd>BufferLineTogglePin<cr>')
-SetKey('n', '<leader>bp', '<cmd>BufferLinePick<cr>')
+SetKey('n', '<leader>bp', '<cmd>BufferLineTogglePin<cr>')
+SetKey('n', '<leader>bb', '<cmd>BufferLinePick<cr>')
 SetKey('n', '<leader>bc', '<cmd>BufferLinePickClose<cr>')
+SetKey('n', '<leader>bo', '<cmd>BufferLineCloseOthers<cr>')
