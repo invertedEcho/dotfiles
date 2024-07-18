@@ -13,6 +13,5 @@
     ~/.config/kitty: kitty
     ~/.local/bin/toggle-bar.sh: scripts/toggle-bar.sh
     ~/.local/bin/night-mode.sh: scripts/night-mode.sh
-    ~/.local/bin/edit-nixos-configs.sh: scripts/edit-nixos-configs.sh
     ~/.local/bin/setup-monitors.sh: scripts/setup-monitors.sh
     ~/.ideavimrc: intellij-settings/.ideavimrc
