@@ -12,7 +12,7 @@ map f1 new_os_window --cwd=current
 cursor_shape underline
 
 # BEGIN_KITTY_THEME
-# Tokyo Night Storm
+# Tokyo Night Moon
 include current-theme.conf
 # END_KITTY_THEME
 

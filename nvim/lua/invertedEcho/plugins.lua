@@ -78,14 +78,14 @@ require('lazy').setup({
       require('fidget').setup()
     end,
   },
-  -- {
-  --   'folke/tokyonight.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd('colorscheme tokyonight-storm')
-  --   end,
-  -- },
+  {
+    'folke/tokyonight.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd('colorscheme tokyonight-storm')
+    end,
+  },
   {
     'akinsho/toggleterm.nvim',
     keys = {
@@ -180,18 +180,6 @@ require('lazy').setup({
       'nvim-lua/plenary.nvim',
     },
     config = true,
-  },
-  {
-    'rebelot/kanagawa.nvim',
-    config = function()
-      vim.cmd('colorscheme kanagawa')
-    end,
-  },
-  {
-    'pwntester/octo.nvim',
-    config = function()
-      require('octo').setup()
-    end,
   },
 }, {
   ui = {
