@@ -7,7 +7,7 @@
 
     "modules-left": ["custom/wofi", "hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["backlight", "battery", "pulseaudio", "network", "tray"],
+    "modules-right": ["cpu", "memory", "backlight", "battery", "pulseaudio", "network", "tray"],
 
     "hyprland/workspaces": {
         "on-click": "activate",
@@ -37,6 +37,15 @@
         "format": "  {:%a %b %d  %I:%M %p}", // %b %d %Y  --Date formatting
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "interval": 2,
+        "format": "  {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 2,
+        "format": "  {}%"
     },
     "backlight": {
 	"format": "{percent}% {icon}",
