@@ -14,5 +14,7 @@ if [ -n "$OUTPUT" ]; then
 else
   hyprctl keyword monitor HDMI-A-1,highres,0x0,1
   hyprctl keyword monitor DP-2,1920x1080@144,1920x0,1
+  # https://github.com/hyprwm/Hyprland/issues/6032
+  hyprctl keyword monitor Unknown-1,disable
   notify-send "Successfully setup monitors for Home."
 fi

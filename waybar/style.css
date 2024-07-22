@@ -1,143 +1,186 @@
-@import "mocha.css";
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
 
+@keyframes blink-warning {
+    70% {
+        color: white;
+    }
+
+    to {
+        color: white;
+        background-color: orange;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+      color: white;
+    }
+
+    to {
+        color: white;
+        background-color: red;
+    }
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+
+/* Reset all styles */
 * {
-  min-height: 0;
-  font-family: "JetBrainsMono Nerd Font";
-  font-size: 14px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
 }
 
-window#waybar {
-  color: @text;
-  background: @base;
-  transition-property: background-color;
-  transition-duration: 0.5s;
+/* The whole bar */
+#waybar {
+    background: #323232;
+    color: white;
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 13px;
 }
 
-window#waybar.empty {
-  opacity: 0.3;
-}
-
-.modules-left {
-  border: none;
-  padding: 5px 5px;
-}
-
-.modules-right {
-  border: none;
-  padding: 5px 5px;
-}
-
-.modules-center {
-  border: none;
-  padding: 5px 5px;
-}
-
-button {
-  border: none;
-  border-radius: 0;
-}
-
-button:hover {
-  background: @base;
-  border-radius: 90px;
-}
-
-#custom-wofi {
-  color: @blue;
-  font-weight: 600;
-  margin-right: 10px;
-  padding-left: 15px;
-  padding-right: 19px;
-  border-radius: 90px;
-  background: @crust
-}
-
-#workspaces {
-  font-weight: 600;
-  margin-right: 10px;
-  padding: 5px 10px;
-  border-radius: 90px;
-  background: @crust
-}
-
-
-#workspaces button {
-  color: @text;
-  font-weight: 600;
-  margin: 0px;
-  padding: 0px 5px;
-}
-
-#workspaces button.urgent {
-  color: @red;
-}
-#workspaces button.empty {
-  color: @surface2;
-}
-
-#workspaces button.active {
-  color: @blue;
-}
-
-#workspaces button.focused {
-  color: @green;
-}
-
-#cpu,
+/* Each module */
 #battery,
+#clock,
+#cpu,
+#custom-keyboard-layout,
 #memory,
-#backlight,
-#disk {
-  color: @blue;
-  font-weight: 600;
-  margin-right: 10px;
-  padding: 6px 15px;
-  border-radius: 90px;
-  background: @crust
-}
-
-#pulseaudio {
-  color: @crust;
-  font-weight: 600;
-  margin-right: 10px;
-  padding: 6px 15px;
-  border-radius: 90px;
-  background: @blue
-}
-
-#network {
-  color: @crust;
-  font-weight: 600;
-  margin-right: 10px;
-  padding: 6px 15px;
-  border-radius: 90px;
-  background: @green
-}
-
+#mode,
+#network,
+#pulseaudio,
+#temperature,
 #tray {
-  color: @text;
-  font-weight: 600;
-  padding: 6px 15px;
-  border-radius: 90px;
-  background: @crust
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+#battery {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.warning {
+    color: orange;
+}
+
+#battery.critical {
+    color: red;
+}
+
+#battery.warning.discharging {
+    animation-name: blink-warning;
+    animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
 }
 
 #clock {
-  color: @blue;
-  font-weight: 600;
-  margin-right: 10px;
-  padding: 6px 15px;
-  border-radius: 90px;
-  background: @crust
+    font-weight: bold;
 }
 
-#custom-sepp {
-    color: @surface2;
-    font-size: 20px;
-        padding-left: 4px;
-        padding-right: 10px;
+#cpu {
+  /* No styles */
+}
+
+#cpu.warning {
+    color: orange;
+}
+
+#cpu.critical {
+    color: red;
+}
+
+#memory {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#memory.warning {
+    color: orange;
+}
+
+#memory.critical {
+    color: red;
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#mode {
+    background: #64727D;
+    border-top: 2px solid white;
+    /* To compensate for the top border and still have vertical centering */
+    padding-bottom: 2px;
+}
+
+#network {
+    /* No styles */
 }
 
 #network.disconnected {
-  background-color: @red;
+    color: orange;
+}
+
+#pulseaudio {
+    /* No styles */
+}
+
+#pulseaudio.muted {
+    /* No styles */
+}
+
+#custom-spotify {
+    color: rgb(102, 220, 105);
+}
+
+#temperature {
+    /* No styles */
+}
+
+#temperature.critical {
+    color: red;
+}
+
+#tray {
+    /* No styles */
+}
+
+#window {
+    font-weight: bold;
+}
+
+#workspaces button {
+    border-top: 2px solid transparent;
+    /* To compensate for the top border and still have vertical centering */
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #888888;
+}
+
+#workspaces button.focused {
+    border-color: #4c7899;
+    color: white;
+    background-color: #285577;
+}
+
+#workspaces button.urgent {
+    border-color: #c9545d;
+    color: #c9545d;
 }

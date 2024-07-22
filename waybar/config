@@ -1,14 +1,37 @@
 {
-    "layer": "top",
-    "position": "bottom",
-    "margin-left": 0,
-    "margin-right": 0,
-    "margin-top": 0,
-    "spacing": 1,
+    // -------------------------------------------------------------------------
+    // Global configuration
+    // -------------------------------------------------------------------------
 
-    "modules-left": ["custom/wofi", "hyprland/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["cpu", "memory", "backlight", "battery", "pulseaudio", "network", "tray"],
+    "layer": "top",
+
+    "position": "top",
+
+    // If height property would be not present, it'd be calculated dynamically
+    "height": 30,
+
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "sway/window"
+    ],
+    "modules-right": [
+        "network",
+        "memory",
+        "cpu",
+        "custom/keyboard-layout",
+        "battery",
+	"pulseaudio",
+        "tray",
+        "clock#date",
+        "clock#time"
+    ],
+
+
+    // -------------------------------------------------------------------------
+    // Modules
+    // -------------------------------------------------------------------------
 
     "hyprland/workspaces": {
         "on-click": "activate",
@@ -28,54 +51,79 @@
             // "default": ""
          },
     },
-    "tray": {
-        "icon-size": 18,
-        "spacing": 5,
-        "show-passive-items": true,
+    "battery": {
+        "interval": 10,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        // Connected to AC
+        "format": "  {icon}  {capacity}%", // Icon: bolt
+        // Not connected to AC
+        "format-discharging": "{icon}  {capacity}%",
+        "format-icons": [
+            "", // Icon: battery-full
+            "", // Icon: battery-three-quarters
+            "", // Icon: battery-half
+            "", // Icon: battery-quarter
+            ""  // Icon: battery-empty
+        ],
+        "tooltip": true
     },
-    "clock": {
-        "interval": 60,
-        "format": "  {:%a %b %d  %I:%M %p}", // %b %d %Y  --Date formatting
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-    },
-    "cpu": {
-        "interval": 2,
-        "format": "  {usage}%",
+
+    "clock#time": {
+        "interval": 1,
+        "format": "{:%H:%M:%S}",
         "tooltip": false
     },
+
+    "clock#date": {
+      "interval": 10,
+      "format": "  {:%e %b %Y}", // Icon: calendar-alt
+      "tooltip-format": "{:%e %B %Y}"
+    },
+
+    "cpu": {
+        "interval": 5,
+        "format": "  {usage}%",
+        "states": {
+          "warning": 70,
+          "critical": 90
+        }
+    },
+
     "memory": {
-        "interval": 2,
-        "format": "  {}%"
+        "interval": 5,
+        "format": "  {}%",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
     },
-    "backlight": {
-	"format": "{percent}% {icon}",
-	"format-icons": ["󰃠"]
-    },
-   "battery": {
-        "interval": 10,
-	"states": {
-	  "warning": 30,
-	  "critical": 15
-	},
-        "format": "{icon}  {capacity}%",
-	"format-icons": ["", "", "", "", ""],
-	"format-charging": "󰂄 {capacity}%",
-    },
+
     "network": {
-        "format-wifi": "  {essid} {signalStrength}%",
-        "format-ethernet": "󰈀 {ipaddr}/{cidr}",
-        "tooltip-format-wifi": "{ipaddr}",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-	"on-click": "iwgtk"
+        "interval": 5,
+        "format-wifi": "  {essid} ({signalStrength}%)", // Icon: wifi
+        "format-ethernet": "󰈀  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+        "format-disconnected": "⚠  Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}"
     },
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
+        "tooltip": false
+    },
+
+    "sway/window": {
+        "format": "{}",
+        "max-length": 120
+    },
+
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-bluetooth": "{icon} {volume}% 󰂯",
         "format-bluetooth-muted": "󰖁 {icon} 󰂯",
-        "format-muted": "󰖁 {format_source}",
+        "format-muted": "󰖁 0%",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
@@ -89,13 +137,10 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/wofi": {
-      "format": "{icon}",
-      "format-icons": "",
-      "exec-on-event": "true",
-      "on-click": "wofi --show=drun",
-    },
-    "custom/sepp": {
-        "format": "|"
-    },
+
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    }
+
 }
