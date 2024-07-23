@@ -166,15 +166,12 @@
 }
 
 #workspaces button {
-    border-top: 2px solid transparent;
-    /* To compensate for the top border and still have vertical centering */
-    padding-bottom: 2px;
-    padding-left: 10px;
-    padding-right: 10px;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    min-width: 60px;
     color: #888888;
 }
 
-#workspaces button.focused {
+#workspaces button.active {
     border-color: #4c7899;
     color: white;
     background-color: #285577;
