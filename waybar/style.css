@@ -167,6 +167,8 @@
 
 #workspaces button {
     border-bottom: 2px solid rgba(255,255,255,0.2);
+    padding-left: 10px;
+    padding-right: 10px;
     min-width: 60px;
     color: #888888;
 }
