@@ -1,0 +1,6 @@
+name: llc
+root: ~/dev/work/langenscheidt/langenscheidt-language-coach
+
+windows:
+  - editor: nvim .
+  - server: pnpm dev

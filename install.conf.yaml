@@ -5,6 +5,7 @@
 - clean: ["~"]
 
 - link:
+    ~/.config/tmuxinator: tmuxinator
     ~/.config/hypr: hypr
     ~/.config/waybar: waybar
     ~/.config/wofi: wofi
