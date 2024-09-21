@@ -37,11 +37,11 @@
         "on-click": "activate",
         "format": "{icon}",
         "format-icons": {
-            "1": "1 code",
-            "2": "2 www",
-	    "3": "3 term",
-	    "4": "4 notes",
-	    "5": "5 chat",
+            "1": " dev",
+            "2": " web",
+	    "3": " term",
+	    "4": "󱞁 notes",
+	    "5": " chat",
             "6": "6 music",
             "7": "7",
             "8": "8",
@@ -73,13 +73,13 @@
 
     "clock#time": {
         "interval": 1,
-        "format": "{:%H:%M:%S}",
+        "format": "  {:%H:%M}",
         "tooltip": false
     },
 
     "clock#date": {
       "interval": 10,
-      "format": "  {:%e %b %Y}",
+      "format": "󰃶  {:%e %b %Y}",
       "tooltip-format": "<tt><small>{calendar}</small></tt>",
       "calendar": {
 	"mode"          : "year",
@@ -122,10 +122,10 @@
 
     "network": {
         "interval": 5,
-        "format-wifi": "  {essid} ({signalStrength}%)", // Icon: wifi
+        "format-wifi": " ",
         "format-ethernet": "󰈀  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
         "format-disconnected": "⚠  Disconnected",
-        "tooltip-format": "{ifname}: {ipaddr}",
+        "tooltip-format": "{essid}: {ipaddr}",
 	"on-click": "iwgtk"
     },
 
@@ -140,7 +140,7 @@
     },
 
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": "{icon}  {volume}%",
         "format-bluetooth": "{icon} {volume}% 󰂯",
         "format-bluetooth-muted": "󰖁 {icon} 󰂯",
         "format-muted": "󰖁 0%",

@@ -29,25 +29,27 @@
  * Base styles
  * -------------------------------------------------------------------------- */
 
-/* Reset all styles */
 * {
     border: none;
-    border-radius: 0;
-    min-height: 0;
-    margin: 0;
+    border-radius: 5px;
+    min-height: 25px;
+    margin: 2px;
     padding: 0;
+    font-weight: 500;
 }
 
 /* The whole bar */
 #waybar {
-    background: #323232;
+    background: #24283b;
     color: white;
     font-family: JetBrainsMono Nerd Font;
-    font-size: 13px;
+    font-size: 14px;
+    border-radius: 0;
 }
 
 /* Each module */
 #battery,
+#date,
 #clock,
 #cpu,
 #custom-keyboard-layout,
@@ -56,11 +58,12 @@
 #network,
 #pulseaudio,
 #temperature,
+#backlight,
 #tray {
     padding-left: 10px;
     padding-right: 10px;
+    background-color: #39465e;
 }
-
 
 /* -----------------------------------------------------------------------------
  * Module styles
@@ -70,6 +73,8 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    background-color: #ad82cb;
+    color: black;
 }
 
 #battery.warning {
@@ -91,11 +96,12 @@
 }
 
 #clock {
-    font-weight: bold;
+    font-weight: 500;
+    background-color: #ffd484;
+    color: black;
 }
 
 #cpu {
-  /* No styles */
 }
 
 #cpu.warning {
@@ -130,56 +136,42 @@
 }
 
 #network {
-    /* No styles */
 }
 
 #network.disconnected {
     color: orange;
 }
 
-#pulseaudio {
-    /* No styles */
-}
-
-#pulseaudio.muted {
-    /* No styles */
-}
-
 #custom-spotify {
     color: rgb(102, 220, 105);
-}
-
-#temperature {
-    /* No styles */
 }
 
 #temperature.critical {
     color: red;
 }
 
-#tray {
-    /* No styles */
-}
-
-#window {
-    font-weight: bold;
-}
-
 #workspaces button {
-    border-bottom: 2px solid rgba(255,255,255,0.2);
+    /* border-bottom: 2px solid rgba(255,255,255,0.2); */
+    border-radius: 5px;
     padding-left: 10px;
     padding-right: 10px;
     min-width: 60px;
-    color: #888888;
+    color: white;
+    background-color: #39465e; 
 }
 
 #workspaces button.active {
     border-color: #4c7899;
-    color: white;
-    background-color: #285577;
+    color: black;
+    background-color: #FFFFFF;
 }
 
 #workspaces button.urgent {
     border-color: #c9545d;
     color: #c9545d;
+}
+
+#pulseaudio {
+  background-color: #7eddde;
+  color: black;
 }
