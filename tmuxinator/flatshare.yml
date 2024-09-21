@@ -1,0 +1,7 @@
+name: flatshare
+root: ~/dev/priv/flatshare/
+
+
+windows:
+  - editor: nvim .
+  - server: cd backend && pnpm dev
