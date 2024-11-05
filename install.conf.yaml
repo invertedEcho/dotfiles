@@ -8,7 +8,6 @@
     ~/.config/tmuxinator: tmuxinator
     ~/.config/hypr: hypr
     ~/.config/waybar: waybar
-    ~/.config/wofi: wofi
     ~/.config/swaync: swaync
     ~/.config/kitty: kitty
     ~/.local/bin/toggle-bar.sh: scripts/toggle-bar.sh
