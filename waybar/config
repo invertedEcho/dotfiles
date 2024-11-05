@@ -14,7 +14,7 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "sway/window"
+        "hyprland/window"
     ],
     "modules-right": [
         "network",
@@ -129,12 +129,7 @@
 	"on-click": "iwgtk"
     },
 
-    "sway/mode": {
-        "format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
-        "tooltip": false
-    },
-
-    "sway/window": {
+    "hyprland/window": {
         "format": "{}",
         "max-length": 120
     },

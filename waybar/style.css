@@ -101,9 +101,6 @@
     color: black;
 }
 
-#cpu {
-}
-
 #cpu.warning {
     color: orange;
 }
@@ -128,16 +125,6 @@
     animation-duration: 2s;
 }
 
-#mode {
-    background: #64727D;
-    border-top: 2px solid white;
-    /* To compensate for the top border and still have vertical centering */
-    padding-bottom: 2px;
-}
-
-#network {
-}
-
 #network.disconnected {
     color: orange;
 }
@@ -151,11 +138,8 @@
 }
 
 #workspaces button {
-    /* border-bottom: 2px solid rgba(255,255,255,0.2); */
-    border-radius: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    min-width: 60px;
     color: white;
     background-color: #39465e; 
 }
