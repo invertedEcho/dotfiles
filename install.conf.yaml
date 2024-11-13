@@ -14,3 +14,4 @@
     ~/.local/bin/night-mode.sh: scripts/night-mode.sh
     ~/.local/bin/setup-monitors.sh: scripts/setup-monitors.sh
     ~/.ideavimrc: intellij-settings/.ideavimrc
+    ~/.aerospace.toml: aerospace.toml
