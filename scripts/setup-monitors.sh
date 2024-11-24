@@ -12,9 +12,12 @@ if [ -n "$OUTPUT" ]; then
   hyprctl keyword monitor $LAPTOP_SCREEN_NAME, disable
   notify-send "Successfully setup monitors for Office."
 else
-  hyprctl keyword monitor HDMI-A-1,highres,0x0,1
-  hyprctl keyword monitor DP-2,1920x1080@144,1920x0,1
+  hyprctl keyword monitor desc:Dell Inc. DELL U2415 7MT0177A2T2S,highres,0x0,1
+  hyprctl keyword monitor desc:Acer Technologies Acer KG271 C 0x9231F806,1920x1080@144,1920x0,1
   # https://github.com/hyprwm/Hyprland/issues/6032
   hyprctl keyword monitor Unknown-1,disable
+
+  hyprctl dispatch moveworkspacetomonitor 2 desc:Dell Inc. DELL U2415 7MT0177A2T2S
+  hyprctl dispatch moveworkspacetomonitor 1 desc:Acer Technologies Acer KG271 C 0x9231F806
   notify-send "Successfully setup monitors for Home."
 fi
