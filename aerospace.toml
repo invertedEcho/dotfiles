@@ -10,6 +10,7 @@ cmd-enter = 'exec-and-forget open -n -a kitty'
 alt-shift-c = 'reload-config'
 alt-r = 'mode resize'
 cmd-shift-space = 'layout floating tiling'
+cmd-shift-f = 'fullscreen'
 
 cmd-h = 'focus left'
 cmd-j = 'focus down'
@@ -46,8 +47,8 @@ cmd-shift-8 = 'move-node-to-workspace 8'
 cmd-shift-9 = 'move-node-to-workspace 9'
 
 [mode.resize.binding]
-h = 'resize width -50'
+h = 'resize width +50'
 j = 'resize height +50'
 k = 'resize height -50'
-l = 'resize width +50'
+l = 'resize width -50'
 esc = 'mode main'
