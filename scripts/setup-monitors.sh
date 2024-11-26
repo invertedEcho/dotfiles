@@ -17,6 +17,9 @@ if [ -n "$OUTPUT" ]; then
   hyprctl keyword monitor desc:GIGA-BYTE TECHNOLOGY CO. LTD. G27Q 23082B003536, 2560x1440,2560x0,1
   hyprctl keyword monitor desc:GIGA-BYTE TECHNOLOGY CO. LTD. G27Q 23082B003522, 2560x1440,0x0,1
   hyprctl keyword monitor eDP-1,preferred,auto,1
+
+  hyprctl dispatch moveworkspacetomonitor 1 desc:GIGA-BYTE TECHNOLOGY CO. LTD. G27Q 23082B003522
+  hyprctl dispatch moveworkspacetomonitor 2 desc:GIGA-BYTE TECHNOLOGY CO. LTD. G27Q 23082B003536
   notify-send "Successfully setup monitors for Office."
 else
   hyprctl keyword monitor desc:Dell Inc. DELL U2415 7MT0177A2T2S,highres,0x0,1
