@@ -26,6 +26,7 @@ else
   hyprctl keyword monitor desc:Acer Technologies Acer KG271 C 0x9231F806,1920x1080@144,1920x0,1
   # https://github.com/hyprwm/Hyprland/issues/6032
   hyprctl keyword monitor Unknown-1,disable
+  hyprctl keyword monitor desc:Samsung Electric Company SAMSUNG 0x00000800,disable
 
   hyprctl dispatch moveworkspacetomonitor 2 desc:Dell Inc. DELL U2415 7MT0177A2T2S
   hyprctl dispatch moveworkspacetomonitor 1 desc:Acer Technologies Acer KG271 C 0x9231F806
