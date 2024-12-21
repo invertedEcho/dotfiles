@@ -1,9 +1,7 @@
-start-at-login = false
+start-at-login = true
 
 default-root-container-layout = 'tiles'
 default-root-container-orientation = 'auto'
-
-accordion-padding = 30
 
 [mode.main.binding]
 cmd-enter = 'exec-and-forget open -n -a kitty'
@@ -12,10 +10,10 @@ alt-r = 'mode resize'
 cmd-shift-space = 'layout floating tiling'
 cmd-shift-f = 'fullscreen'
 
-cmd-h = 'focus left'
-cmd-j = 'focus down'
-cmd-k = 'focus up'
-cmd-l = 'focus right'
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
 
 alt-shift-h = 'move-through left'
 alt-shift-j = 'move-through down'
@@ -25,26 +23,26 @@ alt-shift-l = 'move-through right'
 alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
-cmd-1 = 'workspace code'
-cmd-2 = 'workspace www'
-cmd-3 = 'workspace term'
-cmd-4 = 'workspace notes'
-cmd-5 = 'workspace chat'
-cmd-6 = 'workspace music'
-cmd-7 = 'workspace 7'
-cmd-8 = 'workspace 8'
-cmd-9 = 'workspace 9'
-cmd-0 = 'workspace 10'
+alt-1 = 'workspace code'
+alt-2 = 'workspace www'
+alt-3 = 'workspace term'
+alt-4 = 'workspace notes'
+alt-5 = 'workspace chat'
+alt-6 = 'workspace music'
+alt-7 = 'workspace 7'
+alt-8 = 'workspace 8'
+alt-9 = 'workspace 9'
+alt-0 = 'workspace 10'
 
-cmd-shift-1 = 'move-node-to-workspace code'
-cmd-shift-2 = 'move-node-to-workspace www'
-cmd-shift-3 = 'move-node-to-workspace term'
-cmd-shift-4 = 'move-node-to-workspace notes'
-cmd-shift-5 = 'move-node-to-workspace chat'
-cmd-shift-6 = 'move-node-to-workspace music'
-cmd-shift-7 = 'move-node-to-workspace 7'
-cmd-shift-8 = 'move-node-to-workspace 8'
-cmd-shift-9 = 'move-node-to-workspace 9'
+alt-shift-1 = 'move-node-to-workspace code'
+alt-shift-2 = 'move-node-to-workspace www'
+alt-shift-3 = 'move-node-to-workspace term'
+alt-shift-4 = 'move-node-to-workspace notes'
+alt-shift-5 = 'move-node-to-workspace chat'
+alt-shift-6 = 'move-node-to-workspace music'
+alt-shift-7 = 'move-node-to-workspace 7'
+alt-shift-8 = 'move-node-to-workspace 8'
+alt-shift-9 = 'move-node-to-workspace 9'
 
 [mode.resize.binding]
 h = 'resize width +50'
