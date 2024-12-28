@@ -12,6 +12,6 @@
     ~/.config/kitty: kitty
     ~/.local/bin/toggle-bar.sh: scripts/toggle-bar.sh
     ~/.local/bin/night-mode.sh: scripts/night-mode.sh
-    ~/.local/bin/setup-monitors.sh: scripts/setup-monitors.sh
+    ~/.local/bin/monitors.py: scripts/monitors.py
     ~/.ideavimrc: intellij-settings/.ideavimrc
     ~/.aerospace.toml: aerospace.toml
