@@ -10,6 +10,7 @@
     ~/.config/waybar: waybar
     ~/.config/swaync: swaync
     ~/.config/kitty: kitty
+    ~/.config/zathura: zathura
     ~/.local/bin/toggle-bar.sh: scripts/toggle-bar.sh
     ~/.local/bin/night-mode.sh: scripts/night-mode.sh
     ~/.local/bin/monitors.py: scripts/monitors.py
