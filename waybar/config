@@ -122,11 +122,11 @@
 
     "network": {
         "interval": 5,
-        "format-wifi": " ",
-        "format-ethernet": "󰈀  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+        "format-wifi": "  {essid}: {ipaddr}",
+        "format-ethernet": "󰈀  {ifname}: {ipaddr}",
         "format-disconnected": "⚠  Disconnected",
-        "tooltip-format": "{essid}: {ipaddr}",
-	"on-click": "iwgtk"
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+	"on-click": "kitty -e nmtui"
     },
 
     "hyprland/window": {
