@@ -1,6 +1,0 @@
-name: bein-pod
-root: ~/dev/work/bein/be-in-pod
-
-windows:
-  - editor: nvim .
-  - ssh-rasp-pi: ssh be-in@10.69.2.137

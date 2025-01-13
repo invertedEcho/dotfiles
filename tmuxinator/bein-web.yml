@@ -1,9 +1,0 @@
-name: bein-web
-root: ~/dev/work/bein/be-in-web/
-
-windows:
-  - editor: nvim .
-  - server: docker compose up -d
-  - logs: tail -f storage/logs/laravel.log
-  - sql: sleep 5 && docker exec -it laravel_mysql mysql -p brothersgym
-  - stripe: stripe listen --forward-to localhost:9000/api/stripe-webhook
