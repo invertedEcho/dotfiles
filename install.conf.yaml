@@ -11,6 +11,7 @@
     ~/.config/kitty: kitty
     ~/.config/zathura: zathura
     ~/.config/sketchybar: sketchybar
+    ~/.config/rofi: rofi
     ~/.local/bin/toggle-bar.sh: scripts/toggle-bar.sh
     ~/.local/bin/night-mode.sh: scripts/night-mode.sh
     ~/.local/bin/monitors.py: scripts/monitors.py
