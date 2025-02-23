@@ -1,3 +1,4 @@
+#!/run/current-system/sw/bin/python3
 import subprocess
 import json
 import sys
@@ -8,6 +9,7 @@ SPLITTED_MOVE_WORKSPACE_CMD = 'hyprctl dispatch moveworkspacetomonitor'.split(" 
 
 LAPTOP_MONITOR_NAME = 'eDP-1'
 TV_MONITOR_NAME = 'HDMI-A-1'
+TV_MONITOR_DESC = 'XXX Beyond TV 0x00010000'
 
 
 def send_message(msg: str):
@@ -43,7 +45,8 @@ def setup_monitors(is_laptop: bool):
     else:
         subprocess.run(SPLITTED_MONITOR_CMD + ['desc:Dell Inc. DELL U2415 7MT0177A2T2S,highres,0x0,1'])
         subprocess.run(SPLITTED_MONITOR_CMD + ['desc:Acer Technologies Acer KG271 C 0x9231F806,1920x1080@144,1920x0,1'])
-        subprocess.run(SPLITTED_MONITOR_CMD + ['desc:Samsung Electric Company SAMSUNG 0x00000800,disable'])
+
+        subprocess.run(SPLITTED_MONITOR_CMD + [f'desc:{TV_MONITOR_DESC},disable'])
         # https://github.com/hyprwm/Hyprland/issues/6032
         subprocess.run(SPLITTED_MONITOR_CMD + ['Unknown-1,disable'])
 
