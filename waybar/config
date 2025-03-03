@@ -126,7 +126,7 @@
         "format-ethernet": "󰈀  {ifname}: {ipaddr}",
         "format-disconnected": "⚠  Disconnected",
         "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
-	"on-click": "kitty -e nmtui"
+	"on-click": "iwgtk"
     },
 
     "hyprland/window": {
