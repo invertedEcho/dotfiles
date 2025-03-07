@@ -8,11 +8,11 @@
     ~/.config/hypr: hypr
     ~/.config/waybar: waybar
     ~/.config/swaync: swaync
-    ~/.config/kitty: kitty
+    ~/.config/wezterm: wezterm
     ~/.config/zathura: zathura
     ~/.config/rofi: rofi
+    ~/.config/aerospace: aerospace
     ~/.local/bin/toggle-bar.sh: scripts/toggle-bar.sh
     ~/.local/bin/night-mode.sh: scripts/night-mode.sh
     ~/.local/bin/monitors.py: scripts/monitors.py
     ~/.ideavimrc: intellij-settings/.ideavimrc
-    ~/.aerospace.toml: aerospace.toml
