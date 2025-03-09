@@ -4,23 +4,23 @@
 
 @keyframes blink-warning {
     70% {
-        color: white;
+        color: #fbf1c7;
     }
 
     to {
-        color: white;
-        background-color: orange;
+        color: #fbf1c7;
+        background-color: #fabd2f;
     }
 }
 
 @keyframes blink-critical {
     70% {
-      color: white;
+      color: #fbf1c7;
     }
 
     to {
-        color: white;
-        background-color: red;
+        color: #fbf1c7;
+        background-color: #fb4934;
     }
 }
 
@@ -40,8 +40,8 @@
 
 /* The whole bar */
 #waybar {
-    background: #24283b;
-    color: white;
+    background: #282828;
+    color: #fbf1c7;
     font-family: JetBrainsMono Nerd Font;
     font-size: 14px;
     border-radius: 0;
@@ -62,7 +62,7 @@
 #tray {
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #39465e;
+    background-color: #3c3836;
 }
 
 /* -----------------------------------------------------------------------------
@@ -73,16 +73,16 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    background-color: #ad82cb;
-    color: black;
+    background-color: #b16286;
+    color: #1d2021;
 }
 
 #battery.warning {
-    color: orange;
+    color: #fabd2f;
 }
 
 #battery.critical {
-    color: red;
+    color: #fb4934;
 }
 
 #battery.warning.discharging {
@@ -97,16 +97,16 @@
 
 #clock {
     font-weight: 500;
-    background-color: #ffd484;
-    color: black;
+    background-color: #fabd2f;
+    color: #1d2021;
 }
 
 #cpu.warning {
-    color: orange;
+    color: #fabd2f;
 }
 
 #cpu.critical {
-    color: red;
+    color: #fb4934;
 }
 
 #memory {
@@ -116,46 +116,46 @@
 }
 
 #memory.warning {
-    color: orange;
+    color: #fabd2f;
 }
 
 #memory.critical {
-    color: red;
+    color: #fb4934;
     animation-name: blink-critical;
     animation-duration: 2s;
 }
 
 #network.disconnected {
-    color: orange;
+    color: #fabd2f;
 }
 
 #custom-spotify {
-    color: rgb(102, 220, 105);
+    color: #8ec07c;
 }
 
 #temperature.critical {
-    color: red;
+    color: #fb4934;
 }
 
 #workspaces button {
     padding-left: 10px;
     padding-right: 10px;
-    color: white;
-    background-color: #39465e; 
+    color: #fbf1c7;
+    background-color: #3c3836;
 }
 
 #workspaces button.active {
-    border-color: #4c7899;
-    color: black;
-    background-color: #FFFFFF;
+    border-color: #458588;
+    color: #1d2021;
+    background-color: #fbf1c7;
 }
 
 #workspaces button.urgent {
-    border-color: #c9545d;
-    color: #c9545d;
+    border-color: #9d0006;
+    color: #9d0006;
 }
 
 #pulseaudio {
-  background-color: #7eddde;
-  color: black;
+  background-color: #8ec07c;
+  color: #1d2021;
 }

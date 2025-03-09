@@ -8,7 +8,7 @@
     "position": "top",
 
     // If height property would be not present, it'd be calculated dynamically
-    "height": 30,
+    "height": 50,
 
     "modules-left": [
         "hyprland/workspaces"
