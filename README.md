@@ -1,5 +1,8 @@
 # dotfiles
 
+> [!CAUTION]
+> These dotfiles are archived as I've moved them into my [nixos-config](https://github.com/invertedEcho/nixos-config)
+
 ## setup
 
 - Clone this repository
