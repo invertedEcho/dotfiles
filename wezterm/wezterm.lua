@@ -14,4 +14,5 @@ return {
 	front_end = "WebGpu",
 	hide_tab_bar_if_only_one_tab = true,
 	enable_wayland = false,
+	audible_bell = "Disabled",
 }
