@@ -14,7 +14,7 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "hyprland/window"
+	"mpris"
     ],
     "modules-right": [
         "network",
@@ -156,6 +156,17 @@
     "tray": {
         "icon-size": 21,
         "spacing": 10
+    },
+    "mpris": {
+      "format": "{player_icon} {title} - {artist}",
+      "format-paused": "{status_icon} <i>{title} - {artist}",
+      "player-icons": {
+	"default": "▶",
+	"spotify": ""
+      },
+      "status-icons": {
+	"paused": "⏸"
+      },
     }
 
 }
