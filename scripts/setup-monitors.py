@@ -38,9 +38,7 @@ def setup_monitors(is_laptop: bool):
         send_message("Successfully setup monitors for laptop.")
     else:
         subprocess.run(SPLITTED_MONITOR_CMD + ["DP-2,1920x1080@144.0,auto-left,1"])
-        subprocess.run(
-            SPLITTED_MONITOR_CMD + ["DP-3,1920x1200@59.95,auto-right,1,transform,1"]
-        )
+        subprocess.run(SPLITTED_MONITOR_CMD + ["DP-3,1920x1200@59.95,auto-right,1"])
         subprocess.run(SPLITTED_MONITOR_CMD + ["HDMI-A-1,disabled"])
         send_message("Successfully setup monitors for Home.")
 
