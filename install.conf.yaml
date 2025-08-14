@@ -8,6 +8,7 @@
     ~/.config/kitty: kitty
     ~/.config/git: git
     ~/.zshrc: .zshrc
+    ~/.ssh: ssh
 
 # - create:
 #     - ~/downloads
