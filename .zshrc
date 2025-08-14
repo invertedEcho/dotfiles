@@ -18,6 +18,11 @@ alias gp="git pull"
 alias gP="git push"
 alias cr="cargo run"
 
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # needs to be at end of file
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
