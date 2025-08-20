@@ -1,4 +1,4 @@
-export PATH=/home/invertedecho/.local/bin:/home/invertedecho/bin:/usr/local/bin:/usr/bin:/home/invertedecho/.local/bin/lua-language-server/bin
+export PATH=/home/invertedecho/.local/bin:/home/invertedecho/bin:/usr/local/bin:/usr/bin:/home/invertedecho/.local/bin/lua-language-server/bin:/home/invertedecho/.dotnet/tools/
 source ~/.cargo/env
 
 eval "$(zoxide init zsh)"
