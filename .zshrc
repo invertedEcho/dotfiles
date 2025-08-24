@@ -26,3 +26,4 @@ setopt appendhistory
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # needs to be at end of file
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH="/home/invertedecho/.gdvm/bin/current_godot:/home/invertedecho/.gdvm/bin:$PATH"
