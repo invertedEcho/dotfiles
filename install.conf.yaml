@@ -9,6 +9,7 @@
     ~/.config/git: git
     ~/.zshrc: .zshrc
     ~/.ssh: ssh
+    ~/.tmux.conf: tmux.conf
 
 # - create:
 #     - ~/downloads
@@ -16,3 +17,6 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  -
+    description: Installing tpm
+    command: if [ ! -d "/home/invertedecho/.tmux/plugins/tpm/" ]; then git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm; fi
