@@ -10,6 +10,7 @@
     ~/.zshrc: .zshrc
     ~/.ssh: ssh
     ~/.tmux.conf: tmux.conf
+    ~/.config/i3: i3
 
 # - create:
 #     - ~/downloads
