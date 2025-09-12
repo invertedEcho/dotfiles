@@ -7,11 +7,12 @@
 - link:
     ~/.config/kitty: kitty
     ~/.config/git: git
-    ~/.zshrc: .zshrc
+    ~/.zshrc: zshrc
     ~/.ssh: ssh
     ~/.tmux.conf: tmux.conf
     ~/.config/i3: i3
     ~/.config/gtk-3.0: gtk-3.0
+    ~/.xinitrc: xinitrc
 
 # - create:
 #     - ~/downloads
