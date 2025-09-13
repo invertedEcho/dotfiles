@@ -30,6 +30,7 @@ tiling_drag modifier titlebar
 
 bindsym Mod4+Return exec kitty
 bindsym Mod4+Ctrl+l exec i3lock-fancy
+bindsym Mod4+n exec ~/.local/bin/night-mode.sh
 
 bindsym Mod4+q kill
 
