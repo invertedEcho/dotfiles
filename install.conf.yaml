@@ -11,6 +11,7 @@
     ~/.ssh: ssh
     ~/.tmux.conf: tmux.conf
     ~/.config/i3: i3
+    ~/.config/i3status: i3status
     ~/.config/gtk-3.0: gtk-3.0
     ~/.xinitrc: xinitrc
     ~/.local/bin/:
