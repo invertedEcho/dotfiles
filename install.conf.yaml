@@ -18,6 +18,7 @@
       glob: true
       path: scripts/*
     ~/.config/redshift: redshift
+    ~/Pictures/Wallpapers: Wallpapers
 
 # - create:
 #     - ~/downloads
