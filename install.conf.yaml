@@ -18,11 +18,12 @@
       glob: true
       path: scripts/*
     ~/.config/redshift: redshift
-    ~/Pictures/Wallpapers: Wallpapers
+    ~/Pictures/Wallpapers:
+      glob: true
+      path: Wallpapers/*
 
-# - create:
-#     - ~/downloads
-#     - ~/.vim/undo-history
+- create:
+    - ~/Pictures/Wallpapers/
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
