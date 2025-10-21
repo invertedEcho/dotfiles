@@ -5,8 +5,11 @@
 - clean: ['~']
 
 - link:
+    ~/.config/hypr: hypr
+    ~/.config/waybar: waybar
     ~/.config/kitty: kitty
     ~/.config/git: git
+    ~/.config/rofi: rofi
     ~/.zshrc: zshrc
     ~/.ssh: ssh
     ~/.tmux.conf: tmux.conf
