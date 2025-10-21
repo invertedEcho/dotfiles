@@ -34,7 +34,7 @@
     // -------------------------------------------------------------------------
 
     "custom/keyboard_layout": {
-      "exec": "~/.config/scripts/print-keyboard-layout.sh",
+      "exec": "~/.local/bin/print-keyboard-layout.sh",
       "interval": 1,
       "format": "󰌌 {}"
     },
@@ -45,10 +45,10 @@
         "format-icons": {
             "1": "1 main",
             "2": "2 web",
-	    "3": "3 misc",
-	    "4": "4 notes",
+	    "3": "3 music",
+	    "4": "4 proton",
 	    "5": "5 chat",
-            "6": "6 music",
+            "6": "6 game",
             "7": "7",
             "8": "8 game",
             "9": "9 other big apps",
