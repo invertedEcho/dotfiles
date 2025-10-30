@@ -1,8 +1,6 @@
-#!/run/current-system/sw/bin/python3
+#!/usr/bin/python3
 import subprocess
 import json
-import sys
-
 
 SPLITTED_MONITOR_CMD = "hyprctl keyword monitor".split(" ")
 SPLITTED_MOVE_WORKSPACE_CMD = "hyprctl dispatch moveworkspacetomonitor".split(" ")
