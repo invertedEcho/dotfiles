@@ -1,168 +1,71 @@
 {
-    // -------------------------------------------------------------------------
-    // Global configuration
-    // -------------------------------------------------------------------------
-
-    "layer": "top",
-
+    "layer": "bottom",
     "position": "top",
+    "height": 37,
+    "spacing": 0,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["custom/clock"],
+    "modules-right": ["hyprland/language", "pulseaudio", "battery", "backlight", "tray"],
 
-    // If height property would be not present, it'd be calculated dynamically
-    "height": 50,
-
-    "modules-left": [
-        "hyprland/workspaces"
-    ],
-    "modules-center": [
-	"mpris"
-    ],
-    "modules-right": [
-    	"custom/keyboard_layout",
-        "memory",
-        "cpu",
-	"backlight",
-        "battery",
-	"pulseaudio",
-        "tray",
-        "clock#date",
-        "clock#time"
-    ],
-
-
-    // -------------------------------------------------------------------------
-    // Modules
-    // -------------------------------------------------------------------------
-
-    "custom/keyboard_layout": {
-      "exec": "~/.local/bin/print-keyboard-layout.sh",
-      "interval": 1,
-      "format": "󰌌 {}"
-    },
 
     "hyprland/workspaces": {
-        "on-click": "activate",
-        "format": "{icon}",
+	"format": "{icon}{name}",
         "format-icons": {
-            "1": "1 main",
-            "2": "2 web",
-	    "3": "3 music",
-	    "4": "4 proton",
-	    "5": "5 chat",
-            "6": "6",
-            "7": "7",
-            "8": "8 game",
-            "9": "9 other big apps",
-            // "urgent": "",
-            // "active": "",
-            // "default": ""
-         },
-    },
-    "battery": {
-        "interval": 10,
-        "states": {
-            "warning": 30,
-            "critical": 15
+            "default": " ",
+            "urgent": "!",
+            "active": "*"
         },
-        // Connected to AC
-        "format": "  {icon}  {capacity}%", // Icon: bolt
-        // Not connected to AC
-        "format-discharging": "{icon}  {capacity}%",
-        "format-icons": [
-            "", // Icon: battery-full
-            "", // Icon: battery-three-quarters
-            "", // Icon: battery-half
-            "", // Icon: battery-quarter
-            ""  // Icon: battery-empty
-        ],
-        "tooltip": true
+        //"on-click": "activate",
+        //"format": "{name}",
+        //"format-icons": {
+        //    "1": "1 main",
+        //    "2": "2 web",
+	//    "3": "3 music",
+	//    "4": "4 proton",
+	//    "5": "5 chat",
+        //    "6": "6",
+        //    "7": "7",
+        //    "8": "8 game",
+        //    "9": "9 other big apps",
+        //    // "urgent": "",
+        //    "active": " {name}",
+        //    // "default": ""
+        // },
     },
 
-    "clock#time": {
-        "interval": 1,
-        "format": "  {:%H:%M}",
-        "tooltip": false
+    "hyprland/language": {
+      "format": "<span color='#252525'>[ </span><span color='#afa193'><b>key: </b></span>{}<span color='#252525'> / </span>",
+      "format-de": "de",
+      "format-en": "en",
+      "tooltip": false
     },
 
-    "clock#date": {
-      "interval": 10,
-      "format": "󰃶  {:%e %b %Y}",
-      "tooltip-format": "<tt><small>{calendar}</small></tt>",
-      "calendar": {
-	"mode"          : "year",
-	"mode-mon-col"  : 3,
-	"weeks-pos"     : "right",
-	"on-scroll"     : 1,
-	"on-click-right": "mode",
-	"format": {
-		"months":     "<span color='#ffead3'><b>{}</b></span>",
-		"days":       "<span color='#ecc6d9'><b>{}</b></span>",
-		"weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-		"weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-		"today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-	}
-      }
-    },
-
-    "cpu": {
-        "interval": 5,
-        "format": "  {usage}%",
-        "states": {
-          "warning": 70,
-          "critical": 90
-        }
-    },
-
-    "memory": {
-        "interval": 5,
-        "format": "  {}%",
-        "states": {
-            "warning": 70,
-            "critical": 90
-        }
-    },
-
-    "backlight": {
-	"format": "{icon} {percent}% ",
-	"format-icons": ["󰃠"]
-    },
-
-    "hyprland/window": {
-        "format": "{}",
-        "max-length": 120
+    "custom/clock": {
+        "format": "<span color='#252525'>[ </span>{text}<span color='#252525'> ]</span>",
+        "exec": "date +'%H:%M %A, %b %d' | awk '{print tolower($0)}'",
+        "interval": 3
     },
 
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
-        "format-bluetooth": "{icon} {volume}% 󰂯",
-        "format-bluetooth-muted": "󰖁 {icon} 󰂯",
-        "format-muted": "󰖁 0%",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "󰋋",
-            "hands-free": "󱡒",
-            "headset": "󰋎",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
+        "format": "<span color='#afa193'><b>vol:</b></span> {volume}%",
+        "format-muted": "<span color='#afa193'><b>vol:</b></span> X%"
+    },
+    
+    "battery": {
+        "format": "<span color='#252525'> / </span><span color='#afa193'><b>bat:</b></span> {capacity}%",
+        "format-charging": "<span color='#252525'> / </span><span color='#afa193'><b>ac:</b></span> {capacity}%",
+        "tooltip": false,
+        "interval": 20
     },
 
+    "backlight": {
+        "format": "<span color='#252525'> / </span><span color='#afa193'><b>mon:</b></span> {percent}%<span color='#252525'> ]</span>",
+        "tooltip": false
+    },
+    
     "tray": {
-        "icon-size": 21,
-        "spacing": 10
-    },
-    "mpris": {
-      "format": "{player_icon} {title} - {artist}",
-      "format-paused": "{status_icon} {title} - {artist}",
-      "player-icons": {
-	"default": "▶",
-      },
-      "status-icons": {
-	"paused": "⏸"
-      },
+        "icon-size": 20,
+        "spacing": 7,
+        "tooltip": false
     }
-
 }
