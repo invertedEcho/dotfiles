@@ -17,7 +17,7 @@
 	"mpris"
     ],
     "modules-right": [
-    	"custom/keyboard_layout",
+    	"hyprland/language",
         "memory",
         "cpu",
 	"backlight",
@@ -33,10 +33,10 @@
     // Modules
     // -------------------------------------------------------------------------
 
-    "custom/keyboard_layout": {
-      "exec": "~/.local/bin/print-keyboard-layout.sh",
-      "interval": 1,
-      "format": "󰌌 {}"
+    "hyprland/language": {
+      "format": "󰌌 {}",
+      "format-de": "de",
+      "format-en": "en"
     },
 
     "hyprland/workspaces": {
