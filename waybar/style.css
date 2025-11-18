@@ -4,26 +4,25 @@
 
 @keyframes blink-warning {
     70% {
-        color: #fbf1c7;
+        color: #c0caf5;
     }
 
     to {
-        color: #fbf1c7;
-        background-color: #fabd2f;
+        color: #c0caf5;
+        background-color: #e0af68;
     }
 }
 
 @keyframes blink-critical {
     70% {
-      color: #fbf1c7;
+      color: #c0caf5;
     }
 
     to {
-        color: #fbf1c7;
-        background-color: #fb4934;
+        color: #c0caf5;
+        background-color: #f7768e;
     }
 }
-
 
 /* -----------------------------------------------------------------------------
  * Base styles
@@ -40,8 +39,8 @@
 
 /* The whole bar */
 #waybar {
-    background: #282828;
-    color: #fbf1c7;
+    background: #1a1b26;
+    color: #c0caf5;
     font-family: JetBrainsMono Nerd Font;
     font-size: 14px;
     border-radius: 0;
@@ -61,7 +60,7 @@
 #tray {
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #3c3836;
+    background-color: #24283b;
 }
 
 /* -----------------------------------------------------------------------------
@@ -72,16 +71,16 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    background-color: #b16286;
-    color: #1d2021;
+    background-color: #9d7cd8;
+    color: #1a1b26;
 }
 
 #battery.warning {
-    color: #fabd2f;
+    color: #e0af68;
 }
 
 #battery.critical {
-    color: #fb4934;
+    color: #f7768e;
 }
 
 #battery.warning.discharging {
@@ -96,16 +95,16 @@
 
 #clock {
     font-weight: 500;
-    background-color: #fabd2f;
-    color: #1d2021;
+    background-color: #e0af68;
+    color: #1a1b26;
 }
 
 #cpu.warning {
-    color: #fabd2f;
+    color: #e0af68;
 }
 
 #cpu.critical {
-    color: #fb4934;
+    color: #f7768e;
 }
 
 #memory {
@@ -115,42 +114,42 @@
 }
 
 #memory.warning {
-    color: #fabd2f;
+    color: #e0af68;
 }
 
 #memory.critical {
-    color: #fb4934;
+    color: #f7768e;
     animation-name: blink-critical;
     animation-duration: 2s;
 }
 
 #custom-spotify {
-    color: #8ec07c;
+    color: #9ece6a;
 }
 
 #temperature.critical {
-    color: #fb4934;
+    color: #f7768e;
 }
 
 #workspaces button {
     padding-left: 10px;
     padding-right: 10px;
-    color: #fbf1c7;
-    background-color: #3c3836;
+    color: #c0caf5;
+    background-color: #24283b;
 }
 
 #workspaces button.active {
-    border-color: #458588;
-    color: #1d2021;
-    background-color: #fbf1c7;
+    border-color: #7aa2f7;
+    color: #1a1b26;
+    background-color: #c0caf5;
 }
 
 #workspaces button.urgent {
-    border-color: #9d0006;
-    color: #9d0006;
+    border-color: #f7768e;
+    color: #f7768e;
 }
 
 #pulseaudio {
-  background-color: #8ec07c;
-  color: #1d2021;
+  background-color: #9ece6a;
+  color: #1a1b26;
 }
