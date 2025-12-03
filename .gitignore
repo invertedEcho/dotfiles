@@ -1,2 +1,4 @@
 ssh/known_hosts*
 ssh/id*
+sway/outputs
+sway/workspaces

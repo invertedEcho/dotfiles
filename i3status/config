@@ -24,7 +24,7 @@ wireless _first_ {
 }
 
 ethernet _first_ {
-        format_up = "LAN: %ip (%speed)"
+        format_up = "LAN: %ip"
         format_down = "LAN: down"
 }
 
@@ -33,11 +33,11 @@ battery all {
 }
 
 disk "/" {
-        format = "%avail"
+        format = "/: %avail"
 }
 
 memory {
-        format = "used: %used | available: %available"
+        format = "RAM: %percentage_used"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
