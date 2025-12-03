@@ -5,6 +5,7 @@
 - clean: ['~']
 
 - link:
+    ~/.config/sway: sway
     ~/.config/hypr: hypr
     ~/.config/waybar: waybar
     ~/.config/kitty: kitty
