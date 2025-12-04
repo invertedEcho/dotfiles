@@ -36,3 +36,4 @@ export EDITOR=/usr/bin/nvim
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # needs to be at end of file
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH="$PATH:/home/invertedecho/.dotnet/tools"
