@@ -8,6 +8,7 @@ exec --no-startup-id picom -b --backend glx
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id waypaper --restore
+exec --no-startup-id swayidle timeout 600 swaylock timeout 1800 'systemctl suspend'
 
 # Media keybinds
 set $refresh_i3status killall -SIGUSR1 i3status
