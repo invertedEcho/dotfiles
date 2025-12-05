@@ -38,6 +38,9 @@ bindsym Mod4+q kill
 
 bindsym Mod4+d exec --no-startup-id rofi -show drun
 
+bindsym Mod4+s exec --no-startup-id grim -g "$(slurp)" - | wl-copy && notify-send "Copied selected region to clipboard."
+bindsym Mod4+Shift+s exec --no-startup-id grim -g "$(slurp)" ~/Pictures/Screenshots/screenshot-$(date +'%Y%m%d-%H%M%S').png && notify-send "Saved selected region to ~/Pictures/Screenshots"
+
 # change focus
 bindsym Mod4+$left focus left
 bindsym Mod4+$down focus down
@@ -60,7 +63,7 @@ bindsym Mod4+v split v
 bindsym Mod4+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym Mod4+s layout stacking
+# bindsym Mod4+s layout stacking
 bindsym Mod4+w layout tabbed
 bindsym Mod4+e layout toggle split
 
@@ -156,3 +159,5 @@ bar {
 
 for_window [class="fun-shooter"] floating enable
 for_window [class="Thunar"] floating enable
+for_window [class="a-game"] floating enable
+for_window [class="Godot"] floating enable
