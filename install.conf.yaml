@@ -12,7 +12,9 @@
     ~/.config/git: git
     ~/.config/rofi: rofi
     ~/.zshrc: zshrc
-    ~/.ssh: ssh
+    ~/.zprofile: zprofile
+    ~/.ssh/config: ssh/config
+    ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
     ~/.config/i3: i3
     ~/.config/i3status: i3status
@@ -28,6 +30,7 @@
 
 - create:
     - ~/Pictures/Wallpapers/
+    - ~/.ssh
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

@@ -1,0 +1,8 @@
+[user]
+	email = "jakob.stechow@pm.me"
+	name = "Jakob Stechow"
+	signingkey = /home/invertedecho/.ssh/id_ed25519.pub
+[push]
+	autoSetupRemote = true
+[gpg]
+	format = ssh
