@@ -30,7 +30,6 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
-export PATH="/home/invertedecho/.gdvm/bin/current_godot:/home/invertedecho/.gdvm/bin:$PATH"
 export EDITOR=/usr/bin/nvim
 
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
