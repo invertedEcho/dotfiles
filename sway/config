@@ -32,7 +32,8 @@ floating_modifier Mod4
 
 bindsym Mod4+Return exec kitty
 bindsym Mod4+Ctrl+l exec i3lock-fancy
-bindsym Mod4+n exec ~/.local/bin/night-mode.sh
+bindsym Mod4+n exec ~/.local/bin/night-mode-wayland.sh
+bindsym Mod4+p exec wlogout
 
 bindsym Mod4+q kill
 
