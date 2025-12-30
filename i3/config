@@ -5,6 +5,10 @@ exec --no-startup-id picom -b --backend glx
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id waypaper --restore
+exec --no-startup-id dunst
+exec --no-startup-id flameshot
+exec --no-startup-id ~/.screenlayout/main.sh
+exec --no-startup-id "setxkbmap -layout us,de -option 'grp:caps_toggle'"
 
 # Media keybinds
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -33,6 +37,8 @@ tiling_drag modifier titlebar
 bindsym Mod4+Return exec kitty
 bindsym Mod4+Ctrl+l exec i3lock-fancy
 bindsym Mod4+n exec ~/.local/bin/night-mode-x11.sh
+bindsym Mod4+Shift+e exec rofimoji
+bindsym Mod4+e exec nautilus
 
 bindsym Mod4+q kill
 
@@ -51,18 +57,18 @@ bindsym Mod4+Shift+$up move up
 bindsym Mod4+Shift+$right move right
 
 # split in horizontal orientation
-# bindsym Mod4+h split h
+bindsym Mod1+h split h
 
 # split in vertical orientation
-bindsym Mod4+v split v
+bindsym Mod1+v split v
 
 # enter fullscreen mode for the focused container
 bindsym Mod4+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym Mod4+s layout stacking
-bindsym Mod4+w layout tabbed
-bindsym Mod4+e layout toggle split
+bindsym Mod1+s layout stacking
+bindsym Mod1+w layout tabbed
+bindsym Mod1+e layout toggle split
 
 # toggle tiling / floating
 bindsym Mod4+Shift+space floating toggle
@@ -90,11 +96,11 @@ set $ws2 "2 secondary"
 set $ws3 "3 music"
 set $ws4 "4 proton"
 set $ws5 "5 chat"
-set $ws6 "6 game"
+set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8"
+set $ws8 "8 game"
 set $ws9 "9 other big apps"
-set $ws10 "10"
+set $ws10 "10 obsidian"
 
 # switch to workspace
 bindsym Mod4+1 workspace number $ws1
@@ -125,7 +131,7 @@ bindsym Mod4+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym Mod4+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym Mod4+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -162,3 +168,4 @@ bar {
 
 for_window [class="fun-shooter"] floating enable
 for_window [class="Thunar"] floating enable
+assign [class="obsidian"] $ws4
