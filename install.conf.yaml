@@ -9,7 +9,6 @@
     ~/.config/hypr: hypr
     ~/.config/waybar: waybar
     ~/.config/kitty: kitty
-    ~/.config/git: git
     ~/.config/rofi: rofi
     ~/.zshrc: zshrc
     ~/.zprofile: zprofile
