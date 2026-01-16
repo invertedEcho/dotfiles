@@ -17,7 +17,9 @@
     ~/.tmux.conf: tmux.conf
     ~/.config/i3: i3
     ~/.config/i3status: i3status
-    ~/.config/gtk-3.0: gtk-3.0
+    ~/.config/gtk-3.0:
+      path: gtk-3.0
+      force: true
     ~/.xinitrc: xinitrc
     ~/.local/bin/:
       glob: true
@@ -30,6 +32,7 @@
 - create:
     - ~/Pictures/Wallpapers/
     - ~/.ssh
+    - ~/.local/bin
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
