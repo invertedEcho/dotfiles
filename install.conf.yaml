@@ -38,4 +38,4 @@
   - [git submodule update --init --recursive, Installing submodules]
   -
     description: Installing tpm
-    command: if [ ! -d "/home/invertedecho/.tmux/plugins/tpm/" ]; then git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm; fi
+    command: if [ ! -d "/home/$USER/.tmux/plugins/tpm/" ]; then git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm; fi

@@ -1,4 +1,4 @@
-export PATH=/home/invertedecho/.local/bin:/home/invertedecho/bin:/usr/local/bin:/usr/bin:/home/invertedecho/.local/bin/lua-language-server/bin:/home/invertedecho/.dotnet/tools/
+export PATH=/home/$USER/.local/bin:/home/$USER/bin:/usr/local/bin:/usr/bin:/home/$USER/.local/bin/lua-language-server/bin:/home/$USER/.dotnet/tools/
 source ~/.cargo/env
 
 eval "$(zoxide init zsh)"
@@ -35,4 +35,4 @@ export EDITOR=/usr/bin/nvim
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # needs to be at end of file
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-export PATH="$PATH:/home/invertedecho/.dotnet/tools"
+export PATH="$PATH:/home/$USER/.dotnet/tools"
