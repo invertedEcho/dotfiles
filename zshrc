@@ -1,5 +1,4 @@
-export PATH=/home/$USER/.local/bin:/home/$USER/bin:/usr/local/bin:/usr/bin:/home/$USER/.local/bin/lua-language-server/bin:/home/$USER/.dotnet/tools/
-source ~/.cargo/env
+export PATH="$PATH:/home/$USER/.local/bin:/home/$USER/bin:/usr/local/bin:/usr/bin:/home/$USER/.local/bin/lua-language-server/bin:/home/$USER/.dotnet/tools/"
 
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
@@ -32,7 +31,9 @@ setopt appendhistory
 
 export EDITOR=/usr/bin/nvim
 
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-# needs to be at end of file
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-export PATH="$PATH:/home/$USER/.dotnet/tools"
+if ! hostname | grep -q 'nixos'; then
+  source ~/.cargo/env
+  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  export PATH="$PATH:/home/$USER/.dotnet/tools"
+fi
