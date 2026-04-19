@@ -1,4 +1,4 @@
-file:///home/invertedecho/Downloads
-file:///home/invertedecho/Sync Sync
+sftp://192.168.0.121/mnt/homeserver-lvm/Music/1_to_be_imported 1_to_be_imported
+file:///home/echo/Downloads
 file:///mnt/512GB_NVME 512GB_NVME
-smb://192.168.178.88/shared/ shared on 192.168.178.88
+sftp://192.168.0.121/mnt/homeserver-lvm homeserver-lvm
