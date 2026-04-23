@@ -1,4 +1,4 @@
-export PATH="$PATH:/home/$USER/.local/bin:/home/$USER/bin:/usr/local/bin:/usr/bin:/home/$USER/.local/bin/lua-language-server/bin:/home/$USER/.dotnet/tools/"
+export PATH="$PATH:/home/$USER/.local/bin:/home/$USER/bin:/usr/local/bin:/usr/bin:/home/$USER/.local/bin/lua-language-server/bin:/home/$USER/.dotnet/tools/:/home/$USER/.cargo/bin"
 
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
@@ -22,7 +22,7 @@ alias ".."="cd .."
 alias ga="git add ."
 alias gp="git pull"
 alias gP="git push"
-alias cr="cargo run"
+alias t="tmux"
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
