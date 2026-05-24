@@ -20,6 +20,8 @@
     	// "hyprland/language",
         "memory",
         "cpu",
+	"network",
+	"bluetooth",
 	"backlight",
         "battery",
 	"pulseaudio",
