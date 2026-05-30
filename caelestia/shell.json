@@ -1,0 +1,35 @@
+{
+	"bar": {
+		"activeWindow": {
+			"compact": false,
+			"inverted": false
+		},
+		"clock": {
+			"background": false,
+			"showDate": true
+		},
+		"persistent": true,
+		"status": {
+			"showAudio": false,
+			"showKbLayout": false,
+			"showLockStatus": true,
+			"showMicrophone": false
+		},
+		"tray": {
+			"background": false,
+			"compact": false,
+			"recolour": true
+		},
+		"workspaces": {
+			"occupiedBg": false,
+			"showWindows": false,
+			"shown": 5
+		}
+	},
+	"launcher": {
+		"vimKeybinds": true
+	},
+	"services": {
+		"lyricsBackend": "Auto"
+	}
+}

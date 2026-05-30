@@ -10,6 +10,7 @@
     ~/.config/waybar: waybar
     ~/.config/kitty: kitty
     ~/.config/rofi: rofi
+    ~/.config/caelestia: caelestia
     ~/.zshrc: zshrc
     ~/.zprofile: zprofile
     ~/.ssh/config: ssh/config
