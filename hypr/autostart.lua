@@ -1,0 +1,12 @@
+hl.on("hyprland.start", function()
+	hl.exec_cmd("waypaper --restore")
+	hl.exec_cmd("swaync")
+	hl.exec_cmd("gnome-keyring-daemon")
+	hl.exec_cmd("hypridle")
+	hl.exec_cmd("~/.local/bin/night-mode-wayland.sh")
+	hl.exec_cmd("vicinae server")
+	hl.exec_cmd("caelestia-shell")
+	hl.exec_cmd("systemctl --user start hyprpolkitagent")
+	-- below is required for screensharing
+	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+end)
