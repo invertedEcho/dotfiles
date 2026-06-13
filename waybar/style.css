@@ -30,10 +30,9 @@
 
 * {
     border: none;
-    border-radius: 5px;
-    min-height: 25px;
+    border-radius: 10px;
     margin: 2px;
-    padding: 0;
+    padding: 1px;
     font-weight: 500;
 }
 
@@ -41,12 +40,13 @@
 #waybar {
     background: #1a1b26;
     color: #c0caf5;
-    font-family: JetBrainsMono Nerd Font;
-    font-size: 14px;
+    font-family: Inter;
+    font-size: 16px;
     border-radius: 0;
 }
 
 /* Each module */
+#mpris,
 #battery,
 #date,
 #clock,
@@ -123,10 +123,6 @@
     color: #f7768e;
     animation-name: blink-critical;
     animation-duration: 2s;
-}
-
-#custom-spotify {
-    color: #9ece6a;
 }
 
 #temperature.critical {
