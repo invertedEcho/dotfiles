@@ -10,15 +10,19 @@ all_monitors_output_subprocess = subprocess.run(
     ["hyprctl", "monitors", "all", "-j"], capture_output=True, text=True
 )
 all_monitors_output_json = json.loads(all_monitors_output_subprocess.stdout)
-filtered_monitor = next(
-    filter(lambda monitor: monitor["name"] == MONITOR_NAME, all_monitors_output_json)
-)
 
-is_external_monitor_disabled = filtered_monitor["disabled"] is True
+try:
+    filtered_monitor = next(
+        filter(lambda monitor: monitor["name"] == MONITOR_NAME, all_monitors_output_json)
+    )
 
-if is_external_monitor_disabled:
-    subprocess.run(SPLITTED_MONITOR_CMD + [f"{MONITOR_NAME},preferred,auto,2"])
-    subprocess.run(["notify-send", "Enabled external monitor"])
-else:
-    subprocess.run(SPLITTED_MONITOR_CMD + [f"{MONITOR_NAME},disable"])
-    subprocess.run(["notify-send", "Disabled external monitor"])
+    is_external_monitor_disabled = filtered_monitor["disabled"] is True
+
+    if is_external_monitor_disabled:
+        subprocess.run(SPLITTED_MONITOR_CMD + [f"{MONITOR_NAME},preferred,auto,2"])
+        subprocess.run(["notify-send", "Enabled external monitor"])
+    else:
+        subprocess.run(SPLITTED_MONITOR_CMD + [f"{MONITOR_NAME},disable"])
+        subprocess.run(["notify-send", "Disabled external monitor"])
+except: 
+    subprocess.run(["notify-send", f"{MONITOR_NAME} doesn't seem to be available."])
