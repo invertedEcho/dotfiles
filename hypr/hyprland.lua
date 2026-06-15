@@ -4,7 +4,7 @@ require("input")
 
 local terminal = "kitty"
 local fileManager = "nautilus"
-local menu = "vicinae open"
+local menu = "rofi -show drun"
 
 hl.config({
 	general = {
@@ -97,7 +97,7 @@ hl.config({
 	misc = {
 		force_default_wallpaper = 0,
 		disable_hyprland_logo = true,
-		vrr = 1,
+		vrr = 0,
 		animate_manual_resizes = true,
 		enable_anr_dialog = false, -- application not responding
 	},
@@ -113,7 +113,7 @@ hl.gesture({
 	action = "workspace",
 })
 
-local mainMod = "SUPER" -- Sets "Windows" key as main modifier
+local mainMod = "SUPER"
 local modWithShift = "SUPER + SHIFT"
 local modWithCtrl = "SUPER + CTRL"
 
@@ -143,6 +143,7 @@ hl.bind(modWithShift .. " + N", hl.dsp.exec_cmd("swaync-client -t"))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("~/.local/bin/night-mode-wayland.sh"))
 hl.bind(modWithShift .. " + C", hl.dsp.exec_cmd("hyprpicker | wl-copy"))
 hl.bind(modWithShift .. " + T", hl.dsp.exec_cmd("python3 ~/.local/bin/toggle-external-monitor.py"))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("~/.local/bin/toggle-bar.sh"))
 
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
@@ -261,7 +262,7 @@ hl.window_rule({
 hl.window_rule({
 	name = "float by class",
 	match = {
-		class = "org.gnome.Nautilus|ddcui|org.gnome.Loupe|org.gnome.Calculator|org.pulseaudio.pavucontrol|blueman-manager|xdg-desktop-portal-gtk",
+		class = "org.gnome.Nautilus|ddcui|org.gnome.Loupe|org.gnome.Calculator|org.pulseaudio.pavucontrol|blueman-manager|xdg-desktop-portal-gtk|arena-shooter|de.tha.oop.praktikum.bomberman.Launcher",
 	},
 	float = true,
 })
@@ -320,9 +321,8 @@ hl.window_rule({
 	name = "inhibit idle when fullscreen",
 	match = {
 		class = "*",
-		fullscreen = true,
 	},
-	idle_inhibit = "always",
+	idle_inhibit = "fullscreen",
 })
 
 hl.env("_JAVA_AWT_WM_NONPARENTING", "1")
