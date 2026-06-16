@@ -129,7 +129,11 @@
 	},
 	"bluetooth": {
 		"on-click": "blueman-manager",
-		"format-connected-battery": " {device_alias} | {device_battery_percentage}%"
+		"format-connected-battery": " {device_alias} | {device_battery_percentage}%",
+		"format-device-preference": [
+			"DALI IO-8",
+			"AirPods Pro"
+		]
 	},
 	"pulseaudio": {
 		"format": "{icon}  {volume}%",
