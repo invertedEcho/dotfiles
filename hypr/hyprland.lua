@@ -284,7 +284,7 @@ hl.window_rule({
 hl.window_rule({
 	name = "workspace4",
 	match = {
-		class = "proton-pass|Proton Mail|protonvpn-app|ch.proton.bridge-gui|net.thunderbird.Thunderbird",
+		class = "proton-pass|Proton Mail|proton.vpn.app.gtk|ch.proton.bridge-gui|net.thunderbird.Thunderbird",
 	},
 	workspace = "4",
 })
