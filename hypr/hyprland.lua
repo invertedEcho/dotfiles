@@ -142,7 +142,7 @@ hl.bind(
 hl.bind(modWithShift .. " + N", hl.dsp.exec_cmd("swaync-client -t"))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("~/.local/bin/night-mode-wayland.sh"))
 hl.bind(modWithShift .. " + C", hl.dsp.exec_cmd("hyprpicker | wl-copy"))
-hl.bind(modWithShift .. " + T", hl.dsp.exec_cmd("python3 ~/.local/bin/toggle-external-monitor.py"))
+hl.bind(modWithShift .. " + T", hl.dsp.exec_cmd("python3 ~/.local/bin/toggle-monitor.py"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("~/.local/bin/toggle-bar.sh"))
 
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
