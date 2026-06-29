@@ -31,7 +31,7 @@ setopt appendhistory
 
 export EDITOR=/usr/bin/nvim
 
-if ! hostname | grep -q 'nixos'; then
+if ! uname -a | grep -q 'NixOS'; then
   source ~/.cargo/env
   source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
   source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
