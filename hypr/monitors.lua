@@ -7,17 +7,23 @@ hl.monitor({
 hl.monitor({
 	output = "HDMI-A-1",
 	disabled = true,
+	mode = "preferred",
+	position = "auto",
+	scale = 2,
 })
 
 hl.monitor({
 	output = "DP-2",
-	mode = "highrr",
-	position = "1200x0",
+	mode = "2560x1440@180",
+	position = "1920x0",
+	-- bitdepth = 10,
+	-- cm = "hdr",
+	-- sdrbrightness = 1.2,
+	-- sdrsaturation = 1.0,
 })
 
 hl.monitor({
 	output = "DP-3",
 	mode = "1920x1200",
 	position = "0x0",
-	transform = 1,
 })
