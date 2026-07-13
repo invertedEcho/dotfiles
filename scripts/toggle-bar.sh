@@ -5,5 +5,5 @@ then
     ps aux | grep 'waybar' | grep -v grep | awk '{print $2}' | xargs kill
 else
     notify-send "Starting waybar..."
-    waybar
+    ~/.local/bin/waybar/waybar
 fi

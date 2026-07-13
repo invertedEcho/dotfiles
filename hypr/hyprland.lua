@@ -3,6 +3,8 @@ require("autostart")
 require("input")
 require("keybinds")
 
+hl.env("GTK_THEME", "Orchis-Dark")
+
 hl.config({
 	render = {
 		cm_auto_hdr = true,

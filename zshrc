@@ -1,4 +1,4 @@
-export PATH="$PATH:/home/$USER/.local/bin:/home/$USER/bin:/usr/local/bin:/usr/bin:/home/$USER/.local/bin/lua-language-server/bin:/home/$USER/.dotnet/tools/:/home/$USER/.cargo/bin"
+export PATH="/home/$USER/.local/bin/waybar/:/home/$USER/.local/bin:/home/$USER/bin:/usr/local/bin:/usr/bin:/home/$USER/.local/bin/lua-language-server/bin:/home/$USER/.dotnet/tools/:/home/$USER/.cargo/bin:/home/$USER/.local/bin/codelldb-extension/adapter:$PATH"
 
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
@@ -16,7 +16,6 @@ promptinit
 prompt pure
 
 alias n='nvim'
-alias lg='lazygit'
 alias rm='trash'
 alias ".."="cd .."
 alias ga="git add ."

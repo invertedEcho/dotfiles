@@ -1,4 +1,5 @@
 hl.on("hyprland.start", function()
+	hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 30")
 	hl.exec_cmd("waypaper --restore")
 	hl.exec_cmd("swaync")
 	hl.exec_cmd("gnome-keyring-daemon")

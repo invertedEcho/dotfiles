@@ -1,4 +1,4 @@
-local terminal = "kitty"
+local terminal = "wezterm"
 local fileManager = "nautilus"
 local menu = 'rofi -show combi -combi-modes "window,drun,run"'
 
