@@ -8,6 +8,7 @@
 	"height": 50,
 	"modules-left": [
 		"hyprland/workspaces",
+		"wlr/taskbar",
 		"mpris"
 	],
 	"modules-center": [],
@@ -26,6 +27,9 @@
 	// -------------------------------------------------------------------------
 	// Modules
 	// -------------------------------------------------------------------------
+	"wlr/taskbar": {
+		"on-click": "activate"
+	},
 	"hyprland/language": {
 		"format": "󰌌 {}",
 		"format-de": "de",
