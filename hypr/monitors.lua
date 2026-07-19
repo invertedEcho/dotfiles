@@ -2,11 +2,11 @@ hl.monitor({
 	output = "eDP-1",
 	mode = "preferred",
 	position = "auto",
+	disabled = false,
 })
 
 hl.monitor({
 	output = "HDMI-A-1",
-	disabled = true,
 	mode = "preferred",
 	position = "auto",
 	scale = 2,

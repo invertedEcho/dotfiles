@@ -21,6 +21,9 @@ alias ".."="cd .."
 alias ga="git add ."
 alias gp="git pull"
 alias gP="git push"
+alias gs="git status"
+alias gd="git diff"
+alias gdc="git diff --cached"
 alias t="tmux"
 
 HISTFILE=~/.zsh_history
