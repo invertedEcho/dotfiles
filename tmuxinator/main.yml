@@ -1,0 +1,32 @@
+---
+name: main
+project_root: "/home/echo"
+windows:
+- netvy:
+    layout: bd5e,230x54,0,0,1
+    panes:
+    - cd /home/echo/dev/netvy
+- shooter:
+    layout: d511,230x54,0,0{73x54,0,0[73x27,0,0,2,73x26,0,28,5],156x54,74,0,6}
+    panes:
+    - cd /home/echo/dev/arena-shooter
+    - cd /home/echo/dev/arena-shooter
+    - cd /home/echo/dev/arena-shooter
+- nix-cfg:
+    layout: bd60,230x54,0,0,3
+    panes:
+    - cd /home/echo/dev/nixos-config
+- nvim-cfg:
+    layout: bd61,230x54,0,0,4
+    panes:
+    - cd /home/echo/dev/nvim-config
+- homeserver:
+    layout: bd64,230x54,0,0,7
+    panes:
+    - cd /home/echo
+    - ssh homeserver
+- htop:
+    layout: b565,230x52,0,0,8
+    panes:
+    - cd /home/echo
+    - htop

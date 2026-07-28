@@ -15,6 +15,7 @@
     ~/.ssh/config: ssh/config
     ~/.config/git: git
     ~/.config/tmux/tmux.conf: tmux.conf
+    ~/.config/tmuxinator: tmuxinator
     ~/.config/i3: i3
     ~/.config/i3status: i3status
     ~/.xinitrc: xinitrc
