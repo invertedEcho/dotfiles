@@ -9,6 +9,7 @@ hl.monitor({
 	output = "HDMI-A-1",
 	mode = "preferred",
 	position = "auto",
+	disabled = true,
 	scale = 2,
 })
 

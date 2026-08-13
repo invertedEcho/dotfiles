@@ -15,7 +15,7 @@ autoload -Uz promptinit
 promptinit
 prompt pure
 
-alias n='nvim'
+alias n='neovide --fork'
 alias rm='trash'
 alias ".."="cd .."
 alias ga="git add ."
@@ -25,6 +25,7 @@ alias gs="git status"
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias t="tmux"
+alias cb="cargo build"
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

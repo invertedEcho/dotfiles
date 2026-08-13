@@ -8,6 +8,7 @@
     ~/.config/sway: sway
     ~/.config/hypr: hypr
     ~/.config/waybar: waybar
+    ~/.config/wezterm: wezterm
     ~/.config/kitty: kitty
     ~/.config/rofi: rofi
     ~/.zshrc: zshrc

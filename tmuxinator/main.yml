@@ -23,10 +23,8 @@ windows:
 - homeserver:
     layout: bd64,230x54,0,0,7
     panes:
-    - cd /home/echo
     - ssh homeserver
 - htop:
     layout: b565,230x52,0,0,8
     panes:
-    - cd /home/echo
     - htop

@@ -7,6 +7,7 @@ hl.env("GTK_THEME", "Orchis-Dark")
 
 hl.config({
 	render = {
+		-- enable HDR for fullscreen apps
 		cm_auto_hdr = true,
 	},
 	general = {
@@ -27,7 +28,10 @@ hl.config({
 
 		layout = "scrolling",
 	},
-
+	-- scrolling = {
+	-- 	-- each window should always take up the entire width of the monitor/workspace
+	-- 	column_width = 1.0,
+	-- },
 	decoration = {
 		rounding = 6,
 		rounding_power = 2,
@@ -50,14 +54,8 @@ hl.config({
 			vibrancy = 0.1696,
 		},
 	},
-
 	animations = {
 		enabled = true,
-		-- FIXME: add again
-		-- bezier = "overshot,0.13,0.39,0.29,1.1",
-		-- animation = "windows,1,4,overshot,slide",
-		-- animation = "border,1,10,default",
-		-- animation = "fade,1,10,default",
 	},
 })
 
