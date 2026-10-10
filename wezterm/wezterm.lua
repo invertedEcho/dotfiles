@@ -57,4 +57,6 @@ end
 
 config.color_scheme = scheme_for_appearance(get_appearance())
 
+config.audible_bell = "Disabled"
+
 return config
