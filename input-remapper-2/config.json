@@ -1,0 +1,6 @@
+{
+    "version": "2.2.0",
+    "autoload": {
+        "Logitech USB Receiver": "new preset 2"
+    }
+}

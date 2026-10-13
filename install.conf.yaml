@@ -19,6 +19,7 @@
     ~/.config/tmuxinator: tmuxinator
     ~/.config/i3: i3
     ~/.config/i3status: i3status
+    ~/.config/input-remapper-2: input-remapper-2
     ~/.xinitrc: xinitrc
     ~/.local/bin/:
       glob: true
