@@ -42,3 +42,8 @@ if ! uname -a | grep -q 'NixOS'; then
   source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   export PATH="$PATH:/home/$USER/.dotnet/tools"
 fi
+
+# autostart tmux under following conditions: 1. tmux exists 2. were in an interactive shell 3. tmux doesnt try to run within itself
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
