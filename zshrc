@@ -44,6 +44,7 @@ if ! uname -a | grep -q 'NixOS'; then
 fi
 
 # autostart tmux under following conditions: 1. tmux exists 2. were in an interactive shell 3. tmux doesnt try to run within itself
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+# 4. we are not starting from vscode. vscode seems to set no_new_privs, so if vscode starts first, and a terminal is started normally, it will be in the same tmux server, and thus inheriting the no_new_privs flag, preventing it from running sudo.
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ] && [ "$TERM_PROGRAM" != "vscode" ]; then
   exec tmux
 fi
